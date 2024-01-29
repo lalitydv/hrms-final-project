@@ -56,11 +56,13 @@ import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginModule } from './login/login.module';
+import { CustomTableComponent } from './common/custom-table/custom-table.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    DashboardComponent
+    DashboardComponent,
+    CustomTableComponent
   ],
   imports: [
     BrowserModule,
