@@ -1,0 +1,102 @@
+:host{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.forgot-main{
+    height: calc(100vh - 128px);
+    width: 95%;
+    &-inner{
+        &-right{
+            &-login{
+                font-size: 40px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #8A2080;
+    min-height: 57px;
+    display: flex;
+    justify-content: center;
+            }
+        }
+    }
+}
+.login-main{
+    // width: 723px;
+    min-height: 442px;
+    border: 8px solid #8a2080;
+    border-radius: 9px;
+    background-color: #fffdfd;
+    border-top-width: 20px;
+   
+    &-field{
+        &:nth-child(1){
+            margin-top: 17px;
+        }
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    &-login{
+        font-size: 40px;
+        font-weight: 500;
+        margin-top: 10px;
+        color: #8A2080;
+    }
+    &-admin{
+        color: #343A40;
+        font-size: 18px;
+        margin-top: 24px;
+        width: 85%;
+        line-height: 30px;
+        span{
+            color: #8A2080; 
+        }
+    }
+    &-dont{
+        color: #343A40;
+        font-size: 18px;
+        margin-top: 24px;
+        width: 85%;
+        line-height: 30px;
+        text-align: center;
+        span{
+            color: #8A2080; 
+        }
+    }
+    &-remind{
+        width: 80%;
+        min-height: 50px;
+        &-forgot{
+            font-size: 18px;
+            color: #8A2080;
+        }
+        &-captcha{
+            width: 350px;
+            height: 86px;
+            background-color: #f7f5f5;
+            &-privacy{
+                text-align: right;
+    margin-right: 10px;
+            }
+        }
+        &-text{
+            color: #ACACAC;
+        }
+    }
+    &-sign{
+        background-color: #8A2080;
+        width: 80%;
+        height: 50px;
+        margin-top: 25px;
+        &-text{
+            font-size: 20px;
+            font-weight: 500;
+            color: #ffffff;
+            .mdc-label{
+                color: #acacac;
+            }
+        }
+    }
+}

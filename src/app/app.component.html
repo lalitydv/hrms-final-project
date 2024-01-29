@@ -1,3 +1,7 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<div class="" *ngIf="!isLoginView">
+  <app-sidebar></app-sidebar>
+</div>
+
+<ng-container *ngIf="isLoginView">
+  <router-outlet></router-outlet>
+</ng-container>

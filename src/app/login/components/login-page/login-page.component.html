@@ -1,0 +1,39 @@
+<div fxLayout="column" class="login-main flex justify-center items-center h-screen " fxLayoutAlign="center center">
+  <img src="assets/icons/ShinecoderLogo.png" class="logiiamge" />
+  <div class="login-main-login">
+    Login
+  </div>
+  <div class="login-main-admin">(Admin or Employee Login)</div>
+  <div class="login-main-field" [style.marginTop]="'10px'">
+    <label class="custom-label">Your Email<em>*</em></label>
+    <mat-form-field appearance="outline" [floatLabel]="'always'">
+      <input matInput>
+    </mat-form-field>
+  </div>
+  <div class="login-main-field">
+    <label class="custom-label">Password<em>*</em></label>
+    <mat-form-field appearance="outline" [floatLabel]="'always'">
+      <input matInput>
+    </mat-form-field>
+  </div>
+
+  <div class="login-main-remind" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="login-main-remind-text">
+      <mat-checkbox class="example-margin">Remember Me</mat-checkbox>
+    </div>
+    <div class="login-main-remind-forgot cursor-pointer" (click)="gotoForgot()">
+      Forget password?
+    </div>
+  </div>
+  <div class="login-main-remind-captcha px-5" fxLayoutAlign="center stretch" fxLayout="column">
+    <mat-checkbox class="example-margin">I am not a robot</mat-checkbox>
+    <div class="login-main-remind-captcha-privacy">
+      <div class="cursor-pointer">Privacy - Terms</div>
+    </div>
+  </div>
+  <div class="login-main-sign cursor-pointer" fxLayoutAlign="center center" (click)="gotoDashboard()">
+    <div class="login-main-sign-text cursor-pointer">
+      Sign in
+    </div>
+  </div>
+</div>

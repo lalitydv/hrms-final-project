@@ -1,0 +1,83 @@
+:host{
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    // height: 100vh;
+    margin-top: 54px;
+    padding: 20px;
+   
+}
+.logiiamge{
+object-fit: contain;
+width: full ;
+height: 30px;
+}
+
+.login-main{
+    width: 703px;
+    height: 509px;
+    border: 8px solid #8a2080;
+    border-radius: 9px;
+    background-color: #fffdfd;
+    border-top-width: 14px;
+  
+    
+   
+    &-field{
+        &:nth-child(1){
+            margin-top: 15px;
+        }
+        width: 80%;
+      
+        display: flex;
+        flex-direction: column;
+    }
+    &-login{
+        font-size: 21px;
+        font-weight: 500;
+        margin-top: 0px;
+    }
+    &-admin{
+        color: #858C8E;
+        font-size: 12px;
+        margin-top: 15px;
+    }
+    &-remind{
+        width: 80%;
+        min-height: 36px;
+        &-forgot{
+            font-size: 18px;
+            color: #8A2080;
+        }
+        &-captcha{
+            width: 70%;
+            height: 50px;
+            background-color: #f7f5f5;
+            &-privacy{
+                text-align: right;
+    margin-right: 10px;
+            }
+        }
+        &-text{
+            color: #ACACAC;
+        }
+    }
+    &-sign{
+        background-color: #8A2080;
+        width: 80%;
+        height: 50px;
+        border-radius: 10px;
+        margin-top: 10px;
+        &-text{
+            font-size: 20px;
+            font-weight: 500;
+            color: #ffffff;
+            .mdc-label{
+                color: #acacac;
+            }
+        }
+    }
+}
+label.custom-label{
+    margin-bottom: 2px !important;
+}

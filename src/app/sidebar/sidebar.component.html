@@ -1,0 +1,753 @@
+<!-- sidebar.component.html -->
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav ">
+        <!-- Your sidebar content goes here -->
+        <div>
+            <div class="h-full  h-screen pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+                <ul class="space-y-2 font-medium">
+
+                    <li class="flex flex-col justify-center items-center ">
+                        <div class="  bg-white  w-full my-2 ">
+                            <a routerLink="/" class="flex justify-center items-center">
+                                <img src="/assets/Saidebar/logo.png" class="md:w-52  text-2xl w-20 h-10 object-contain"
+                                    alt=" Logo" />
+                            </a>
+                        </div>
+                    </li>
+                    <mat-divider>
+                    </mat-divider>
+
+                    <div class="mt-20 flex flex-col gap-2 p-2 text-[16px]">
+                        <!-- dashbaord  -->
+                        <li>
+                            <a routerLink="/dashbord"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group">
+
+                                <mat-icon>dashboard</mat-icon>
+
+                                <span class="ml-3 ">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <!-- dashbaord  -->
+
+                        <!-- All-Tickets -->
+                        <li>
+                            <button type="button"
+                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
+                                (click)="toggleDropdown('Tickets')">
+                                <mat-icon>assignment</mat-icon>
+
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-lg">All Tickets</span>
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <ul *ngIf="isDropdownOpen('Tickets')" class="py-2 space-y-2">
+                                <li>
+                                    <a routerLink="/all-tickets"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> All
+                                        Tickets
+                                        <hr>
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+
+                                </li>
+                                <li>
+                                    <a routerLink="/open-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75
+                                         rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Open
+                                        Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+
+                                <li>
+                                    <a routerLink="/completed-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Completed
+                                        Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/pending-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Pending
+                                        Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/unassigned-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Unassigned
+                                        Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/overdue-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Overdue
+                                        Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/tickets-due-today"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Tickets
+                                        Due Today</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- All-Tickets -->
+                        <!-- Assigned Tickets -->
+                        <li>
+                            <button type="button"
+                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
+                                (click)="toggleDropdown('Assigned')">
+                                <mat-icon>assignment</mat-icon>
+
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-lg">Assigned Tickets</span>
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <ul *ngIf="isDropdownOpen('Assigned')" class="py-2 space-y-2">
+                                <li>
+                                    <a routerLink="/all-tickets"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Assigned Tickets
+                                        <hr>
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+
+                                </li>
+                                <li>
+                                    <a routerLink="/open-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75
+                                         rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Open
+                                        Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+
+                                <li>
+                                    <a routerLink="/completed-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Completed
+                                        Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/pending-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Open & Unassigned</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/unassigned-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Overdue Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/overdue-tickets"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Tickets Due Today
+                                        Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/tickets-due-today"
+                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Updated Tickets</a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Assigned Tickets -->
+
+
+
+                        <!--  status -->
+                        <li>
+                            <a routerLink="/status/status-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon>trending_up</mat-icon>
+                                <span class="ml-3 "> Status</span>
+                            </a>
+                        </li>
+                        <!--  status -->
+                        <!--  level -->
+                        <li>
+                            <a routerLink="/level/level-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+
+                                <mat-icon>assignment_turned_in</mat-icon>
+                                <span class="ml-3 "> level</span>
+                            </a>
+                        </li>
+                        <!--  level -->
+                        <!--  Product -->
+                        <li>
+                            <a routerLink="/product/product-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon>view_module</mat-icon>
+                                <span class="ml-3 "> Product</span>
+                            </a>
+                        </li>
+                        <!--  Product -->
+                        <!--  Category -->
+                        <li>
+                            <a routerLink="/category/category-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon> category</mat-icon>
+                                <span class="ml-3 "> Category</span>
+                            </a>
+                        </li>
+                        <!--  Category -->
+                        <!-- Sub Category -->
+                        <li>
+                            <a routerLink="/sub-category/subcategory-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon>low_priority</mat-icon>
+                                <span class="ml-3 ">Sub Category</span>
+                            </a>
+                        </li>
+                        <!-- Sub Category -->
+                        <!-- Department -->
+                        <li>
+                            <a routerLink="/department/department-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon>view_compact</mat-icon>
+                                <span class="ml-3 ">Department</span>
+                            </a>
+                        </li>
+                        <!-- Department -->
+                        <!-- Request Type -->
+                        <li>
+                            <a routerLink="/request/request-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <i class="fa-solid fa-calculator"></i>
+                                <span class="ml-3 ">Request Type</span>
+                            </a>
+                        </li>
+                        <!-- Request -->
+                        <!-- impact -->
+                        <li>
+                            <a routerLink="/impact/impact-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon>people</mat-icon>
+                                <span class="ml-3 ">Impact</span>
+                            </a>
+                        </li>
+                        <!-- impact -->
+                        <!-- Urgency -->
+                        <li>
+                            <a routerLink="/urgency-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon>airport_shuttle</mat-icon>
+                                <span class="ml-3 ">Urgency</span>
+                            </a>
+                        </li>
+                        <!-- Urgency -->
+                        <!-- priority -->
+                        <li>
+                            <a routerLink="/priority-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon>perm_data_setting</mat-icon>
+                                <span class="ml-3 ">Priority</span>
+                            </a>
+                        </li>
+                        <!-- Priority -->
+                        <!-- Location Master -->
+                        <li>
+                            <a routerLink="/location-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon>share</mat-icon>
+                                <span class="ml-3 ">Location Master</span>
+                            </a>
+                        </li>
+                        <!-- Location Master -->
+                        <!-- Announcement -->
+                        <li>
+                            <a routerLink="/announcement-list"
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group ">
+                                <mat-icon>build</mat-icon>
+                                <span class="ml-3 ">Announcement</span>
+                            </a>
+                        </li>
+                        <!-- Announcement -->
+
+                        <!-- User Manager -->
+                        <li>
+                            <button type="button"
+                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
+                                (click)="toggleDropdown('UserManager')">
+                                <mat-icon>supervised_user_circle</mat-icon>
+
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-lg">User Manager</span>
+
+
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <ul *ngIf="isDropdownOpen('UserManager')" class="py-2 space-y-2">
+                                <li>
+                                    <a routerLink="/usermang/admin-list"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Admin
+                                    </a>
+                                </li>
+                                <mat-divider></mat-divider>
+
+                                <li>
+                                    <a routerLink="/usermang/agent-list"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Agent
+                                    </a>
+                                </li>
+                                <mat-divider></mat-divider>
+
+                                <li>
+                                    <a routerLink="/usermang/client-list"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Client
+                                    </a>
+                                </li>
+                                <mat-divider></mat-divider>
+                                <li>
+                                    <a routerLink="/usermang/role-list"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Role
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- User Manager -->
+                        <!-- Setting -->
+                        <li>
+                            <button type="button"
+                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
+                                (click)="toggleDropdown('Setting')">
+                                <mat-icon>supervised_user_circle</mat-icon>
+
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-lg">Setting</span>
+
+
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                            <ul *ngIf="isDropdownOpen('Setting')" class="py-2 space-y-2">
+                                <li>
+                                    <a routerLink="/setting/application-setting"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Application Setting
+                                    </a>
+                                </li>
+                                <mat-divider></mat-divider>
+                                <li>
+                                    <a routerLink="/setting/agent-setting"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Agent Setting
+                                    </a>
+                                </li>
+                                <mat-divider></mat-divider>
+
+                                <li>
+                                    <a routerLink="/setting/client-setting"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Client Setting
+                                    </a>
+                                </li>
+                                <mat-divider></mat-divider>
+
+                                <li>
+                                    <a routerLink="/setting/agent-auto-assign-setting"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Agent AutoAssign
+                                    </a>
+                                </li>
+                                <!-- <mat-divider></mat-divider>
+                                <li>
+                                    <a routerLink="/setting/role-list"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Select Technician
+                                    </a>
+                                </li> -->
+                                <mat-divider></mat-divider>
+
+                                <li>
+                                    <a routerLink="/setting/email-setting"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Email Setting
+                                    </a>
+                                </li>
+                                <mat-divider></mat-divider>
+
+                                <li>
+                                    <a routerLink="/setting/logo-setting"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Company Logo
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Setting -->
+
+
+                        <!-- Setting-->
+
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="overflow-y-auto overflow-x-hidden ">
+        <mat-toolbar class=" flex justify-between bg-white shadow-xl mat-toolbar mb-10 -pl-5">
+
+            <button class="bg-Pink flex items-center text-white justify-center rounded-lg w-10 h-10" mat-icon-button
+                (click)="toggleSidenav()">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+
+            <div class="flex items-center">
+                <div class="flex items-center justify-center gap-5 ml-3">
+                    <div>
+                        <button type="button"
+                            class="flex text-sm bg-gray-800 rounded-full  focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="md:w-8 md:h-8 w-4 h-4 object-cover rounded-full"
+                                src="assets/Navsaidbar/India.png" alt="user photo" />
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button"
+                            class="flex   text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/Chnad.png"
+                                alt="user photo" />
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button"
+                            class="flex text-sm  bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/chat.png"
+                                alt="user photo" />
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button"
+                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/Notifiaction.png"
+                                alt="user photo" />
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button"
+                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                            aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/Profile.png"
+                                alt="user photo" />
+                        </button>
+                    </div>
+                    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                        id="dropdown-user">
+                        <div class="px-4 py-3" role="none">
+                            <p class="text-sm text-gray-900 dark:text-white" role="none">
+                                Shine Code
+                            </p>
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                                shinecoders.com
+                            </p>
+                        </div>
+                        <ul class="py-1" role="none">
+                            <li>
+                                <a routerLink="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    role="menuitem">Dashboard</a>
+                            </li>
+                            <li>
+                                <a routerLink="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    role="menuitem">Settings</a>
+                            </li>
+                            <li>
+                                <a routerLink="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    role="menuitem">Earnings</a>
+                            </li>
+                            <li>
+                                <a routerLink="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    role="menuitem">Sign out</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button type="button" data-drawer-target="drawer-right-example"
+                            data-drawer-show="drawer-right-example" data-drawer-placement="right"
+                            aria-controls="drawer-right-example"
+                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/Group 338966.png"
+                                alt="user photo" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </mat-toolbar>
+        <!-- Your main content goes here -->
+        <p class="px-5">
+            <router-outlet></router-outlet>
+        </p>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- setting Rigt side drower  -->
+<!-- drawer component -->
+<div id="drawer-right-example"
+    class="fixed top-16 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-black w-80 dark:bg-gray-800"
+    tabindex="-1" aria-labelledby="drawer-right-label">
+    <h5 id="drawer-right-label"></h5>
+
+    <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example"
+        class="text-gray-400  bg-Pink w-10 h-10 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+        </svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+
+    <div class="mt-10 text-white pb-10">
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Background
+            </label>
+            <select
+                class="appearance-none block w-full  text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name" type="text">
+                <option value="">--Select--</option>
+                <option value="2">dark</option>
+                <option value="3">white</option>
+            </select>
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Layout
+            </label>
+            <select
+                class="appearance-none block w-full  text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name" type="text">
+                <option value="">--Select--</option>
+                <option value="2">Vertical</option>
+                <option value="3">Vertical</option>
+            </select>
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Sidebar
+            </label>
+            <select
+                class="appearance-none block w-full  text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name" type="text">
+                <option value="">--Select--</option>
+                <option value="2">Full</option>
+                <option value="3">Haff</option>
+            </select>
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Sidebar Position
+            </label>
+            <select
+                class="appearance-none block w-full  text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name" type="text">
+                <option value="">--Select--</option>
+                <option value="2">Sticy</option>
+                <option value="3">Fixd</option>
+            </select>
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Header Position
+            </label>
+            <select
+                class="appearance-none block w-full  text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name" type="text">
+                <option value="">--Select--</option>
+                <option value="2">Sticy</option>
+                <option value="3">Fixd</option>
+            </select>
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Container
+            </label>
+            <select
+                class="appearance-none block w-full  text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name" type="text">
+                <option value="">--Select--</option>
+                <option value="2">Wide</option>
+                <option value="3">Fixd</option>
+            </select>
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Direction
+            </label>
+            <select
+                class="appearance-none block w-full  text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name" type="text">
+                <option value="">--Select--</option>
+                <option value="2">LTR</option>
+                <option value="3">Fixd</option>
+            </select>
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Body Font
+            </label>
+            <select
+                class="appearance-none block w-full  text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name" type="text">
+                <option value="">--Select--</option>
+                <option value="2">Roboto</option>
+                <option value="3">Fixd</option>
+            </select>
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Navigation Header
+            </label>
+
+            <div class="my-5 flex gap-5 flex-wrap">
+                <div class="w-5 h-5 bg-Pink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Red rounded-sm"></div>
+                <div class="w-5 h-5 bg-Green rounded-sm"></div>
+                <div class="w-5 h-5 bg-Gray rounded-sm"></div>
+                <div class="w-5 h-5 bg-white rounded-sm"></div>
+                <div class="w-5 h-5 bg-LightSlateBlue rounded-sm"></div>
+                <div class="w-5 h-5 bg-lightPink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Yello rounded-sm"></div>
+                <div class="w-5 h-5 bg-Blue rounded-sm"></div>
+                <div class="w-5 h-5 bg-Pink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Red rounded-sm"></div>
+                <div class="w-5 h-5 bg-Green rounded-sm"></div>
+                <div class="w-5 h-5 bg-Gray rounded-sm"></div>
+                <div class="w-5 h-5 bg-white rounded-sm"></div>
+                <div class="w-5 h-5 bg-LightSlateBlue rounded-sm"></div>
+                <div class="w-5 h-5 bg-lightPink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Yello rounded-sm"></div>
+                <div class="w-5 h-5 bg-Blue rounded-sm"></div>
+            </div>
+
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Header
+            </label>
+
+            <div class="my-5 flex gap-5 flex-wrap">
+                <div class="w-5 h-5 bg-Pink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Red rounded-sm"></div>
+                <div class="w-5 h-5 bg-Green rounded-sm"></div>
+                <div class="w-5 h-5 bg-Gray rounded-sm"></div>
+                <div class="w-5 h-5 bg-white rounded-sm"></div>
+                <div class="w-5 h-5 bg-LightSlateBlue rounded-sm"></div>
+                <div class="w-5 h-5 bg-lightPink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Yello rounded-sm"></div>
+                <div class="w-5 h-5 bg-Blue rounded-sm"></div>
+                <div class="w-5 h-5 bg-Pink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Red rounded-sm"></div>
+                <div class="w-5 h-5 bg-Green rounded-sm"></div>
+                <div class="w-5 h-5 bg-Gray rounded-sm"></div>
+                <div class="w-5 h-5 bg-white rounded-sm"></div>
+                <div class="w-5 h-5 bg-LightSlateBlue rounded-sm"></div>
+                <div class="w-5 h-5 bg-lightPink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Yello rounded-sm"></div>
+                <div class="w-5 h-5 bg-Blue rounded-sm"></div>
+            </div>
+
+
+        </div>
+        <div class="w-full  px-3 mb-6 md:mb-0">
+            <label class="block text-lg  tracking-wide  font-bold mb-2" for="grid-first-name ">
+                Sidebar
+            </label>
+
+            <div class="my-5 flex gap-5 flex-wrap">
+                <div class="w-5 h-5 bg-Pink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Red rounded-sm"></div>
+                <div class="w-5 h-5 bg-Green rounded-sm"></div>
+                <div class="w-5 h-5 bg-Gray rounded-sm"></div>
+                <div class="w-5 h-5 bg-white rounded-sm"></div>
+                <div class="w-5 h-5 bg-LightSlateBlue rounded-sm"></div>
+                <div class="w-5 h-5 bg-lightPink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Yello rounded-sm"></div>
+                <div class="w-5 h-5 bg-Blue rounded-sm"></div>
+                <div class="w-5 h-5 bg-Pink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Red rounded-sm"></div>
+                <div class="w-5 h-5 bg-Green rounded-sm"></div>
+                <div class="w-5 h-5 bg-Gray rounded-sm"></div>
+                <div class="w-5 h-5 bg-white rounded-sm"></div>
+                <div class="w-5 h-5 bg-LightSlateBlue rounded-sm"></div>
+                <div class="w-5 h-5 bg-lightPink rounded-sm"></div>
+                <div class="w-5 h-5 bg-Yello rounded-sm"></div>
+                <div class="w-5 h-5 bg-Blue rounded-sm"></div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+<!-- setting Rigt side drower  -->

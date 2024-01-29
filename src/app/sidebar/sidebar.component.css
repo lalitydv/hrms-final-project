@@ -1,0 +1,38 @@
+/* sidebar.component.css */
+
+.sidenav-container {
+  height: 100%;
+  background-color: #fff;
+}
+
+.sidenav {
+  width: 250px;
+  box-shadow: 5px 5px 5px rgba(231, 239, 253, 0.5);
+  background-color: #fff;
+  position: fixed;
+}
+
+.mat-sidenav-content {
+  /* padding: 16px; */
+}
+
+/* Add additional styles based on your requirements */
+.mat-toolbar {
+  background-color: white !important;
+  /* position: fixed !important; */
+  top: 0;
+  z-index: 1;
+  /* width: 100vw; */
+  padding: 0px 20px 0px 20px !important;
+  margin-bottom: 10px;
+}
+
+.sidenav::after {
+  width: 100px !important;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  padding: 0 5px !important ;
+}
+

@@ -1,0 +1,35 @@
+<div class="forgot-main" fxLayout="column">
+    <div class="forgot-main-header">
+        <img src="assets/icons/ShinecoderLogo.png" />
+    </div>
+    <div class="forgot-main-inner" fxLayout="row" fxFlex="grow">
+        <div fxFlex class="forgot-main-inner-left lg:block hidden">
+            <img src="assets/icons/forgot.svg" width="100%" height="100%" class="lg:block hidden" />
+
+
+        </div>
+        <div fxFlex class="forgot-main-inner-right my-5">
+            <div class="forgot-main-inner-right-login">
+                Forgot Password?
+            </div>
+            <div fxLayout="column" class="login-main" fxLayoutAlign="center center">
+                <div class="login-main-admin">enter the email address associated with your account. we’ll send you
+                    instructions to reset your password.</div>
+                <div class="login-main-field" [style.marginTop]="'10px'">
+                    <label class="custom-label">Email<em>*</em></label>
+                    <mat-form-field placeholder="Enter email address" appearance="outline" [floatLabel]="'always'">
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+
+                <div class="login-main-sign cursor-pointer" fxLayoutAlign="center center" (click)="continue()">
+                    <div class="login-main-sign-text">
+                        Continue
+                    </div>
+
+                </div>
+                <div class="login-main-dont">Dont have an account <span>sign up</span></div>
+            </div>
+        </div>
+    </div>
+</div>
