@@ -1,3 +1,116 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.chart {
+  width: 70%;
+}
+
+.test-margin {
+  margin-left: 0px !important;
+  /* padding: 20px; */
+  /* width: 100vw !important; */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+body {
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-dialog-container {
+  padding: 2px !important;
+  border-radius: 20px !important;
+}
+/* .bg-gray-900\/50 {
+  background-color: none !important;
+} */
+/* .z-30 {
+  z-index: 0 !important;
+}
+
+.inset-0 {
+  inset: 0px !important;
+} */
+th.mat-header-cell {
+  text-align: center !important;
+}
+
+mat-form-field {
+  height: 45px !important;
+}
+.mat-mdc-form-field-infix {
+  min-height: 30px;
+}
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+  padding: 10px 0px;
+}
+.mat-elevation-z8 {
+  border-radius: 10px !important;
+  padding: 20px;
+}
+
+/* tables Setting  */
+mat-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center !important;
+}
+
+.tablestart {
+  border-radius: 20px !important;
+}
+
+th,
+td {
+  border: 1px solid #ddd; /* Add a 1px solid border to each table cell */
+  padding: 8px; /* Add some padding to improve the spacing */
+  text-align: left; /* Adjust text alignment as needed */
+}
+th,
+td:hover {
+  background-color: #f8f8f8 !important;
+}
+
+th {
+  background-color: #f8f8f8 !important; /* Add a background color to the table header */
+}
+
+.custom-row:hover {
+  background-color: #f8f8f8 !important;
+}
+.mat-mdc-table .mat-mdc-header-cell {
+  text-align: center !important;
+  font-weight: bold !important;
+}
+.mdc-data-table__cell,
+.mdc-data-table__header-cell {
+  text-align: center !important;
+}

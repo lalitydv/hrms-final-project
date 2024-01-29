@@ -14,7 +14,7 @@ constructor(private router: Router){}
     this.router.navigate(['dashbord']);
   }
   gotoForgot(){
-    this.router.navigate(['login/forgot']);
+    this.router.navigate(['forgot']);
 
   }
 }

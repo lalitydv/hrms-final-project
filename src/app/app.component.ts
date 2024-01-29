@@ -10,7 +10,7 @@ import { filter } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Hrms';
+  title = 'my-app';
   ngOnInit(): void {
     initFlowbite();
   }
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   .subscribe((event: any) => {
     const currentURL = event.url;
     console.log(currentURL);
-    if (currentURL === '/login' || currentURL === '/forgot' || currentURL === '/new') {
+    if (currentURL === '/' || currentURL === '/forgot' || currentURL === '/new') {
       this.isLoginView = true;
     } else {
       this.isLoginView = false;

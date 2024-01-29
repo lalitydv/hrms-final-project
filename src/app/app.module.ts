@@ -55,6 +55,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginModule } from './login/login.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,6 +109,7 @@ MatAutocompleteModule,
     MatDialogModule,
     MatSnackBarModule,
     MatTooltipModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

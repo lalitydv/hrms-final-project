@@ -8,7 +8,8 @@ const routes: Routes = [
     component: DashboardComponent
     
   },
-  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)},
+  { path: '', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)},
+  { path: 'setting', loadChildren: () => import('./setting/setting.module').then(m => m.SettingModule)},
 ];
 
 @NgModule({

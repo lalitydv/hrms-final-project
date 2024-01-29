@@ -1,1 +1,259 @@
-<p>dashboard works!</p>
+<!-- card start  -->
+
+<div class="text-3xl font-bold ">
+    Overview
+</div>
+<div class="grid grid-cols-1 gap-4 px-4 mt-8 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2  sm:px-8">
+    <div class="flex items-center bg-white border-0 rounded-2xl overflow-hidden shadow-2xl p-2">
+
+        <div class=" rounded-full flex justify-center items-center">
+            <img src="assets/Dashboard/Group 338964.png" alt="" class="p-1 w-20 h-20 object-cover">
+        </div>
+        <div class="px-1 text-gray-700 text-end items-end flex flex-col justify-end">
+            <h3 class="text-sm tracking-wider whitespace-nowrap  font-bold">Active Employee</h3>
+            <p class="text-xl text-end rounded-full p-1  font-bold bg-lightPink w-fit">56</p>
+        </div>
+    </div>
+    <div class="flex items-center bg-white border-0 rounded-2xl overflow-hidden shadow-2xl p-2">
+        <div class=" rounded-full flex justify-center items-center">
+            <img src="assets/Dashboard/Group 338961.png" alt="" class=" p-1 w-20 h-20 object-cover">
+        </div>
+        <div class="px-1 text-gray-700 text-end items-end flex flex-col justify-end">
+            <h3 class="text-sm tracking-wider whitespace-nowrap  font-bold">Present Employee</h3>
+            <p class="text-xl text-end rounded-full p-1  font-bold bg-lightPink w-fit">5</p>
+        </div>
+    </div>
+    <div class="flex items-center bg-white border-0 rounded-2xl overflow-hidden shadow-2xl p-2">
+        <div class=" rounded-full flex justify-center items-center">
+
+            <img src="assets/Dashboard/Group 338961.png" alt="" class=" p-1 w-20 h-20  object-cover">
+
+        </div>
+        <div class="px-1 text-gray-700 text-end items-end flex flex-col justify-end">
+            <h3 class="text-sm tracking-wider whitespace-nowrap  font-bold">Absent Employee</h3>
+            <p class="text-xl text-end rounded-full p-1  font-bold bg-lightPink w-fit">5</p>
+        </div>
+    </div>
+    <div class="flex items-center bg-white border-0 rounded-2xl overflow-hidden shadow-2xl p-2">
+        <div class=" rounded-full flex justify-center items-center">
+            <img src="assets/Dashboard/Ellipse 458.png" alt="" class=" p-1 w-20 h-20 object-cover">
+
+
+        </div>
+        <div class="px-1 text-gray-700 text-end items-end flex flex-col justify-end">
+            <h3 class="text-sm tracking-wider  font-bold">Today Employee on Leave</h3>
+            <p class="text-xl text-end rounded-full p-1  font-bold bg-lightPink w-fit">5</p>
+        </div>
+    </div>
+    <div class="flex items-center bg-white border-0 rounded-2xl overflow-hidden shadow-2xl p-2">
+        <div class=" rounded-full flex justify-center items-center">
+            <img src="assets/Dashboard/Ellipse 458 (1).png" alt="" class=" p-1 w-20 h-20 object-cover">
+
+
+        </div>
+        <div class="px-1 text-gray-700 text-end items-end flex flex-col justify-end">
+            <h3 class="text-sm tracking-wider whitespace-nowrap font-bold">Today Interview</h3>
+            <p class="text-xl text-end rounded-full p-1  font-bold bg-lightPink w-fit">5</p>
+        </div>
+    </div>
+    <div class="flex items-center bg-white border-0 rounded-2xl overflow-hidden shadow-2xl p-2">
+        <div class=" rounded-full flex justify-center items-center">
+            <img src="assets/Dashboard/Ellipse 458 (2).png" alt="" class=" p-1 w-20 h-20 object-cover">
+
+
+        </div>
+        <div class="px-1 text-gray-700 text-end items-end flex flex-col justify-end">
+            <h3 class="text-sm tracking-wider whitespace-nowrap  font-bold">Birthday Update</h3>
+            <p class="text-xl text-end rounded-full p-1  font-bold bg-lightPink w-fit">5</p>
+        </div>
+    </div>
+    <div class="flex items-center bg-white border-0 rounded-2xl overflow-hidden shadow-2xl p-2">
+        <div class=" rounded-full flex justify-center items-center">
+            <img src="assets/Dashboard/Group 338965.png" alt="" class=" p-1 w-20 h-20 object-cover">
+
+
+        </div>
+        <div class="px-1 text-gray-700 text-end items-end flex flex-col justify-end">
+            <h3 class="text-sm tracking-wider whitespace-nowrap  font-bold">Biometric Devices</h3>
+            <p class="text-xl text-end rounded-full p-1  font-bold bg-lightPink w-fit">5</p>
+        </div>
+    </div>
+    <div class="flex items-center bg-white border-0 rounded-2xl overflow-hidden shadow-2xl p-2">
+        <div class=" rounded-full flex justify-center items-center">
+            <img src="assets/Dashboard/Group 338964 (1).png" alt="" class=" p-1 w-20 h-20 object-cover">
+        </div>
+        <div class="px-1 text-gray-700 text-end items-end flex flex-col justify-end">
+            <h3 class="text-sm tracking-wider   font-bold">Employee Attendence</h3>
+            <p class="text-xl text-end rounded-full p-1  font-bold bg-lightPink w-fit">5</p>
+        </div>
+    </div>
+</div>
+<!-- Graph  -->
+<div>
+    <div class="text-3xl font-bold my-10 ">
+        Salary Chart
+    </div>
+
+    <div>
+        <canvasjs-chart [options]="chartOptions" class="w-[100%] overflow-x-scroll"></canvasjs-chart>
+    </div>
+
+
+</div>
+
+<!-- graph 2  -->
+<div>
+
+    <div class="text-3xl font-bold my-10 ">
+        Department Chart
+    </div>
+    <div>
+        <canvasjs-chart [options]="chartOptions2" class="w-full"></canvasjs-chart>
+    </div>
+</div>
+<div class="grid xl:grid-cols-2 gap-4 grid-cols-1 my-5">
+    <div>
+
+        <div class="text-3xl font-bold my-10 ">
+            Upcoming Holidays
+        </div>
+        <div class=" bg-white shadow-2xl p-5 rounded-2xl">
+            <table class="border-2  w-full  ">
+                <thead>
+                    <tr class="border-2 bg-lightPink">
+                        <th class="border-2">Holidays</th>
+                        <th class="border-2">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border-2">
+                            Sunday
+                        </td>
+                        <td class="border-2">
+                            29/03/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-2">
+                            Sunday
+                        </td>
+                        <td class="border-2">
+                            29/03/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-2">
+                            Sunday
+                        </td>
+                        <td class="border-2">
+                            29/03/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-2">
+                            Sunday
+                        </td>
+                        <td class="border-2">
+                            29/03/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-2">
+                            Sunday
+                        </td>
+                        <td class="border-2">
+                            29/03/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-2">
+                            Sunday
+                        </td>
+                        <td class="border-2">
+                            29/03/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-2">
+                            Sunday
+                        </td>
+                        <td class="border-2">
+                            29/03/2001
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-2">
+                            Sunday
+                        </td>
+                        <td class="border-2">
+                            29/03/2001
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <div class="text-3xl font-bold my-10 ">
+            Employee By Department
+        </div>
+        <div class="bg-white shadow-2xl p-5 rounded-2xl">
+            <div>
+                <canvasjs-chart [options]="chartOptions3" class="w-full"></canvasjs-chart>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="my-10">
+    <div class="text-3xl font-bold my-10 ">
+        Upcoming Birthdays
+    </div>
+    <div class=" bg-white shadow-2xl p-5 rounded-2xl ">
+        <table class="border-2  w-full ">
+            <thead>
+                <tr class="border-2 bg-lightPink">
+                    <th class="border-2">Name</th>
+                    <th class="border-2">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border-2">
+                        Muhammad Taha
+                    </td>
+                    <td class="border-2">
+                        29/03/2001
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border-2">
+                        Muhammad Taha
+                    </td>
+                    <td class="border-2">
+                        29/03/2001
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border-2">
+                        Muhammad Taha
+                    </td>
+                    <td class="border-2">
+                        29/03/2001
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border-2">
+                        Muhammad Taha
+                    </td>
+                    <td class="border-2">
+                        29/03/2001
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

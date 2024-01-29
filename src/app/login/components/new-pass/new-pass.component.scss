@@ -14,7 +14,7 @@
                 font-size: 40px;
     font-weight: 500;
     margin-top: 10px;
-    color: #8A2080;
+    color: #FF3389;
     min-height: 57px;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@
 .login-main{
     // width: 723px;
     min-height: 500px;
-    border: 8px solid #8a2080;
+    border: 8px solid #FF3389;
     border-radius: 9px;
     background-color: #fffdfd;
     border-top-width: 20px;
@@ -42,7 +42,7 @@
         font-size: 40px;
         font-weight: 500;
         margin-top: 10px;
-        color: #8A2080;
+        color: #FF3389;
     }
     &-admin{
         color: #343A40;
@@ -51,7 +51,7 @@
         width: 85%;
         line-height: 30px;
         span{
-            color: #8A2080; 
+            color: #FF3389; 
         }
     }
     &-dont{
@@ -62,7 +62,7 @@
         line-height: 30px;
         text-align: center;
         span{
-            color: #8A2080; 
+            color: #FF3389; 
         }
     }
     &-remind{
@@ -70,7 +70,7 @@
         min-height: 50px;
         &-forgot{
             font-size: 18px;
-            color: #8A2080;
+            color: #FF3389;
         }
         &-captcha{
             width: 350px;
@@ -86,7 +86,7 @@
         }
     }
     &-sign{
-        background-color: #8A2080;
+        background-color: #FF3389;
         width: 80%;
         height: 50px;
         margin-top: 25px;
