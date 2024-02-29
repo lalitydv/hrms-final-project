@@ -1,0 +1,43 @@
+<div class="bg-white rounded-2xl">
+    <div class="bg-lightPink py-2 ">
+        <div class="flex justify-between mx-5">
+            <div class="font-bold text-lg">
+                Bulk Import Payroll Master
+            </div>
+            <div mat-dialog-close class="border-2 rounded-full border-Pink w-7 h-7 flex justify-center text-center ">
+                <i class="fa-solid fa-xmark text-Pink text-xl"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-5">
+
+
+        <div class="w-full">
+            <mat-label>Select File</mat-label>
+
+            <form action="#"
+                class="relative border-2 px-20 border-dotted max-w-xs mb-10 bg-white bg-gray-100 rounded-lg shadow-inner">
+                <input type="file" id="file-upload" class="hidden" />
+                <label for="file-upload"
+                    class="z-20 flex flex-col-reverse items-center justify-center w-full h-full cursor-pointer">
+                    <p
+                        class="z-10 text-lg font-light whitespace-nowrap text-center text-Pink border-2 border-Pink p-5 rounded-xl">
+                        browse images
+                    </p>
+                    <img src="https://toppng.com/uploads/preview/file-upload-image-icon-115632290507ftgixivqp.png"
+                        alt="" class="w-36 h-36 my-5" />
+                </label>
+            </form>
+        </div>
+
+
+        <div class="flex gap-5 ">
+            <button type="button" mat-dialog-close
+                class="bg-Gray text-White p-2 px-2 rounded-md border-0 outline-none">Upload</button>
+            <button type="button" mat-dialog-close
+                class="bg-Green text-White p-2 px-4 rounded-md border-0 outline-none">Download Excel Format</button>
+
+        </div>
+    </div>
+</div>

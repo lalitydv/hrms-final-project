@@ -57,9 +57,49 @@
                             </button>
                             <ul *ngIf="isDropdownOpen('Payroll')" class="py-2 space-y-2">
                                 <li>
-                                    <a routerLink="/Payroll"
+                                    <a routerLink="payroll-master/all-employees"
                                         class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Payroll Master
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> All Employees
+                                        <hr>
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+
+                                </li>
+                                <li>
+                                    <a routerLink="payroll-master/payslip"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Payslip
+                                        <hr>
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+
+                                </li>
+                                <li>
+                                    <a routerLink="payroll-master/configuration"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Configuration
+                                        <hr>
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+
+                                </li>
+                                <li>
+                                    <a routerLink="payroll-master/bouns-setting"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Bonus Setting
+                                        <hr>
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+
+                                </li>
+                                <li>
+                                    <a routerLink="payroll-master/payroll-reporting"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Payroll Reporting
                                         <hr>
                                     </a>
                                     <mat-divider>
@@ -72,7 +112,7 @@
                         <!-- Payroll Master -->
                         <!-- MIS  -->
                         <li>
-                            <a routerLink="/"
+                            <a routerLink="/MIS-reports/reports"
                                 class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group">
 
                                 <mat-icon>M</mat-icon>
@@ -127,16 +167,99 @@
                                 </svg>
                             </button>
                             <ul *ngIf="isDropdownOpen('Company')" class="py-2 space-y-2">
+
+
+
+
                                 <li>
-                                    <a routerLink="/Company"
+                                    <a routerLink="/company-master/company"
                                         class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Company Master
-                                        <hr>
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Company
+
                                     </a>
-                                    <mat-divider>
-                                    </mat-divider>
+
+
+
 
                                 </li>
+                                <mat-divider>
+                                </mat-divider>
+                                <li>
+                                    <a routerLink="/company-master/category"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Category
+
+                                    </a>
+                                </li>
+                                <mat-divider>
+                                </mat-divider>
+                                <li>
+                                    <a routerLink="/company-master/division"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Division
+
+                                    </a>
+                                </li>
+                                <mat-divider>
+                                </mat-divider>
+                                <li>
+                                    <a routerLink="/company-master/sub-division"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Sub Division
+
+                                    </a>
+                                </li>
+                                <mat-divider>
+                                </mat-divider>
+                                <li>
+                                    <a routerLink="/company-master/department"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Department
+
+                                    </a>
+                                </li>
+                                <mat-divider>
+                                </mat-divider>
+                                <li>
+                                    <a routerLink="/company-master/sub-department"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Sub Department
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a routerLink="/company-master/cadre"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Cadre
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a routerLink="/company-master/designation"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Designation
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a routerLink="/company-master/cost-centre"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Cost Centre
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a routerLink="/company-master/location"
+                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
+                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Location
+
+                                    </a>
+                                </li>
+
+
+
+
+
 
                             </ul>
                         </li>

@@ -1,0 +1,135 @@
+<section class="my-5">
+    <!-- Heading  -->
+    <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1  ">
+                <img src="assets/Dashboard/image 78.png" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
+            </div>
+            <div class="text-3xl font-bold ">{{Heading}}</div>
+        </div>
+        <div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+    <!-- Hedding  -->
+
+
+    <!-- Select Box  -->
+
+
+    <div class="bg-white  shadow-2xl rounded-2xl   my-5 p-5">
+        <mat-accordion class="mx-4 select-dropdown-box">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="w-full ">
+
+                <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                    <mat-panel-title class="font-medium text-xl ">
+                        Add Designation
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="bg-Lighitblue w-full pt-4 px-8">
+
+                    <div class="mx-auto grid md:grid-cols-3 grid-cols-1 gap-5">
+
+                        <div class="w-full">
+                            <mat-label>Designation</mat-label>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="Designation" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+        <div class="flex items-center gap-5 my-5">
+            <button type="submit"
+                class="text-white bg-Yello hover:bg-Yello focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                Save <i class="fa-solid fa-plus border-2 rounded-full p-0.5"></i>
+            </button>
+            <button type="submit"
+                class="text-white bg-Green hover:bg-Green focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                Save Changes
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- Select Box  -->
+    <!-- table start  -->
+
+    <div class="overflow-auto my-5">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 text-center">
+            <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+            <!-- Position Column -->
+
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink">S.no.</th>
+                <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+            </ng-container>
+            <!-- Designation Column -->
+            <ng-container matColumnDef="Designation" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    Designation
+                </th>
+                <td mat-cell *matCellDef="let element">{{ element.Designation }}</td>
+            </ng-container>
+
+            <!-- Year Column -->
+            <ng-container matColumnDef="Year">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    Year
+                </th>
+                <td mat-cell *matCellDef="let element">{{ element.Year }}</td>
+            </ng-container>
+
+
+
+
+
+            <!-- Action Column -->
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    Actions
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="flex gap-5 justify-center">
+
+                        <span (click)="openDialog()"
+                            class="border-2 p-1 flex w-fit cursor-pointer rounded-lg text-center border-Red text-Red">
+                            <mat-icon>delete</mat-icon>
+                        </span>
+                    </span>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+    </div>
+
+    <!-- table End  -->
+
+
+
+
+</section>

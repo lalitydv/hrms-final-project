@@ -1,0 +1,462 @@
+<section class="my-5">
+    <!-- Heading  -->
+    <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1  ">
+                <img src="assets/Dashboard/image 78.png" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
+            </div>
+            <div class="text-3xl font-bold ">{{Heading}}</div>
+        </div>
+        <div>
+        </div>
+    </div>
+    <!-- Hedding  -->
+
+
+
+
+    <!-- Tab Div start -->
+    <div class="service-tab my-4">
+        <mat-tab-group class="p-4 border-b-2 border-gray-1 flex gap-10" mat-stretch-tabs="false"
+            animationDuration="0ms">
+            <!-- Daily -->
+            <mat-tab label="Daily" class="py-5 bg-Blue">
+                <div class="bg-white  shadow-2xl rounded-2xl bg-Blue   my-5 p-5">
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel (opened)="panelOpenState = false" (closed)="panelOpenState = false"
+                            class="w-full ">
+
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                                <mat-panel-title class="font-medium text-xl ">
+                                    Daily Report <span class="flex gap-4 mx-5">
+                                        <i
+                                            class="fa-solid fa-file-excel text-xl text-white border-0 p-1 bg-Green rounded-md"></i>
+
+                                        <i
+                                            class="fa-solid fa-file-pdf text-xl text-white border-0 p-1 bg-Red rounded-md"></i>
+                                        <i
+                                            class="fa-solid fa-print text-xl text-white border-0 p-1 bg-Yello rounded-md"></i>
+
+                                    </span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="bg-Lighitblue w-full pt-4 ">
+
+                                <div class="mx-auto grid md:grid-cols-3 grid-cols-1 gap-5">
+
+                                    <div class="w-full">
+                                        <mat-label>Company</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Company">Company</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Department</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Department">Department</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Sub Department</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Sub Department">Sub Department</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Category</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Category">Category</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Location</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Location">Location</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Date</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <input matInput type="date" placeholder="Enter date">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Report Type</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Report Type">Report Type</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+
+
+
+
+
+
+
+                                </div>
+                                <div class="flex items-center gap-5 my-5">
+                                    <button type="submit"
+                                        class="text-white bg-Blue hover:bg-Blue focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                                        Generate
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+
+
+
+                </div>
+            </mat-tab>
+            <!--  Monthly -->
+            <mat-tab label=" Monthly">
+                <div class="bg-white  shadow-2xl rounded-2xl   my-5 p-5">
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel (opened)="panelOpenState = false" (closed)="panelOpenState = false"
+                            class="w-full ">
+
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                                <mat-panel-title class="font-medium text-xl ">
+                                    Monthly Report <span class="flex gap-4 mx-5">
+                                        <i
+                                            class="fa-solid fa-file-excel text-xl text-white border-0 p-1 bg-Green rounded-md"></i>
+
+                                        <i
+                                            class="fa-solid fa-file-pdf text-xl text-white border-0 p-1 bg-Red rounded-md"></i>
+                                        <i
+                                            class="fa-solid fa-print text-xl text-white border-0 p-1 bg-Yello rounded-md"></i>
+
+                                    </span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="bg-Lighitblue w-full pt-4 ">
+
+                                <div class="mx-auto grid md:grid-cols-3 grid-cols-1 gap-5">
+
+                                    <div class="w-full">
+                                        <mat-label>Company</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Company">Company</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Department</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Department">Department</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Sub Department</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Sub Department">Sub Department</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Category</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Category">Category</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Location</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Location">Location</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Month</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Month">Month</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Year</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'2024-2025'">
+                                                <mat-option value="2024-2025">2024-2025</mat-option>
+                                                <mat-option value="Month">Month</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+                                    <div class="w-full">
+                                        <mat-label>Report Type</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Report Type">Report Type</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+
+
+
+
+
+
+
+                                </div>
+                                <div class="flex items-center gap-5 my-5">
+                                    <button type="submit"
+                                        class="text-white bg-Blue hover:bg-Blue focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                                        Generate
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+
+
+
+                </div>
+            </mat-tab>
+            <!-- Yearly -->
+            <mat-tab label="Yearly">
+                <div class="bg-white  shadow-2xl rounded-2xl   my-5 p-5">
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel (opened)="panelOpenState = false" (closed)="panelOpenState = false"
+                            class="w-full ">
+
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                                <mat-panel-title class="font-medium text-xl ">
+                                    Yearly Report <span class="flex gap-4 mx-5">
+                                        <i
+                                            class="fa-solid fa-file-excel text-xl text-white border-0 p-1 bg-Green rounded-md"></i>
+
+                                        <i
+                                            class="fa-solid fa-file-pdf text-xl text-white border-0 p-1 bg-Red rounded-md"></i>
+                                        <i
+                                            class="fa-solid fa-print text-xl text-white border-0 p-1 bg-Yello rounded-md"></i>
+
+                                    </span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="bg-Lighitblue w-full pt-4 ">
+
+                                <div class="mx-auto grid md:grid-cols-3 grid-cols-1 gap-5">
+
+                                    <div class="w-full">
+                                        <mat-label>Company</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Company">Company</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Department</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Department">Department</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Sub Department</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Sub Department">Sub Department</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Category</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Category">Category</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Location</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Location">Location</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Report Type</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Report Type">Report Type</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                                <div class="mx-auto grid md:grid-cols-6 grid-cols-1 gap-5">
+                                    <div class="w-full">
+                                        <mat-label>Month</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Month">Month</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Year</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'2024-2025'">
+                                                <mat-option value="2024-2025">2024-2025</mat-option>
+                                                <mat-option value="Month">Month</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full ">
+                                        <mat-divider></mat-divider>
+                                    </div>
+
+
+                                    <div class="w-full">
+                                        <mat-divider></mat-divider>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Month</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'--Select--'">
+                                                <mat-option value="--Select--">--Select--</mat-option>
+                                                <mat-option value="Month">Month</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="w-full">
+                                        <mat-label>Year</mat-label>
+                                        <mat-form-field class="w-full my-2" appearance="outline">
+                                            <mat-select [value]="'2024-2025'">
+                                                <mat-option value="2024-2025">2024-2025</mat-option>
+                                                <mat-option value="Month">Month</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+                                </div>
+                                <div class="flex items-center gap-5 my-5">
+                                    <button type="submit"
+                                        class="text-white bg-Blue hover:bg-Blue focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                                        Generate
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+
+
+
+                </div>
+            </mat-tab>
+            <!-- Import Daily Production -->
+            <mat-tab label="Import Daily Production" class="bg-Blue border-2">
+                <div class="bg-white  shadow-2xl rounded-2xl   my-5 p-5">
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel (opened)="panelOpenState = false" (closed)="panelOpenState = false"
+                            class="w-full ">
+
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                                <mat-panel-title class="font-medium text-xl ">
+                                    Import Daily Production Report
+
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="bg-Lighitblue w-full pt-4 ">
+
+                                <div class="w-full">
+                                    <mat-label>Select File</mat-label>
+                                    <form action="#"
+                                        class="relative border-2 px-20 border-dotted max-w-xs mb-10 bg-white bg-gray-100 rounded-lg shadow-inner">
+                                        <input type="file" id="file-upload" class="hidden" />
+                                        <label for="file-upload"
+                                            class="z-20 flex flex-col-reverse items-center justify-center w-full h-full cursor-pointer">
+                                            <p
+                                                class="z-10 text-lg font-light whitespace-nowrap text-center text-Pink border-2 border-Pink p-5 rounded-xl">
+                                                browse images
+                                            </p>
+                                            <img src="https://toppng.com/uploads/preview/file-upload-image-icon-115632290507ftgixivqp.png"
+                                                alt="" class="w-36 h-36 my-5" />
+                                        </label>
+                                    </form>
+                                </div>
+                                <div class="flex items-center gap-5 my-5">
+                                    <button type="submit"
+                                        class="text-white bg-Green hover:bg-Green focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                                        Bulk Add
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+
+
+
+                </div>
+            </mat-tab>
+
+        </mat-tab-group>
+    </div>
+</section>

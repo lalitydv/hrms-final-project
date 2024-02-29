@@ -1,1 +1,56 @@
-<p>financial-add works!</p>
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
+        <div class="flex items-center mx-5 gap-5">
+
+
+            <div class="shadow-2xl bg-white rounded-full p-1  ">
+                <img src="assets/Dashboard/image 78.png" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
+            </div>
+
+            <div class="text-3xl font-bold ">Save Financial Year</div>
+        </div>
+
+    </div>
+
+    <!-- main contenet  -->
+    <div class="bg-white  shadow-2xl   my-5 p-5">
+        <div class="flex gap-2 items-center justify-between">
+            <div class="text-2xl font-bold flex flex-wrap gap-2">
+                <span>Save </span>
+                <span class="text-Pink">{{tableheading}}</span>
+            </div>
+        </div>
+        <div class="mx-auto grid md:grid-cols-2 grid-cols-1 gap-5 my-5">
+            <div class="w-full">
+                <mat-label>Year <em class="text-Red">*</em></mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <mat-select [value]="'--Select--'">
+                        <mat-option value="--Select--">--Select--</mat-option>
+                        <mat-option value="2023">2023</mat-option>
+                        <mat-option value="2024">2024</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-label class="my-5">Financial Year : </mat-label>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="flex items-center gap-5 my-5">
+            <button type="submit"
+                class="text-white bg-Green hover:bg-Green focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                Save
+            </button>
+            <button type="submit"
+                class="text-white bg-Red hover:bg-Red focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                cancel
+            </button>
+        </div>
+    </div>
+    <!-- main contenet  -->
+
+
+</section>

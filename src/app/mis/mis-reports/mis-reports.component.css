@@ -1,0 +1,6 @@
+.mat-mdc-tab.mdc-tab {
+  flex-grow: 0 !important;
+  border: 2px solid !important;
+  background-color: blue !important;
+  border-radius:  3px !important;
+}

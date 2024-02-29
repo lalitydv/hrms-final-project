@@ -1,5 +1,9 @@
-.tablfiltericon {
-    height: 20px !important;
-    width: 15px !important;
-  }
-  
+mat-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.table-container {
+  border-radius: 50px !important;
+}

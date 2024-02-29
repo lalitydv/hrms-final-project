@@ -1,0 +1,351 @@
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1  ">
+                <img src="{{FirstIcons}}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
+            </div>
+            <div class="text-3xl font-bold ">{{HearderHeding}}</div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Hedding  -->
+
+
+
+    <!-- Select Box  -->
+
+
+    <div class="   my-5 p-5">
+        <div class="flex flex-wrap gap-5">
+            <div>
+                <div class="w-full">
+                    <button type="submit"
+                        class="text-white bg-Pink hover:bg-Pink focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center flex items-center gap-2">
+
+                        <mat-icon class="mat-18"> task</mat-icon>
+
+                        <span>
+
+                            Master Report
+                        </span>
+
+
+                    </button>
+                </div>
+            </div>
+            <div>
+                <label for="search"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="search" id="search" class="block w-full lg:w-96 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                 focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                  dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="Search" required>
+                    <button type="submit" class="text-white absolute right-0 bottom-0 top-0 bg-lightBlue hover:bg-lightBlue focus:ring-4 
+                focus:outline-none focus:ring-lightBlue font-medium rounded-lg text-sm px-5 py-4 dark:bg-lightBlue
+                 dark:hover:bg-lightBlue dark:focus:ring-blue-800">Search</button>
+                </div>
+            </div>
+        </div>
+        <mat-accordion class="mx-4 select-dropdown-box">
+            <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+                <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                    <mat-panel-title class="font-medium text-xl ">
+                        Employee list
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="bg-Lighitblue w-full pt-4 px-8">
+
+                    <div class="mx-auto grid xl:grid-cols-6 md:grid-cols-4 justify-between grid-cols-1 gap-5">
+
+                        <div class="w-full">
+                            <mat-label>User Id</mat-label>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                        <div class="w-full">
+                            <mat-label>Company</mat-label>
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <mat-select [value]="'--All Selected--'">
+                                    <mat-option value="--All Selected--">--All Selected--</mat-option>
+                                    <mat-option value="Company">Company</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="w-full">
+                            <mat-label>Department</mat-label>
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <mat-select [value]="'--All Selected--'">
+                                    <mat-option value="--All Selected--">--All Selected--</mat-option>
+                                    <mat-option value="Department">Department</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="w-full">
+                            <mat-label>Category</mat-label>
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <mat-select [value]="'--All Selected--'">
+                                    <mat-option value="--All Selected--">--All Selected--</mat-option>
+                                    <mat-option value="Category">Category</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="w-full">
+                            <mat-label>Location</mat-label>
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <mat-select [value]="'--All Selected--'">
+                                    <mat-option value="--All Selected--">--All Selected--</mat-option>
+                                    <mat-option value="Location">Location</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="w-full">
+                            <mat-label class="invisible">Location</mat-label>
+                            <div class="w-full my-2">
+                                <button type="submit"
+                                    class="text-white bg-Pink hover:bg-Pink focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-10 py-2.5 text-center">
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+
+    <!-- Select Box  -->
+    <!-- table start  -->
+    <!-- dawnlod icons  -->
+    <div class="flex items-center flex-wrap gap-5">
+        <button class=" flex justify-center items-center bg-Gray text-white p-2 px-2 rounded-md gap-2 ">
+            <mat-icon class="mat-18">autorenew</mat-icon>
+            Refresh
+        </button>
+        <button class=" flex justify-center items-center bg-Red text-white p-2 px-2 rounded-md gap-2 ">
+            <mat-icon class="mat-18">download_2</mat-icon>
+            Filtered
+        </button>
+        <button class=" flex justify-center items-center bg-Green text-white p-2 px-2 rounded-md gap-2 ">
+            <mat-icon class="mat-18">download_2</mat-icon>
+            All
+        </button>
+
+        <button class=" flex justify-center items-center bg-Yello text-white p-2 px-2 rounded-md gap-2 ">
+            <mat-icon class="mat-18">print</mat-icon>
+            Print
+        </button>
+    </div>
+
+    <!-- dawnlod icons  -->
+
+
+    <div class="overflow-auto my-5">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 text-center">
+            <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+            <!-- Position Column -->
+
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink">S.no.
+
+
+                    <div class="relative invisible">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
+                            required>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+            </ng-container>
+            <!-- UserID Column -->
+            <ng-container matColumnDef="UserID" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    User ID
+
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
+                            required>
+                    </div>
+
+                </th>
+                <td mat-cell *matCellDef="let element">{{ element.UserID }}</td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="Name" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    Name
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="Name" id="Name" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="Name"
+                            required>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element">{{ element.Name }}</td>
+            </ng-container>
+            <!-- DOJ Column -->
+            <ng-container matColumnDef="DOJ" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    DOJ
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="DOJ" id="DOJ" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="DOJ"
+                            required>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element"> <span
+                        class="text-[#19AA00] border-2 border-[#19AA00] p-2 rounded-2xl">{{element.DOJ }}</span> </td>
+            </ng-container>
+            <!-- FHName Column -->
+            <ng-container matColumnDef="FHName" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    F./H. Name
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="FHName" id="FHName" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="FHName"
+                            required>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element">{{ element.FHName }}</td>
+            </ng-container>
+            <!-- Department Column -->
+            <ng-container matColumnDef="Department" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    Department
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="Department" id="Department" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
+                            placeholder="Department" required>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element">{{ element.Department }}</td>
+            </ng-container>
+            <!-- Designation Column -->
+            <ng-container matColumnDef="Designation" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    Designation
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="search" id="search" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
+                            placeholder="Designation" required>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element">{{ element.Designation }}</td>
+            </ng-container>
+            <!-- Full Info Column -->
+            <ng-container matColumnDef="FullInfo" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    Full Info
+                    <div class="relative invisible">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
+                            required>
+                    </div>
+                </th>
+                <td mat-cell *matCellDef="let element"> <span class="text-Blue border-2 border-Blue p-2 rounded-2xl">{{
+                        element.FullInfo }}</span> </td>
+            </ng-container>
+            <!-- SalaryColumn -->
+            <ng-container matColumnDef="Salary" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    Salary
+                    <div class="relative invisible">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
+                            required>
+                    </div>
+                <td mat-cell *matCellDef="let element"> <span class="text-Red border-2 border-Red p-2 rounded-2xl">{{
+                        element.Salary }}</span> </td>
+            </ng-container>
+            <!-- File vault Column -->
+            <ng-container matColumnDef="Filevault" class="">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
+                    File vault
+                    <div class="relative invisible">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg">search</mat-icon>
+                        </div>
+                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
+                            required>
+                    </div>
+                <td mat-cell *matCellDef="let element"> <span
+                        class="text-[#00BCF7] border-2 border-[#00BCF7] p-2 rounded-2xl">{{
+                        element.Filevault }}</span> </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+    </div>
+
+    <!-- table End  -->
+
+
+
+
+</section>

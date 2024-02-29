@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./financial-add.component.css']
 })
 export class FinancialAddComponent {
+  tableheading = 'Financial Year';
+ 
+ 
+  
 
 }

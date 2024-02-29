@@ -62,7 +62,12 @@ body {
 th.mat-header-cell {
   text-align: center !important;
 }
-
+mat-label {
+  font-weight: 500 !important;
+}
+.mat-expansion-panel-body {
+  padding: 0 0px 16px !important;
+}
 mat-form-field {
   height: 45px !important;
 }
@@ -93,6 +98,7 @@ td {
   border: 1px solid #ddd; /* Add a 1px solid border to each table cell */
   padding: 8px; /* Add some padding to improve the spacing */
   text-align: left; /* Adjust text alignment as needed */
+  white-space: nowrap; /*
 }
 th,
 td:hover {
@@ -113,4 +119,40 @@ th {
 .mdc-data-table__cell,
 .mdc-data-table__header-cell {
   text-align: center !important;
+}
+.mat-mdc-tab.mdc-tab {
+  flex-grow: 0 !important;
+  margin: 0px 10px !important;
+  border: 0px #1e50a0 solid !important;
+  border-radius: 20px !important;
+  color: #1e50a0 !important;
+  border: none;
+  outline: 0 !important;
+}
+.mat-mdc-tab.mdc-tab:hover {
+  background-color: #1e50a0;
+  color: #ffffff !important;
+}
+.mat-mdc-tab-label-container {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  z-index: 1;
+  background-color: white !important;
+  border-radius: 10px;
+  padding: 5px 0px;
+  outline: 0 !important;
+}
+.line {
+  background: #ff3389;
+  width: 90%;
+  height: 1px;
+  position: relative;
+}
+
+.line span {
+  color: #ff3389;
+  position: relative;
+  top: -7px;
+  left: -3px;
 }
