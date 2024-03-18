@@ -17,43 +17,40 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { ApplicationSettingComponent } from './application-setting/application-setting.component';
-import { AgentSettingComponent } from './agent-setting/agent-setting.component';
-import { ClientSettingComponent } from './client-setting/client-setting.component';
-import { AgentAutoAssignComponent } from './agent-auto-assign/agent-auto-assign.component';
-import { SelectTechnicianComponent } from './select-technician/select-technician.component';
-import { EmailSettingComponent } from './email-setting/email-setting.component';
-import { CompanyLogoComponent } from './company-logo/company-logo.component';
+import { SharedImportsModule } from '../shared-imports/shared-imports.module';
+import { CompanyComponent } from './company/company.component';
+import { PdfReportComponent } from './pdf-report/pdf-report.component';
+import { WhatsappComponent } from './whatsapp/whatsapp.component';
+import { SMSComponent } from './sms/sms.component';
+import { EmailComponent } from './email/email.component';
+import { MDComponent } from './TD/md/md.component';
+import { FtpComponent } from './ftp/ftp.component';
+import { AlertComponent } from './alert/alert.component';
+import { AutoMailReportComponent } from './auto-mail-report/auto-mail-report.component';
+
 
 
 
 @NgModule({
   declarations: [
-    ApplicationSettingComponent,
-    AgentSettingComponent,
-    ClientSettingComponent,
-    AgentAutoAssignComponent,
-    SelectTechnicianComponent,
-    EmailSettingComponent,
-    CompanyLogoComponent
+ 
+   
+   
+  
+    CompanyComponent,
+                 PdfReportComponent,
+                 WhatsappComponent,
+                 SMSComponent,
+                 EmailComponent,
+                 MDComponent,
+                 FtpComponent,
+                 AlertComponent,
+                 AutoMailReportComponent
   ],
   imports: [
     CommonModule,
     SettingRoutingModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatTableModule,
-    MatRadioModule,
-    MatCheckboxModule,
-    MatMenuModule,
-    FormsModule,
-    MatDividerModule,
-    MatDialogModule,
-    MatSelectModule,
-    MatDatepickerModule,
-    CKEditorModule,
-    MatInputModule,
-    MatButtonModule,
-  ]
-})
+    SharedImportsModule
+
+]  })
 export class SettingModule { }

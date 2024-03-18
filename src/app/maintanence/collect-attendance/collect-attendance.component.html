@@ -1,0 +1,40 @@
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1">
+                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
+            </div>
+            <div class="text-3xl font-bold">{{ HearderHeding }}</div>
+        </div>
+
+
+    </div>
+
+    <div class="bg-white shadow rounded-xl p-10 my-10">
+
+        <div class=" flex  gap-1 items-center font-bold text-lg ">
+            <span>Collect</span> <span class="text-Pink">Attendance from Device(s)
+            </span>
+
+        </div>
+        <div class=" w-full my-2">
+            <mat-label>Date *</mat-label>
+            <div class="flex items-center gap-2">
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <input matInput value="09/18/2023 - 09/18/2023" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="flex gap-5 justify-start items-start my-5">
+            <div class=" flex gap-5 ">
+
+                <button type="button" mat-dialog-close
+                    class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">Collect</button>
+            </div>
+        </div>
+
+    </div>
+
+
+</section>

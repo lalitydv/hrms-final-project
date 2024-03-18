@@ -1,0 +1,38 @@
+/* styles.css (global styles) */
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: gray;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-frame {
+  border-color: gray;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  border-color: gray;
+}
+
+/* your-component.component.css */
+.mat-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 20px; /* Adjust this value as needed */
+  overflow: scroll;
+}
+
+.mat-table th,
+.mat-table td {
+  border: 1px solid #e0e0e0; /* Adjust border color as needed */
+  padding: 8px;
+}
+
+.mat-header-cell,
+.mat-cell {
+  font-weight: normal;
+  background-color: #f9f9f9; /* Adjust header cell background color as needed */
+}
+
+.mat-header-row,
+.mat-row {
+  border-bottom: 1px solid #e0e0e0; /* Adjust row border color as needed */
+}

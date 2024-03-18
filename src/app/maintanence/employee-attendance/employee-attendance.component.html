@@ -1,0 +1,74 @@
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1">
+                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
+            </div>
+            <div class="text-3xl font-bold">{{ HearderHeding }}</div>
+        </div>
+    </div>
+
+    <div class="bg-white shadow rounded-xl p-10 my-10  ">
+
+        <div class="my-2 flex flex-col w-96">
+            <mat-label>Employee Name :</mat-label>
+            <mat-form-field class=" my-2" appearance="outline">
+                <mat-select [value]="'--Employee Name--'">
+                    <mat-option value="--Employee Name--">--Employee Name--</mat-option>
+                    <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    <mat-option value="ShineCoder">ShineCoder</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="my-2 flex flex-col w-96">
+            <mat-label>Device Name :</mat-label>
+            <mat-form-field class=" my-2" appearance="outline">
+                <mat-select [value]="'--Device Name--'">
+                    <mat-option value="--Device Name--">--Device Name--</mat-option>
+                    <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    <mat-option value="ShineCoder">ShineCoder</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="flex gap-5">
+            <div class="flex items-center text-Pink">
+                <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
+                <label for="default-radio-1" class="ms-2 text-sm font-medium  ">Daily
+                </label>
+            </div>
+            <div class="flex items-center text-Pink">
+                <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
+                <label for="default-radio-1" class="ms-2 text-sm font-medium  ">Weekly
+                </label>
+            </div>
+            <div class="flex items-center text-Pink">
+                <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
+                <label for="default-radio-1" class="ms-2 text-sm font-medium  ">Monthly
+                </label>
+            </div>
+
+
+
+        </div>
+
+        <div class=" w-96">
+
+            <div class="flex items-center gap-2">
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <input matInput value="09/18/2023 - 09/18/2023" />
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="flex gap-5 justify-start items-start my-5">
+            <div class=" flex gap-5 ">
+
+                <button type="button" mat-dialog-close
+                    class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">GENERATE REPORT</button>
+            </div>
+        </div>
+    </div>
+
+</section>

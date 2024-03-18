@@ -1,0 +1,149 @@
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1">
+                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
+            </div>
+            <div class="text-3xl font-bold">{{ HeaderHeading }}</div>
+        </div>
+
+
+    </div>
+    <div class="shadow-2xl  rounded-2xl p-5 my-5">
+        <div class="flex gap-10 justify-between flex-wrap my-5">
+            <div class=" flex gap-2 text-2xl font-bold">
+                All List <span class="text-Pink">Employee</span>
+
+            </div>
+
+
+            <div>
+                <label for="search"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="search" id="search"
+                        class="block w-full lg:w-96 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-Pink focus:border-Pink dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-Pink dark:focus:border-Pink"
+                        placeholder="Search" required />
+                    <button type="submit"
+                        class="text-white absolute right-0 bottom-0 top-0 bg-Pink hover:bg-Pink focus:outline-none focus:ring-Pink font-medium rounded-lg text-sm px-5 py-4 dark:bg-Pink dark:hover:bg-Pink dark:focus:ring-Pink">
+                        Get Emp Info
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Hedding  -->
+        <!-- table start  -->
+        <div class="overflow-auto my-5">
+
+
+
+            <!-- Table -->
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+
+
+
+                <!-- Full Name Column -->
+                <ng-container matColumnDef="FullName">
+                    <th mat-header-cell *matHeaderCellDef> Full Name </th>
+                    <td mat-cell *matCellDef="let element">
+                        <div class="flex items-center justify-between">
+                            {{element.FullName}}
+                            <img [src]="getProfileImageUrl(element)" alt="Profile Image"
+                                class="w-10  rounded-full mr-2 object-contain">
+
+                        </div>
+                    </td>
+                </ng-container>
+
+                <!-- Email Column -->
+                <ng-container matColumnDef="Email">
+                    <th mat-header-cell *matHeaderCellDef> Email </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+                </ng-container>
+
+                <!-- Mobile Column -->
+                <ng-container matColumnDef="Mobile">
+                    <th mat-header-cell *matHeaderCellDef> Mobile </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Mobile}} </td>
+                </ng-container>
+
+                <!-- Have Finger Column -->
+                <ng-container matColumnDef="HaveFinger">
+                    <th mat-header-cell *matHeaderCellDef> Have Finger </th>
+                    <td mat-cell *matCellDef="let element"> {{element.HaveFinger ? 'Yes' : 'No'}} </td>
+                </ng-container>
+
+                <!-- Have Face Column -->
+                <ng-container matColumnDef="HaveFace">
+                    <th mat-header-cell *matHeaderCellDef> Have Face </th>
+                    <td mat-cell *matCellDef="let element"> {{element.HaveFace ? 'Yes' : 'No'}} </td>
+                </ng-container>
+
+                <!-- Join Date Column -->
+                <ng-container matColumnDef="JoinDate">
+                    <th mat-header-cell *matHeaderCellDef> Join Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.JoinDate}} </td>
+                </ng-container>
+
+                <!-- Count Column -->
+                <ng-container matColumnDef="Count">
+                    <th mat-header-cell *matHeaderCellDef> Count </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Count}} </td>
+                </ng-container>
+
+
+                <!-- Define Column Order -->
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <!-- Your other HTML content goes here -->
+
+
+
+        </div>
+    </div>
+
+    <!-- pagition   -->
+    <div class="flex justify-end my-5">
+        <nav aria-label="Page navigation example">
+            <ul class="inline-flex -space-x-px text-sm">
+                <li>
+                    <a href="#"
+                        class="flex items-center justify-center px-3 h-10 ml-0 leading-tight text-gray-500 bg-Pink border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                        <i class="fa-solid fa-caret-left"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-white justify-center px-3 h-10 leading-tight text-gray-500 bg-Pink border border-gray-300 hover:bg-Pink hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-white
+         dark:hover:bg-Pink dark:hover:text-white">1</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center justify-center px-3 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                </li>
+
+                <li>
+                    <a href="#"
+                        class="flex items-center justify-center px-3 h-10 leading-tight text-gray-500 bg-Pink border  text-white border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"><i
+                            class="fa-solid fa-caret-right"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- pagition   -->
+
+
+    <!-- table End  -->
+
+
+</section>

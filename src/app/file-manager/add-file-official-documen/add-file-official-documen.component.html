@@ -1,0 +1,88 @@
+<div class="bg-white rounded-2xl overflow-y-scroll max-h-full h-[500px]">
+    <div class="bg-lightPink py-2 ">
+        <div class="flex justify-between mx-5">
+            <div>
+                Add File
+            </div>
+            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center ">
+                <i class="fa-solid fa-xmark text-Red text-xl"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-5 overflow-y-scroll ">
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+
+            <div class="w-full ">
+                <mat-label>Title</mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <input matInput placeholder="Title" />
+                </mat-form-field>
+            </div>
+            <div class="w-full ">
+                <mat-label>Document Type</mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <input matInput placeholder="Document Type" />
+                </mat-form-field>
+            </div>
+            <div class="w-full ">
+                <mat-label>Identification Number</mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <input matInput placeholder="Identification Number" />
+                </mat-form-field>
+            </div>
+            <div class="w-full ">
+                <mat-label>Company</mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <mat-select>
+                        <mat-option>--Company--</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                        <mat-option value="Another Company">Another Company</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="w-full ">
+                <mat-label>Expired Date</mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <input matInput type="date" placeholder="Expired Date" />
+                </mat-form-field>
+            </div>
+            <div class="w-full ">
+                <mat-label>Notification</mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <input matInput placeholder="Notification" />
+                </mat-form-field>
+            </div>
+            <div class="w-full flex flex-col ">
+                <mat-label>Description</mat-label>
+                <textarea matInput placeholder="Description" rows="5"></textarea>
+            </div>
+
+            <div class="w-full">
+                <mat-label>Document File (Image preview)</mat-label>
+                <form action="#"
+                    class="relative border-2 px-20 border-dotted max-w-xs mb-10 bg-white bg-gray-100 rounded-lg shadow-inner">
+                    <input type="file" id="file-upload" class="hidden" />
+                    <label for="file-upload"
+                        class="z-20 flex flex-col-reverse items-center justify-center w-full h-full cursor-pointer">
+                        <p
+                            class="z-10 text-lg font-light whitespace-nowrap text-center text-Pink border-2 border-Pink p-5 rounded-xl">
+                            Browse Image
+                        </p>
+                        <img src="https://toppng.com/uploads/preview/file-upload-image-icon-115632290507ftgixivqp.png"
+                            alt="" class="w-20 h-20 my-5" />
+                    </label>
+                </form>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+        <div class="flex gap-5 justify-start items-start my-5">
+            <div class=" flex gap-5 ">
+
+                <button type="button" mat-dialog-close
+                    class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

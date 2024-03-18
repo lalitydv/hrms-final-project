@@ -1,0 +1,53 @@
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1">
+                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
+            </div>
+            <div class="text-3xl font-bold">{{ HearderHeding }}</div>
+        </div>
+    </div>
+
+    <div class="mx-auto grid md:grid-cols-2 grid-cols-1 gap-5 my-10 p-5 shadow rounded-xl">
+
+        <div class="w-full ">
+            <mat-label>Department</mat-label>
+            <mat-form-field class="w-full my-2" appearance="outline">
+                <mat-select [value]="'--All--'">
+                    <mat-option value="--All--">--All--</mat-option>
+                    <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    <mat-option value="ShineCoder">ShineCoder</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </div>
+        <div class="w-full ">
+            <mat-label>Month</mat-label>
+            <mat-form-field class="w-full my-2" appearance="outline">
+                <mat-select [value]="'--Month--'">
+                    <mat-option value="--Month--">--Month--</mat-option>
+                    <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    <mat-option value="ShineCoder">ShineCoder</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+
+        </div>
+        <div class="flex gap-5 justify-start items-start my-5">
+            <div class=" flex gap-5 ">
+
+                <button type="button" mat-dialog-close
+                    class=" text-[#1E50A0] p-2 px-5 rounded-md border-2 border-[#1E50A0] outline-none">GENERATE
+                    EXCEL</button>
+                <button type="button" mat-dialog-close
+                    class="border-[#1E50A0] text-[#1E50A0] p-2 px-5 rounded-md border-2 outline-none">GENERATE
+                    PDF</button>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>

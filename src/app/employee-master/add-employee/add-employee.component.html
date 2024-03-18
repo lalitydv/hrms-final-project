@@ -1,0 +1,262 @@
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1">
+                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
+            </div>
+            <div class="text-3xl font-bold">{{ HearderHeding }}</div>
+        </div>
+        <div class="flex gap-4 flex-wrap">
+            <button class="bg-Blue rounded-md p-2 px-2 flex gap-2 items-center text-White">
+                <mat-icon class="mat-18">login</mat-icon> Manage Login
+            </button>
+
+            <button class="bg-Red rounded-md p-2 px-2 flex gap-2 items-center text-White">
+                <mat-icon class="mat-18">person_cancel</mat-icon> Deactivate
+            </button>
+            <button class="bg-black rounded-md p-2 px-2 flex gap-2 items-center text-White">
+                <mat-icon class="mat-18">block</mat-icon> Blacklist
+            </button>
+            <button class="bg-Yello rounded-md p-2 px-2 flex gap-2 items-center text-White">
+                <mat-icon class="mat-18">history</mat-icon> History
+            </button>
+        </div>
+
+        <div class="flex gap-10 flex-wrap">
+            <button routerLink="/employee-master/add-employee"
+                class="bg-Pink text-white flex justify-center flex-row p-3 px-3 text-[20px] rounded-lg items-center gap-2">
+                <mat-icon class="mat-18">arrow_back</mat-icon> Go To Employee List
+            </button>
+
+            <div>
+                <label for="search"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="search" id="search"
+                        class="block w-full lg:w-96 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-Pink focus:border-Pink dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-Pink dark:focus:border-Pink"
+                        placeholder="Search" required />
+                    <button type="submit"
+                        class="text-white absolute right-0 bottom-0 top-0 bg-Pink hover:bg-Pink focus:outline-none focus:ring-Pink font-medium rounded-lg text-sm px-5 py-4 dark:bg-Pink dark:hover:bg-Pink dark:focus:ring-Pink">
+                        Get Emp Info
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Hedding  -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Personal Information -->
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Personal Information
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+
+                    </div>
+                </div>
+
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+
+
+                    <div class="grid md:grid-cols-3 grid-cols-1 gap-5">
+                        <div class="grid md:col-span-2 col-span-1 md:grid-cols-4 gap-5 grid-cols-1">
+                            <div class="w-full">
+                                <div class="flex items-center justify-between">
+                                    <mat-label> Paycode *</mat-label>
+                                    <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="784859" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex items-center justify-between">
+                                    <mat-label> User Id*</mat-label>
+                                    <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="784859" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex items-center justify-between">
+                                    <mat-label>Adhaar *</mat-label>
+                                    <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="784859" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex items-center justify-between">
+                                    <mat-label>DOB *</mat-label>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput [matDatepicker]="dobPicker" placeholder="Choose a date"
+                                            readonly>
+                                        <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                        <mat-datepicker #dobPicker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+
+
+                            <div class="w-full">
+                                <div class="flex items-center justify-between">
+                                    <mat-label> PAN</mat-label>
+                                    <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="784859" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex items-center justify-between">
+                                    <mat-label> Voter ID</mat-label>
+
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="784859" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex items-center justify-between">
+                                    <mat-label>Driving License</mat-label>
+
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="784859" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex items-center justify-between">
+                                    <mat-label>DOJ *</mat-label>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput [matDatepicker]="dobPicker" placeholder="Choose a date"
+                                            readonly>
+                                        <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                        <mat-datepicker #dobPicker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                        <div>
+                            <img src="assets/EMP/Rectangle 12349.png" alt="">
+                        </div>
+
+                    </div>
+                    <!-- second Inpute  -->
+                    <div class="grid md:grid-cols-4 gap-5 grid-cols-1">
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Name *</mat-label>
+                                <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Gender *</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <mat-label> Marital Status*</mat-label>
+
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="784859" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!-- Personal Information -->
+    <!-- Personal Input  Information -->
+
+
+    <!-- Personal Input Information -->
+
+
+
+</section>

@@ -14,6 +14,14 @@ const routes: Routes = [
   { path: 'company-master', loadChildren: () => import('./company-master/company-master.module').then(m => m.CompanyMasterModule)},
   { path: 'MIS-reports', loadChildren: () => import('./mis/mis.module').then(m => m.MISModule)},
   { path: 'payroll-master', loadChildren: () => import('./payroll-master/payroll-master.module').then(m => m.PayrollMasterModule)},
+  { path: 'employee-master', loadChildren: () => import('./employee-master/employee-master.module').then(m => m.EmployeeMasterModule)},
+  { path: 'shift', loadChildren: () => import('./shift/shift.module').then(m => m.ShiftModule)},
+  { path: 'holiday', loadChildren: () => import('./holidays/holidays.module').then(m => m.HolidaysModule)},
+  { path: 'leaves', loadChildren: () => import('./leaves/leaves.module').then(m => m.LeavesModule)},
+  { path: 'biometric', loadChildren: () => import('./biometric-device/biometric-device.module').then(m => m.BiometricDeviceModule)},
+  { path: 'attendance-summary', loadChildren: () => import('./attendance-summary/attendance-summary.module').then(m => m.AttendanceSummaryModule)},
+  { path: 'maintanence', loadChildren: () => import('./maintanence/maintanence.module').then(m => m.MaintanenceModule)},
+  { path: 'file-manager', loadChildren: () => import('./file-manager/file-manager.module').then(m => m.FileManagerModule)},
 ];
 
 @NgModule({
