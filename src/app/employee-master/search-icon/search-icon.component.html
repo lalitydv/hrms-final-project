@@ -1,0 +1,70 @@
+<div class="bg-white rounded-2xl">
+    <div class="bg-lightPink py-2 ">
+        <div class="flex justify-between mx-5">
+            <div>
+                Search Table
+            </div>
+            <div mat-dialog-close class="border-2 rounded-full border-Pink w-7 h-7 flex justify-center text-center ">
+                <i class="fa-solid fa-xmark text-Pink text-xl"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-5">
+
+
+        <!-- Import MatTableModule in your app.module.ts -->
+
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!-- Paycode Column -->
+            <ng-container matColumnDef="paycode">
+                <mat-header-cell *matHeaderCellDef> Paycode </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.paycode}} </mat-cell>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+
+            <!-- Company Column -->
+            <ng-container matColumnDef="company">
+                <mat-header-cell *matHeaderCellDef> Company </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.company}} </mat-cell>
+            </ng-container>
+
+            <!-- Department Column -->
+            <ng-container matColumnDef="department">
+                <mat-header-cell *matHeaderCellDef> Department </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.department}} </mat-cell>
+            </ng-container>
+
+            <!-- Designation Column -->
+            <ng-container matColumnDef="designation">
+                <mat-header-cell *matHeaderCellDef> Designation </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.designation}} </mat-cell>
+            </ng-container>
+
+            <!-- Joining Date Column -->
+            <ng-container matColumnDef="joiningDate">
+                <mat-header-cell *matHeaderCellDef> Joining Date </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.joiningDate}} </mat-cell>
+            </ng-container>
+
+            <!-- Leaving Date Column -->
+            <ng-container matColumnDef="leavingDate">
+                <mat-header-cell *matHeaderCellDef> Leaving Date </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.leavingDate}} </mat-cell>
+            </ng-container>
+
+            <!-- Table Rows -->
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+
+
+
+    </div>
+</div>

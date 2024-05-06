@@ -22,6 +22,10 @@ const routes: Routes = [
   { path: 'attendance-summary', loadChildren: () => import('./attendance-summary/attendance-summary.module').then(m => m.AttendanceSummaryModule)},
   { path: 'maintanence', loadChildren: () => import('./maintanence/maintanence.module').then(m => m.MaintanenceModule)},
   { path: 'file-manager', loadChildren: () => import('./file-manager/file-manager.module').then(m => m.FileManagerModule)},
+  { path: 'hr', loadChildren: () => import('./hr/hr.module').then(m => m.HRModule)},
+  { path: 'project-management', loadChildren: () => import('./project-management/project-management.module').then(m => m.ProjectManagementModule)},
+  { path: 'help-desk', loadChildren: () => import('./help-desk/help-desk.module').then(m => m.HelpDeskModule)},
+  { path: 'meeting', loadChildren: () => import('./meetings/meetings.module').then(m => m.MeetingsModule)},
 ];
 
 @NgModule({

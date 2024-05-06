@@ -38,11 +38,11 @@ import { MatTreeModule } from "@angular/material/tree";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { FormsModule } from '@angular/forms';
+import {A11yModule} from '@angular/cdk/a11y';
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-
     MatNativeDateModule,
     MatAutocompleteModule,
     MatBadgeModule,
@@ -82,6 +82,7 @@ import { FormsModule } from '@angular/forms';
     FlexLayoutModule,
     CanvasJSAngularChartsModule,
     FormsModule,
+    A11yModule
   
   ],
   exports: [
@@ -122,7 +123,8 @@ import { FormsModule } from '@angular/forms';
     MatTooltipModule,
     MatTreeModule,
     CanvasJSAngularChartsModule,
-    FormsModule
+    FormsModule,
+    A11yModule
   ]
 })
 export class SharedImportsModule { }

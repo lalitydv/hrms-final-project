@@ -1,1 +1,145 @@
-<p>ftp works!</p>
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1">
+                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
+            </div>
+            <div class="text-3xl font-bold">{{ HearderHeding }}</div>
+        </div>
+        <div class="flex gap-4 flex-wrap">
+
+            <button (click)="openDialog()" class="bg-Red rounded-md p-2 px-2 flex gap-2 items-center text-White">
+                <mat-icon class="mat-18"> do_not_disturb_on</mat-icon> Bulk Delete
+            </button>
+            <button (click)="openDialogAdd()" class="bg-Blue rounded-md p-2 px-2 flex gap-2 items-center text-White">
+                <mat-icon class="mat-18"> add_circle</mat-icon> Add Shift
+            </button>
+
+        </div>
+
+
+    </div>
+    <!-- Hedding  -->
+    <!-- Company Logo Review Information -->
+    <mat-accordion class="mx-4 select-dropdown-box ">
+        <mat-expansion-panel [(expanded)]="panelOpenState2" class="w-full custom-accordion">
+            <mat-expansion-panel-header class="shadow-md  border-white w-full">
+                <div class="flex items-center justify-center  w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Mask Detection Setting
+
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+
+                    </div>
+                </div>
+
+            </mat-expansion-panel-header>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!-- Company Logo Review Information -->
+
+    <!-- table start  -->
+    <div class="bg-white rounded-2xl p-2 shado ">
+
+        <div class="flex gap-10 justify-end flex-wrap my-5">
+            <div>
+                <label for="search"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="search" id="search"
+                        class="block w-full lg:w-96 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-Pink focus:border-Pink dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-Pink dark:focus:border-Pink"
+                        placeholder="Search" required />
+                    <button type="submit"
+                        class="text-white absolute right-0 bottom-0 top-0 bg-Pink hover:bg-Pink focus:outline-none focus:ring-Pink font-medium rounded-lg text-sm px-5 py-4 dark:bg-Pink dark:hover:bg-Pink dark:focus:ring-Pink">
+                        Get Emp Info
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="overflow-auto my-5">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 text-center">
+                <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef class="bg-lightPink">Sno.</th>
+                    <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+                </ng-container>
+
+                <!-- Checkbox Column -->
+                <ng-container matColumnDef="checkbox">
+                    <th mat-header-cell *matHeaderCellDef class="bg-lightPink"> <mat-checkbox></mat-checkbox></th>
+                    <td mat-cell *matCellDef="let row">
+                        <mat-checkbox [(ngModel)]="row.selected"></mat-checkbox>
+                    </td>
+                </ng-container>
+
+                <!-- HostAddress Column -->
+                <ng-container matColumnDef="HostAddress">
+                    <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Host Address</th>
+                    <td mat-cell *matCellDef="let element">{{ element.HostAddress }}</td>
+                </ng-container>
+
+
+
+                <!-- PortNumber Column -->
+                <ng-container matColumnDef="PortNumber">
+                    <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Port Number</th>
+                    <td mat-cell *matCellDef="let element">{{ element.PortNumber }}</td>
+                </ng-container>
+
+                <!-- FtpMethod Column -->
+                <ng-container matColumnDef="FtpMethod">
+                    <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Ftp Method</th>
+                    <td mat-cell *matCellDef="let element">{{ element.FtpMethod }}</td>
+                </ng-container>
+
+                <!-- Username Column -->
+                <ng-container matColumnDef="Username">
+                    <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Username</th>
+                    <td mat-cell *matCellDef="let element">{{ element.Username }}</td>
+                </ng-container>
+
+
+
+
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- table End  -->
+
+
+
+    <div class=" my-5">
+        <button type="submit"
+            class="text-white bg-Green hover:bg-Green focus:outline-none focus:ring-Green font-medium rounded-lg text-sm px-5 py-2 dark:bg-Green dark:hover:bg-Green dark:focus:ring-Green">
+            Submit
+        </button>
+    </div>
+</section>

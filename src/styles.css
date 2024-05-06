@@ -35,6 +35,9 @@
   justify-content: center !important;
   align-items: center !important;
 }
+mat-icon {
+  height: 20px !important;
+}
 body {
 }
 html,
@@ -156,4 +159,24 @@ th {
   top: -7px;
   left: -3px;
 }
+/* ------------- */
+.mat-accordion > .mat-expansion-panel-spacing:first-child,
+.mat-accordion
+  > *:first-child:not(.mat-expansion-panel)
+  .mat-expansion-panel-spacing {
+  border-radius: 10px !important;
+}
 
+/* ------------- */
+.shado {
+  box-shadow: 0 0 5px 5px rgb(238, 237, 237);
+}
+.tab-group{
+  border: 0.1rem solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 1px 0px 9x 2px gray !important;
+}
+.tab-group {
+  border: none !important;
+  box-shadow: 1px 0px 9x 2px gray !important;
+}

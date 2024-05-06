@@ -1,1 +1,271 @@
-<p>auto-mail-report works!</p>
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1">
+                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
+            </div>
+            <div class="text-3xl font-bold">{{ HearderHeding }}</div>
+        </div>
+    </div>
+    <!-- Hedding  -->
+    <!-- Company Logo Review Information -->
+
+
+
+    <mat-accordion class="mx-4 select-dropdown-box ">
+        <mat-expansion-panel [(expanded)]="panelOpenState2" class="w-full custom-accordion">
+            <mat-expansion-panel-header class="shadow-md  border-white w-full">
+                <div class="flex items-center justify-center  w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold ">Enable Automatic Email
+                        Trigger of Reports
+
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+
+                <mat-checkbox color="primary" class="example-margin" [(ngModel)]="checked">Admin Password Change
+                    Notification</mat-checkbox>
+
+                <div class="grid  md:grid-cols-2 justify-center items-center grid-cols-1 gap-5">
+
+
+
+
+                    <div class="w-full">
+                        <div class="flex items-center justify-between">
+                            <mat-label>Admin Username*</mat-label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2 flex gap-2" appearance="outline">
+                                <input matInput type="number" value="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="flex items-center justify-between">
+                            <mat-label>Admin Password*</mat-label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2 flex gap-2" appearance="outline">
+                                <input matInput type="number" value="0 Times" />
+                            </mat-form-field>
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion class="mx-4 select-dropdown-box ">
+        <mat-expansion-panel [(expanded)]="panelOpenState3" class="w-full custom-accordion">
+            <mat-expansion-panel-header class="shadow-md  border-white w-full">
+                <div class="flex items-center justify-center  w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold ">Reports In Mail
+
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+
+
+
+                <div class="grid  md:grid-cols-2 justify-center items-center grid-cols-1 gap-5">
+
+
+
+
+
+                    <div class="w-full">
+                        <div class="flex items-center justify-between">
+                            <mat-label>Reports Selection*</mat-label>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2 flex gap-2" appearance="outline">
+                                <input matInput type="number" value="0 Times" />
+                            </mat-form-field>
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+
+
+    <mat-expansion-panel [(expanded)]="panelOpenState4" class="w-full custom-accordion">
+        <mat-expansion-panel-header class="shadow-md  border-white w-full">
+            <div class="flex items-center justify-center  w-full">
+                <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold ">Approve Alert Settings
+                </div>
+                <div class=" flex line ">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                            <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                <path
+                                    d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                <path
+                                    d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                            </g>
+                        </svg>
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </mat-expansion-panel-header>
+        <div class="bg-Lighitblue w-full pt-4 px-8">
+            <div class="grid  md:grid-cols-5 justify-center items-center grid-cols-1 gap-5">
+
+
+
+
+                <div class="w-full">
+                    <div class="flex items-center justify-between">
+                        <mat-label>Sending Frequency*</mat-label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class="w-full my-2 flex gap-2" appearance="outline">
+                            <input matInput type="number" value="" />
+                        </mat-form-field>
+
+
+
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="flex items-center justify-between">
+                        <mat-label>Day*</mat-label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class="w-full my-2 flex gap-2" appearance="outline">
+                            <input matInput type="number" value="0 Times" />
+                        </mat-form-field>
+
+
+
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="flex items-center justify-between">
+                        <mat-label>Time*</mat-label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class="w-full my-2 flex gap-2" appearance="outline">
+                            <input matInput type="number" value="0 Times" />
+                        </mat-form-field>
+
+
+
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="flex items-center justify-between">
+                        <mat-label>Sending Day*</mat-label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class="w-full my-2 flex gap-2" appearance="outline">
+                            <input matInput type="number" value="0 Times" />
+                        </mat-form-field>
+
+
+
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="flex items-center justify-between">
+                        <mat-label>Last Alert Time</mat-label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class="w-full my-2 flex gap-2" appearance="outline">
+                            <input matInput type="number" value="0 Times" />
+                        </mat-form-field>
+
+
+
+                    </div>
+                </div>
+                <div class="w-full">
+                    <div class="flex items-center justify-between">
+                        <mat-label>Email Address</mat-label>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class="w-full my-2 flex gap-2" appearance="outline">
+                            <input matInput type="number" value="0 Times" />
+                        </mat-form-field>
+
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </mat-expansion-panel>
+
+
+    <!-- Company Logo Review Information -->
+
+
+    <div class=" my-5">
+        <button type="submit"
+            class="text-white bg-Green hover:bg-Green focus:outline-none focus:ring-Green font-medium rounded-lg text-sm px-5 py-2 dark:bg-Green dark:hover:bg-Green dark:focus:ring-Green">
+            Submit
+        </button>
+    </div>
+</section>

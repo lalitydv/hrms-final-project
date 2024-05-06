@@ -1,0 +1,89 @@
+<div class="bg-white rounded-2xl overflow-y-scroll h-screen">
+    <div class="bg-lightPink py-2 ">
+        <div class="flex justify-between mx-5">
+            <div>
+                Update Event
+            </div>
+            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center ">
+                <i class="fa-solid fa-xmark text-Red text-xl"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-5">
+
+
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+
+
+
+
+            <div class="w-full ">
+                <mat-label>Company </mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <mat-select [value]="'--Company--'">
+                        <mat-option value="--Company--">--Company--</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="w-full ">
+                <mat-label>Department </mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <mat-select [value]="'--Company--'">
+                        <mat-option value="--Company--">--Company--</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="w-full ">
+                <mat-label>Event Title *</mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+
+                    <input matInput type="time" name="" id="">
+
+
+                </mat-form-field>
+            </div>
+            <div class="w-full ">
+                <mat-label>Event Date *</mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <input matInput type="date" name="" id="">
+                </mat-form-field>
+            </div>
+            <div class="w-full ">
+                <mat-label>Status </mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <mat-select [value]="'--Company--'">
+                        <mat-option value="--Company--">--Company--</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class=" w-full">
+            <mat-label> Description*</mat-label>
+            <div class="flex items-center gap-2">
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <textarea matInput rows="" placeholder="Enter description"></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class=" w-full my-5">
+            <mat-checkbox checked="true" class="underline">Notification</mat-checkbox>
+        </div>
+
+        <mat-divider></mat-divider>
+        <div class="flex gap-5 justify-start items-start my-5">
+            <div class=" flex gap-5 ">
+
+                <button type="button" mat-dialog-close
+                    class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,253 @@
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center mx-5 gap-5">
+            <div class="shadow-2xl bg-white rounded-full p-1">
+                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
+            </div>
+            <div class="text-3xl font-bold">{{ HearderHeding }}</div>
+        </div>
+        <div class="flex gap-4 flex-wrap">
+
+            <button class="bg-Red rounded-md p-2 px-2 flex gap-2 items-center text-White">
+                <mat-icon class="mat-18"> do_not_disturb_on</mat-icon> Bulk Delete
+            </button>
+            <button (click)="openDialogAdd()" class="bg-Blue rounded-md p-2 px-2 flex gap-2 items-center text-White">
+                <mat-icon class="mat-18"> add_circle</mat-icon> Add Transfer
+            </button>
+
+
+        </div>
+
+
+    </div>
+    <div class="flex gap-10 justify-between flex-wrap my-5">
+        <div class=" flex gap-2">
+
+
+            <div class="flex gap-2 items-center">
+                <span>Display</span>
+                <select name="" id="">
+                    <option value="25">25</option>
+                    <option value="10">10</option>
+                </select>
+                <span>records per page</span>
+            </div>
+
+            <span class="flex gap-4 mx-5">
+                <div>
+                    <i class="fa-solid fa-file-excel text-xl text-white border-0 p-1 px-3 bg-DarkGreen rounded-md"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file-pdf text-xl text-white border-0 p-1 px-3 bg-Red rounded-md"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-print text-xl text-white border-0 p-1 px-3 bg-Yello rounded-md"></i>
+                </div>
+                <div mat-button [matMenuTriggerFor]="menu">
+                    <i class="fa-solid fa-eye text-xl text-white border-0 p-1 px-3 bg-LightSlateBlue rounded-md"></i>
+                </div>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="selectOption('Option 1')">
+                        <div class="flex items-center ">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
+                            <label for="default-radio-1" class="ms-2 text-sm font-medium ">Employee
+                            </label>
+                        </div>
+                    </button>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item (click)="selectOption('Option 2')">
+                        <div class="flex items-center text-Pink  ">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
+                            <label for="default-radio-1" class="ms-2 text-sm font-medium text-Pink ">Company
+                            </label>
+                        </div>
+                    </button>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item (click)="selectOption('Option 3')">
+                        <div class="flex items-center text-Pink">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
+                            <label for="default-radio-1" class="ms-2 text-sm font-medium  ">
+
+
+                                From Department
+                            </label>
+                        </div>
+                    </button>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item (click)="selectOption('Option 4')">
+                        <div class="flex items-center text-Pink ">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
+                            <label for="default-radio-1" class="ms-2 text-sm font-medium ">To Department
+                            </label>
+                        </div>
+                    </button>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item (click)="selectOption('Option 5')">
+                        <div class="flex items-center text-Pink ">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
+                            <label for="default-radio-1" class="ms-2 text-sm font-medium ">Date
+                            </label>
+                        </div>
+                    </button>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item (click)="selectOption('Option 6')">
+                        <div class="flex items-center text-Pink ">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
+                            <label for="default-radio-1" class="ms-2 text-sm font-medium ">Action
+                            </label>
+                        </div>
+                    </button>
+
+
+
+                </mat-menu>
+
+
+            </span>
+        </div>
+
+
+        <div>
+            <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                </div>
+                <input type="search" id="search"
+                    class="block w-full lg:w-96 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-Pink focus:border-Pink dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-Pink dark:focus:border-Pink"
+                    placeholder="Search" required />
+                <button type="submit"
+                    class="text-white absolute right-0 bottom-0 top-0 bg-Pink hover:bg-Pink focus:outline-none focus:ring-Pink font-medium rounded-lg text-sm px-5 py-4 dark:bg-Pink dark:hover:bg-Pink dark:focus:ring-Pink">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Hedding  -->
+
+    <!-- table start  -->
+
+    <div class="overflow-auto my-5">
+        <table mat-table [dataSource]="dataSource" class=" text-center">
+            <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink">Sno.</th>
+                <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+            </ng-container>
+
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="checkbox">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink"><mat-checkbox></mat-checkbox></th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-checkbox [(ngModel)]="row.selected"></mat-checkbox>
+                </td>
+            </ng-container>
+            <!-- AwardName Column -->
+            <ng-container matColumnDef="ToDepartment">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">To Department</th>
+                <td mat-cell *matCellDef="let element">{{ element.ToDepartment }}
+                </td>
+
+            </ng-container>
+            <!-- EventName Column -->
+            <ng-container matColumnDef="EmployeeName">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Employee</th>
+                <td mat-cell *matCellDef="let element">{{ element.EmployeeName }}
+                </td>
+
+            </ng-container>
+
+
+            <!-- CompanyName Column -->
+            <ng-container matColumnDef="CompanyName">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Company</th>
+                <td mat-cell *matCellDef="let element">{{ element.CompanyName }}</td>
+            </ng-container>
+
+
+            <!-- PromotionTitle Column -->
+            <ng-container matColumnDef="FromDepartment">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">From Department</th>
+                <td mat-cell *matCellDef="let element">{{ element.FromDepartment }}</td>
+            </ng-container>
+
+            <!--Start Date Column -->
+            <ng-container matColumnDef="Date">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Date</th>
+                <td mat-cell *matCellDef="let element">{{ element.Date }}</td>
+            </ng-container>
+            
+
+            <!-- Action Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Action</th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="flex gap-5 justify-center">
+
+                        <span (click)="openDialogview()"
+                            class="border-2 p-1 flex w-fit rounded-lg text-center border-Green text-Green">
+                            <mat-icon>visibility</mat-icon>
+                        </span>
+                        <span (click)="openDialogEddit()"
+                            class="border-2 p-1 flex w-fit rounded-lg text-center border-Blue text-Blue">
+                            <mat-icon>border_color</mat-icon>
+                        </span>
+
+                        <span (click)="openDialog()"
+                            class="border-2 p-1 flex w-fit cursor-pointer rounded-lg text-center border-Red text-Red">
+                            <mat-icon>delete</mat-icon>
+                        </span>
+                    </span>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <!-- pagition   -->
+    <div class="flex justify-end my-5">
+        <nav aria-label="Page navigation example">
+            <ul class="inline-flex -space-x-px text-sm">
+                <li>
+                    <a href="#"
+                        class="flex items-center justify-center px-3 h-10 ml-0 leading-tight text-gray-500 bg-Pink border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                        <i class="fa-solid fa-caret-left"></i></a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center text-white justify-center px-3 h-10 leading-tight text-gray-500 bg-Pink border border-gray-300 hover:bg-Pink hover:text-white dark:bg-gray-800 dark:border-gray-700 dark:text-white
+         dark:hover:bg-Pink dark:hover:text-white">1</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center justify-center px-3 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                </li>
+
+                <li>
+                    <a href="#"
+                        class="flex items-center justify-center px-3 h-10 leading-tight text-gray-500 bg-Pink border  text-white border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"><i
+                            class="fa-solid fa-caret-right"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- pagition   -->
+
+
+    <!-- table End  -->
+
+
+</section>
+
+

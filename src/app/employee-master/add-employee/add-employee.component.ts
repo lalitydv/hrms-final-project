@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EmployeeCodeComponent } from '../employee-code/employee-code.component';
+import { SearchIconComponent } from '../search-icon/search-icon.component';
 
 @Component({
   selector: 'app-add-employee',
@@ -8,7 +11,19 @@ import { Component } from '@angular/core';
 export class AddEmployeeComponent {
 
   FirstIcons:String="assets/Dashboard/image 78.png"
-  HearderHeding:String="Employees Info"
+  HearderHeding:String="Add Employees"
 
 panelOpenState = true;
+Qualification = true;
+Examination = true;
+Job = true;
+isChecked: boolean = true;
+
+constructor(public dialog: MatDialog ) { }
+  openDialog (){
+    this.dialog.open(EmployeeCodeComponent);
+  }
+  openDialogsearch (){
+    this.dialog.open(SearchIconComponent);
+  }
 }

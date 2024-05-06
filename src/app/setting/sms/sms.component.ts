@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./sms.component.css']
 })
 export class SMSComponent {
-
+  FirstIcons:String="assets/Dashboard/image 78.png"
+  HearderHeding:String="System Setting"
+  panelOpenState = true;
 }

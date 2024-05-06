@@ -1,72 +1,24 @@
 <section class="my-5">
     <!-- Hedding  -->
-    <div class="flex md:flex flex-wrap items-center justify-between gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1">
-                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
-            </div>
-            <div class="text-3xl font-bold">{{ HearderHeding }}</div>
+    <div class="flex items-center mx-5 gap-5">
+        <div class="shadow-2xl bg-white rounded-full p-1">
+            <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
         </div>
-        <div class="flex gap-4 flex-wrap">
-            <button class="bg-Blue rounded-md p-2 px-2 flex gap-2 items-center text-White">
-                <mat-icon class="mat-18">login</mat-icon> Manage Login
-            </button>
-
-            <button class="bg-Red rounded-md p-2 px-2 flex gap-2 items-center text-White">
-                <mat-icon class="mat-18">person_cancel</mat-icon> Deactivate
-            </button>
-            <button class="bg-black rounded-md p-2 px-2 flex gap-2 items-center text-White">
-                <mat-icon class="mat-18">block</mat-icon> Blacklist
-            </button>
-            <button class="bg-Yello rounded-md p-2 px-2 flex gap-2 items-center text-White">
-                <mat-icon class="mat-18">history</mat-icon> History
-            </button>
-        </div>
-
-        <div class="flex gap-10 flex-wrap">
-            <button routerLink="/employee-master/add-employee"
-                class="bg-Pink text-white flex justify-center flex-row p-3 px-3 text-[20px] rounded-lg items-center gap-2">
-                <mat-icon class="mat-18">arrow_back</mat-icon> Go To Employee List
-            </button>
-
-            <div>
-                <label for="search"
-                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                        </svg>
-                    </div>
-                    <input type="search" id="search"
-                        class="block w-full lg:w-96 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-Pink focus:border-Pink dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-Pink dark:focus:border-Pink"
-                        placeholder="Search" required />
-                    <button type="submit"
-                        class="text-white absolute right-0 bottom-0 top-0 bg-Pink hover:bg-Pink focus:outline-none focus:ring-Pink font-medium rounded-lg text-sm px-5 py-4 dark:bg-Pink dark:hover:bg-Pink dark:focus:ring-Pink">
-                        Get Emp Info
-                    </button>
-                </div>
-            </div>
-        </div>
+        <div class="text-3xl font-bold">{{ HearderHeding }}</div>
     </div>
+    <div class="flex gap-10 flex-wrap my-5">
+        <button routerLink="/employee-master/add-employee"
+            class="bg-Pink text-white flex justify-center flex-row p-3 px-3 text-[15px] rounded-lg items-center gap-2">
+            <mat-icon class="mat-18">arrow_back</mat-icon> Go To Employee List
+        </button>
+        <button (click)="openDialog()"
+            class="bg-Pink text-white flex justify-center flex-row p-3 px-3 text-[15px] rounded-lg items-center gap-2">
+            Auto Generate Employee Code
+        </button>
 
 
-
+    </div>
     <!-- Hedding  -->
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Personal Information -->
     <mat-accordion class="mx-4 select-dropdown-box">
         <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
@@ -88,18 +40,16 @@
 
                     </div>
                 </div>
-
             </mat-expansion-panel-header>
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
-
 
                     <div class="grid md:grid-cols-3 grid-cols-1 gap-5">
                         <div class="grid md:col-span-2 col-span-1 md:grid-cols-4 gap-5 grid-cols-1">
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
                                     <mat-label> Paycode *</mat-label>
-                                    <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                                    <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <mat-form-field class="w-full my-2" appearance="outline">
@@ -111,7 +61,7 @@
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
                                     <mat-label> User Id*</mat-label>
-                                    <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                                    <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <mat-form-field class="w-full my-2" appearance="outline">
@@ -123,7 +73,7 @@
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
                                     <mat-label>Adhaar *</mat-label>
-                                    <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                                    <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <mat-form-field class="w-full my-2" appearance="outline">
@@ -151,7 +101,7 @@
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
                                     <mat-label> PAN</mat-label>
-                                    <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                                    <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <mat-form-field class="w-full my-2" appearance="outline">
@@ -208,11 +158,11 @@
 
                     </div>
                     <!-- second Inpute  -->
-                    <div class="grid md:grid-cols-4 gap-5 grid-cols-1">
+                    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-5 grid-cols-1">
                         <div class="w-full">
                             <div class="flex items-center justify-between">
                                 <mat-label> Name *</mat-label>
-                                <mat-icon class="mat-18 text-Gray">search</mat-icon>
+                                <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -229,13 +179,319 @@
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'Male'">
+                                        <mat-option value="Male">Male</mat-option>
+                                        <mat-option value="FEMale">FEMale</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Marital Status*</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>DOJ *</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput [matDatepicker]="dobPicker" placeholder="Choose a date" readonly>
+                                    <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                    <mat-datepicker #dobPicker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- therd Inpute  -->
+                    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-5 grid-cols-1">
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Father/Husband name *</mat-label>
+                                <mat-icon (click)="openDialogsearch()"class="mat-18 text-Gray">search</mat-icon>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
                                     <input matInput value="784859" />
                                 </mat-form-field>
 
                             </div>
                         </div>
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Spouse Name</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Mother’s Name</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="784859" />
+                                    </mat-form-field>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Nominee</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <mat-divider></mat-divider>
+                    <!-- 4th Inpute  -->
+                    <div class="grid  lg:grid-cols-5 md:grid-cols-3  gap-5 grid-cols-1">
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Primary Contact*</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Secondary Contact*</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Emergency Name</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Emergency Number</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Emergency Person Relation</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Email</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Nationality</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Religion</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Blood Group</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <!-- 5th Inpute  -->
+                    <div class="grid  lg:grid-cols-2 md:grid-cols-2  gap-5 grid-cols-1">
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Primary Contact*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <textarea matInput placeholder="Enter your current address">784859</textarea>
+                                </mat-form-field>
+
+
+                            </div>
+                        </div>
+                        <div class="w-full ">
+
+                            <div>
+                                <div class="flex items-center justify-between">
+                                    <mat-label>Permanent Address</mat-label>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <textarea matInput placeholder="Enter your current address">784859</textarea>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full ">
+                            <div>
+                                <div class="flex items-center justify-between">
+                                    <mat-label>Pincode:</mat-label>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="784859" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full flex gap-5">
+                            <div>
+                                <div class="flex items-center justify-between">
+                                    <mat-label>Pincode:</mat-label>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="784859" />
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between">
+                                    <mat-label>Status:</mat-label>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <mat-select [value]="'All Selected'">
+                                            <mat-option value="All Selected">All Selected</mat-option>
+                                            <mat-option value="Company">Company</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!-- Personal Information -->
+    <!-- Qualification -->
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="Qualification" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Qualification
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="w-full">
                         <div class="flex items-center justify-between">
-                            <mat-label> Marital Status*</mat-label>
+                            <mat-label>Highest Qualification</mat-label>
 
                         </div>
                         <div class="flex items-center gap-2">
@@ -245,17 +501,1074 @@
 
                         </div>
                     </div>
+                    <div class="w-fit">
+
+
+                        <button
+                            class="bg-Blue text-white flex justify-center flex-row p-3 px-3  rounded-lg items-center gap-2">
+                            <div class="text-center flex justify-center items-center">
+                                <i
+                                    class="fa-solid fa-plus border-2 rounded-full  mx-1 text-center   items-center border-lightPink   ">
+                                </i>
+                            </div>
+                            Add Details
+                        </button>
+                    </div>
+
+                    <div class="grid md:grid-cols-4 gap-5 grid-cols-1">
+
+
+
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Course/Class</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Institute</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Passing Year</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Percentage/Grade</mat-label>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
                 </div>
 
 
             </div>
         </mat-expansion-panel>
     </mat-accordion>
-    <!-- Personal Information -->
-    <!-- Personal Input  Information -->
+    <!-- Qualification -->
+    <!-- Examination -->
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="Examination" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Examination
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="w-full">
+                        <div class="flex items-center justify-between">
+                            <mat-label>Total Experience</mat-label>
+
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="784859" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-fit">
+
+                        <button
+                            class="bg-Blue text-white flex justify-center flex-row p-3 px-3  rounded-lg items-center gap-2">
+                            <div class="text-center flex justify-center items-center">
+                                <i
+                                    class="fa-solid fa-plus border-2 rounded-full  mx-1 text-center   items-center border-lightPink   ">
+                                </i>
+                            </div>
+                            Add Details
+                        </button>
+                    </div>
+
+                    <div class="grid md:grid-cols-4 gap-5 grid-cols-1">
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Name of Employer</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Position</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Period(From-To)</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Reason of Leaving</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="784859" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
-    <!-- Personal Input Information -->
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!-- Examination -->
+    <!-- Job Information -->
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="Job" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Job Information
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="grid lg:grid-cols-5 md:grid-cols-5 grid-cols-1 gap-5">
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Company*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Designation*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Designation 2</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Department*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Sub Department*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label> Division</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Sub Division</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Location*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Cost Center</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Cadre/Grade</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Category*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Overtime Type*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Shift Code*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Supervisor User ID</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Shift Rotation</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Weekly Off*</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between invisible">
+                                <mat-label>Auto Shift</mat-label>
+                            </div>
+                            <mat-checkbox [(ngModel)]="isChecked" color="primary">Auto Shift</mat-checkbox>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="bg-white rounded-md  shado p-1 m-2">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Family Members
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="grid lg:grid-cols-7 md:grid-cols-5 grid-cols-1 gap-5">
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Relation</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Name</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Age</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>DOB </mat-label>
+                            </div>
+                            <div class="flex flex-col  items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput [matDatepicker]="dobPicker" placeholder="Choose a date" readonly>
+                                    <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                    <mat-datepicker #dobPicker></mat-datepicker>
+                                </mat-form-field>
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput [matDatepicker]="dobPicker" placeholder="Choose a date" readonly>
+                                    <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                    <mat-datepicker #dobPicker></mat-datepicker>
+                                </mat-form-field>
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput [matDatepicker]="dobPicker" placeholder="Choose a date" readonly>
+                                    <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                    <mat-datepicker #dobPicker></mat-datepicker>
+                                </mat-form-field>
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput [matDatepicker]="dobPicker" placeholder="Choose a date" readonly>
+                                    <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                    <mat-datepicker #dobPicker></mat-datepicker>
+                                </mat-form-field>
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput [matDatepicker]="dobPicker" placeholder="Choose a date" readonly>
+                                    <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                    <mat-datepicker #dobPicker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Address</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Dependent</mat-label>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+
+                            </div>
+
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Nominee</mat-label>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+                                <mat-checkbox [(ngModel)]="isChecked" color="primary"></mat-checkbox>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- PF Details -->
+            <div class="bg-white rounded-md  shado p-1 m-2">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">PF Details
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-5">
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Name of Employer</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Position</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Nominee Name</mat-label>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Percent</mat-label>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ESI Details -->
+            <div class="bg-white rounded-md  shado p-1 m-2">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">ESI Details
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1 gap-5">
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Insurance No.</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Local Office</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Dispensary</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Nominee</mat-label>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Residing Together</mat-label>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Gratuity Details -->
+            <div class="bg-white rounded-md  shado p-1 m-2">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Gratuity Details
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-5">
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Nominee</mat-label>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <mat-select [value]="'All Selected'">
+                                        <mat-option value="All Selected">All Selected</mat-option>
+                                        <mat-option value="Company">Company</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Percentage(%)</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--LWF Details -->
+            <div class="bg-white rounded-md  shado p-1 m-2">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">LWF
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-5">
+
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Worker No</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Leaves Details -->
+            <div class="bg-white rounded-md  shado p-1 m-2">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Leaves
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-5">
+
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Casual Leave(CL)</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Sick Leave(SL)</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Earned Leave(EL)</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Other Details Details -->
+            <div class="bg-white rounded-md  shado p-1 m-2">
+                <div class="flex items-center justify-center bg-white w-full">
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Other Details
+                    </div>
+                    <div class=" flex line ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                    <path
+                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
+                    <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-1 gap-5">
+                        <div class="w-full">
+                            <div class="flex items-center justify-between invisible">
+                                <mat-label>Auto Shift</mat-label>
+                            </div>
+                            <mat-checkbox [(ngModel)]="isChecked" color="primary">Divyang</mat-checkbox>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between invisible">
+                                <mat-label>Auto Shift</mat-label>
+                            </div>
+                            <mat-checkbox [(ngModel)]="isChecked" color="primary">First Aid Trained</mat-checkbox>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between invisible">
+                                <mat-label>Auto Shift</mat-label>
+                            </div>
+                            <mat-checkbox [(ngModel)]="isChecked" color="primary">Fire Fighter</mat-checkbox>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between invisible">
+                                <mat-label>Auto Shift</mat-label>
+                            </div>
+                            <mat-checkbox [(ngModel)]="isChecked" color="primary">Chemical Trained</mat-checkbox>
+                        </div>
+
+                    </div>
+                    <div class="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1 gap-5">
+
+
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Bus Route</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Bus Point</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between">
+                                <mat-label>Locker Number</mat-label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-5 justify-start items-start my-5">
+                <div class=" flex gap-5 px-10 ">
+
+                    <button type="button" mat-dialog-close
+                        class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">Save</button>
+                </div>
+            </div>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!-- Job Information -->
 
 
 

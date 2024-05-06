@@ -35,12 +35,15 @@
             </div>
 
             <span class="flex gap-4 mx-5">
-                <i class="fa-solid fa-file-excel text-xl text-white border-0 p-1 px-3 bg-DarkGreen rounded-md"></i>
-
-                <i class="fa-solid fa-file-pdf text-xl text-white border-0 p-1 px-3 bg-Red rounded-md"></i>
-                <i class="fa-solid fa-print text-xl text-white border-0 p-1 px-3 bg-Yello rounded-md"></i>
-
-
+                <div>
+                    <i class="fa-solid fa-file-excel text-xl text-white border-0 p-1 px-3 bg-DarkGreen rounded-md"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file-pdf text-xl text-white border-0 p-1 px-3 bg-Red rounded-md"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-print text-xl text-white border-0 p-1 px-3 bg-Yello rounded-md"></i>
+                </div>
                 <div mat-button [matMenuTriggerFor]="menu">
                     <i class="fa-solid fa-eye text-xl text-white border-0 p-1 px-3 bg-LightSlateBlue rounded-md"></i>
                 </div>
@@ -92,7 +95,6 @@
 
 
                 </mat-menu>
-
 
 
             </span>
@@ -202,8 +204,8 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
     </div>
-      <!-- pagition   -->
-      <div class="flex justify-end my-5">
+    <!-- pagition   -->
+    <div class="flex justify-end my-5">
         <nav aria-label="Page navigation example">
             <ul class="inline-flex -space-x-px text-sm">
                 <li>

@@ -14,6 +14,8 @@ import { CommenEmpMasterComponent } from './commen-emp-master/commen-emp-master.
 import { OrgWideSearchComponent } from './org-wide-search/org-wide-search.component';
 import { FileVaultComponent } from './list-employee/file-vault/file-vault.component';
 import { FileVaultTableComponent } from './list-employee/file-vault-table/file-vault-table.component';
+import { EmployeeCodeComponent } from './employee-code/employee-code.component';
+import { SearchIconComponent } from './search-icon/search-icon.component';
 @NgModule({
   declarations: [
     CardLetterComponent,
@@ -26,7 +28,9 @@ import { FileVaultTableComponent } from './list-employee/file-vault-table/file-v
     CommenEmpMasterComponent,
     OrgWideSearchComponent,
     FileVaultComponent,
-    FileVaultTableComponent
+    FileVaultTableComponent,
+    EmployeeCodeComponent,
+    SearchIconComponent
   ],
   imports: [
     CommonModule,

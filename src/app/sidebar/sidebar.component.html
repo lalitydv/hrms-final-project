@@ -4,7 +4,7 @@
         <!-- Your sidebar content goes here -->
         <div>
             <div class="h-full  h-screen pb-4 overflow-y-auto bg-white dark:bg-gray-800">
-                <ul class="space-y-2 font-medium">
+                <ul class="space-y-2 font-normal">
 
                     <li class="flex flex-col justify-center items-center ">
                         <div class="  bg-white  w-full my-2 ">
@@ -17,50 +17,55 @@
                     <mat-divider>
                     </mat-divider>
 
-                    <div class="mt-20 flex flex-col gap-2 p-2 text-[16px]">
+                    <div class="mt-20 flex flex-col gap-2 p-2 text-[14px]">
                         <!-- dashbaord  -->
                         <li>
                             <a routerLink="/dashbord"
-                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group">
+                                class="flex items-center justify-start  p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group  font-normal">
 
-                                <mat-icon>dashboard</mat-icon>
+                                <mat-icon class=" items-center text-sm">dashboard</mat-icon>
 
-                                <span class="ml-3 ">Dashboard</span>
+                                <span class="ml-3 mt-1">Dashboard</span>
                             </a>
                         </li>
+
                         <!-- dashbaord  -->
                         <!-- Financial  -->
                         <li>
                             <a routerLink="/financial/list"
-                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group">
+                                class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group font-normal">
 
-                                <mat-icon>Financial</mat-icon>
+                                <mat-icon class=" flex-shrink-0 text-sm">Financial</mat-icon>
 
-                                <span class="ml-3 ">Financial Year</span>
+                                <span class="ml-3  mt-1">Financial Year</span>
                             </a>
                         </li>
                         <!-- Financial  -->
                         <!-- Payroll Master -->
                         <li>
-                            <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
-                                rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
+                            <button type="button" class="flex items-center w-full p-2  transition duration-75 
+                                rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink 
+                                hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r 
+                                from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r 
+                                from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700 "
                                 (click)="toggleDropdown('Payroll')">
-                                <mat-icon>assignment</mat-icon>
+                                <mat-icon class=" flex-shrink-0 text-sm">assignment</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Payroll Master</span>
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                <span class="flex-1 text-left whitespace-nowrap  ml-2 mt-1">Payroll
+                                    Master</span>
+                                <svg class="w-3 h-3 transform rotate-0 transition-transform duration-200"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Payroll')" class="py-2 space-y-2">
-                                <li>
+                            <ul *ngIf="isDropdownOpen('Payroll')" class="py-2 space-y-2 pl-2 text-[12px] ">
+                                <li class="">
                                     <a routerLink="payroll-master/all-employees"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> All Employees
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> All Employees
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -68,9 +73,9 @@
                                 </li>
                                 <li>
                                     <a routerLink="payroll-master/payslip"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Payslip
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Payslip
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -78,9 +83,9 @@
                                 </li>
                                 <li>
                                     <a routerLink="payroll-master/configuration"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Configuration
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Configuration
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -88,9 +93,8 @@
                                 </li>
                                 <li>
                                     <a routerLink="payroll-master/bouns-setting"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Bonus Setting
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Bonus Setting
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -98,13 +102,11 @@
                                 </li>
                                 <li>
                                     <a routerLink="payroll-master/payroll-reporting"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Payroll Reporting
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Payroll Reporting
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
-
                                 </li>
 
                             </ul>
@@ -115,67 +117,67 @@
                             <a routerLink="/MIS-reports/reports"
                                 class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group">
 
-                                <mat-icon>M</mat-icon>
+                                <mat-icon class="text-sm">M</mat-icon>
 
-                                <span class="ml-3 ">MIS</span>
+                                <span class="ml-3 mt-1">MIS</span>
                             </a>
                         </li>
                         <!-- MIS  -->
                         <!-- Employee Master -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex   items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('Employee')">
-                                <mat-icon>assignment</mat-icon>
+                                <mat-icon class="text-sm">assignment</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Employee Master</span>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap mt-1 ">Employee Master</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Employee')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('Employee')" class="py-2 space-y-2 text-[12px]">
                                 <li>
                                     <a routerLink="/employee-master/add-employee"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Add Employee
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Add Employee
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
                                     <a routerLink="/employee-master/list-employee"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> List Employee
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> List Employee
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
                                     <a routerLink="/employee-master/active"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Active Employee
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Active Employee
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
                                     <a routerLink="/employee-master/in-active"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Inactive Employee
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Inactive Employee
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
                                     <a routerLink="/employee-master/resign-employee"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Resign Employee
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Resign Employee
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
                                     <a routerLink="/employee-master/card-letter"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Card & Letter
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Card & Letter
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -187,40 +189,33 @@
                         <!-- Company Master -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('Company')">
-                                <mat-icon>assignment</mat-icon>
+                                <mat-icon class="text-sm">assignment</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Company Master</span>
+                                <span class="flex-1 ml-3 mt-1 text-left whitespace-nowrap ">Company Master</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Company')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('Company')" class="py-2 space-y-2 text-[12px]">
 
-
-
-
-                                <li>
+                                <li class="">
                                     <a routerLink="/company-master/company"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Company
+                                        class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Company
 
                                     </a>
-
-
-
-
                                 </li>
                                 <mat-divider>
                                 </mat-divider>
                                 <li>
                                     <a routerLink="/company-master/category"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Category
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Category
 
                                     </a>
                                 </li>
@@ -228,8 +223,8 @@
                                 </mat-divider>
                                 <li>
                                     <a routerLink="/company-master/division"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Division
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Division
 
                                     </a>
                                 </li>
@@ -237,8 +232,8 @@
                                 </mat-divider>
                                 <li>
                                     <a routerLink="/company-master/sub-division"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Sub Division
+                                        class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Sub Division
 
                                     </a>
                                 </li>
@@ -246,8 +241,8 @@
                                 </mat-divider>
                                 <li>
                                     <a routerLink="/company-master/department"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Department
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Department
 
                                     </a>
                                 </li>
@@ -255,73 +250,123 @@
                                 </mat-divider>
                                 <li>
                                     <a routerLink="/company-master/sub-department"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Sub Department
+                                        class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Sub Department
 
                                     </a>
                                 </li>
                                 <li>
                                     <a routerLink="/company-master/cadre"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Cadre
+                                        class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Cadre
 
                                     </a>
                                 </li>
                                 <li>
                                     <a routerLink="/company-master/designation"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Designation
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Designation
 
                                     </a>
                                 </li>
                                 <li>
                                     <a routerLink="/company-master/cost-centre"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Cost Centre
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Cost Centre
 
                                     </a>
                                 </li>
                                 <li>
                                     <a routerLink="/company-master/location"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Location
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Location
 
                                     </a>
                                 </li>
-
-
-
-
-
-
                             </ul>
                         </li>
                         <!-- Company Master -->
                         <!-- HR -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex items-center w-full p-2 transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('HR')">
-                                <mat-icon>assignment</mat-icon>
+                                <mat-icon class="text-sm">assignment</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">HR</span>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap mt-1 ">HR</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('HR')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('HR')" class="py-2 space-y-2 text-[12px]">
                                 <li>
-                                    <a routerLink="/HR"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>HR
-                                        <hr>
+                                    <a routerLink="/hr/promotion"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Promotion
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
 
+                                </li>
+                                <li>
+                                    <a routerLink="/hr/award"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Award
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+
+                                </li>
+                                <li>
+                                    <a routerLink="/hr/travel"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Travel
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/hr/transfer"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Transfer
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/hr/resignations"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Resignations
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/hr/complaints"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Complaints
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/hr/complaints"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Warnings
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/hr/terminations"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Terminations
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
                                 </li>
 
                             </ul>
@@ -333,21 +378,20 @@
                             <a routerLink="/shift"
                                 class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group">
 
-                                <mat-icon>filter_tilt_shift</mat-icon>
+                                <mat-icon class="text-sm">filter_tilt_shift</mat-icon>
 
-                                <span class="ml-3 ">Shift</span>
+                                <span class="ml-3 mt-1">Shift</span>
                             </a>
                         </li>
                         <!-- Shift -->
                         <!-- holiday -->
-
                         <li>
                             <a routerLink="/holiday"
                                 class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group">
 
-                                <mat-icon> holiday_village</mat-icon>
+                                <mat-icon class="text-sm"> holiday_village</mat-icon>
 
-                                <span class="ml-3 ">Holiday</span>
+                                <span class="ml-3 mt-1">Holiday</span>
                             </a>
                         </li>
                         <!-- holiday -->
@@ -357,9 +401,9 @@
                             <a routerLink="/leaves"
                                 class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group">
 
-                                <mat-icon> holiday_village</mat-icon>
+                                <mat-icon class="text-sm"> holiday_village</mat-icon>
 
-                                <span class="ml-3 ">Leaves</span>
+                                <span class="ml-3 mt-1 ">Leaves</span>
                             </a>
                         </li>
                         <!-- Leaves -->
@@ -368,24 +412,24 @@
                         <!-- Performance -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex   items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('Performance')">
-                                <mat-icon>assignment</mat-icon>
+                                <mat-icon class="text-sm">assignment</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Performance</span>
+                                <span class="flex-1 ml-3 mt-1 text-left whitespace-nowrap ">Performance</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Performance')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('Performance')" class="py-2 space-y-2 text-[12px]">
                                 <li>
                                     <a routerLink="/Performance"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Performance
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Performance
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -398,24 +442,24 @@
                         <!-- HR Calendar -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex   items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('HRCalendar')">
-                                <mat-icon>assignment</mat-icon>
+                                <mat-icon class="text-sm">assignment</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">HR Calendar</span>
+                                <span class="flex-1 ml-3 mt-1 text-left whitespace-nowrap ">HR Calendar</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('HRCalendar')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('HRCalendar')" class="py-2 space-y-2 text-[12px]">
                                 <li>
                                     <a routerLink="/HR Calendar"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>HR Calendar
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>HR Calendar
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -428,24 +472,24 @@
                         <!-- Training -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex   items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('Training')">
-                                <mat-icon>assignment</mat-icon>
+                                <mat-icon class="text-sm">assignment</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Training</span>
+                                <span class="flex-1 ml-3 mt-1 text-left whitespace-nowrap ">Training</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Training')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('Training')" class="py-2 space-y-2 text-[12px]">
                                 <li>
                                     <a routerLink="/Training"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Training
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Training
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -458,88 +502,108 @@
                         <!-- Meetings -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex   items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('Meetings')">
-                                <mat-icon>assignment</mat-icon>
+                                <mat-icon class="text-sm">assignment</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Meetings</span>
+                                <span class="flex-1 ml-3 mt-1 text-left whitespace-nowrap ">Meetings</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Meetings')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('Meetings')" class="py-2 space-y-2 text-[12px]">
                                 <li>
-                                    <a routerLink="/Meetings"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Meetings
-                                        <hr>
+                                    <a routerLink="/meeting/event"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Events
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
-
                                 </li>
-
+                                <li>
+                                    <a routerLink="/meeting/meeting"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Meetings
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
                             </ul>
                         </li>
                         <!-- Meetings -->
                         <!-- Help Desk -->
                         <li>
-                            <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
-                                rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
-                                (click)="toggleDropdown('Help')">
-                                <mat-icon>assignment</mat-icon>
+                            <a routerLink="/help-desk/helpdesk"
+                                class="flex items-center justify-start   p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group  font-normal">
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Help Desk</span>
+                                <mat-icon class="text-sm">assignment</mat-icon>
+
+                                <span class=" ml-2 mt-1">Help Desk </span>
+                            </a>
+                        </li>
+
+                        <!-- Help Desk -->
+                        <!-- Project Management -->
+                        <li>
+                            <button type="button"
+                                class="flex   items-center w-full p-2   transition duration-75 
+                                rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
+                                (click)="toggleDropdown('Project')">
+                                <mat-icon class="text-sm">assignment</mat-icon>
+
+                                <span class="flex-1 ml-3 mt-1 text-left whitespace-nowrap ">Project Management</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Help')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('Project')" class="py-2 space-y-2 text-[12px]">
                                 <li>
-                                    <a routerLink="/Help"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Help Desk
-                                        <hr>
+                                    <a routerLink="/project-management/projects"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Projects
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
 
                                 </li>
-
-                            </ul>
-                        </li>
-                        <!-- Help Desk -->
-                        <!-- Project Management -->
-                        <li>
-                            <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
-                                rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
-                                (click)="toggleDropdown('Project')">
-                                <mat-icon>assignment</mat-icon>
-
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Project Management</span>
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 4 4 4-4" />
-                                </svg>
-                            </button>
-                            <ul *ngIf="isDropdownOpen('Project')" class="py-2 space-y-2">
                                 <li>
-                                    <a routerLink="/Project"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Project Management
-                                        <hr>
+                                    <a routerLink="/project-management/tasks"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Tasks
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
 
+                                </li>
+                                <li>
+                                    <a routerLink="/project-management/clients"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Clients
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/project-management/invoice"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Invoice
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
+                                </li>
+                                <li>
+                                    <a routerLink="/project-management/tax-type"
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Tax Type
+                                    </a>
+                                    <mat-divider>
+                                    </mat-divider>
                                 </li>
 
                             </ul>
@@ -548,23 +612,23 @@
                         <!-- Biometric Device -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex   items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('Biometric')">
-                                <mat-icon>assignment</mat-icon>
+                                <mat-icon class="text-sm">assignment</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Biometric Device</span>
+                                <span class="flex-1 ml-3 mt-1 text-left whitespace-nowrap ">Biometric Device</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Biometric')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('Biometric')" class="py-2 space-y-2 text-[12px]">
                                 <li>
                                     <a routerLink="/biometric/device-list"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Device
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Device
 
                                     </a>
                                     <mat-divider>
@@ -573,8 +637,8 @@
                                 </li>
                                 <li>
                                     <a routerLink="/biometric/device-employee"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Device Employee
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Device Employee
 
                                     </a>
                                     <mat-divider>
@@ -591,9 +655,9 @@
                             <a routerLink="/attendance-summary"
                                 class="flex items-center p-2 rounded-lg group hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink group">
 
-                                <mat-icon> holiday_village</mat-icon>
+                                <mat-icon class="text-sm"> holiday_village</mat-icon>
 
-                                <span class="ml-3 ">Attendance-Summary</span>
+                                <span class="ml-3 mt-1">Attendance-Summary</span>
                             </a>
                         </li>
 
@@ -602,22 +666,22 @@
                         <!-- Maintanence -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex   items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('Maintanence')">
-                                <mat-icon>assignment</mat-icon>
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">Maintanence</span>
+                                <mat-icon class="text-sm">assignment</mat-icon>
+                                <span class="flex-1 ml-3 mt-1 text-left whitespace-nowrap ">Maintanence</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Maintanence')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('Maintanence')" class="py-2 space-y-2 text-[12px]">
                                 <li>
                                     <a routerLink="/maintanence/send-employee"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Send Employee to De
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Send Employee to De
 
                                     </a>
                                     <mat-divider>
@@ -626,8 +690,8 @@
                                 </li>
                                 <li>
                                     <a routerLink="/maintanence/synchronize-fingerprint"
-                                        class="flex items-center w-full p-2 whitespace-nowrap text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs whitespace-nowrap"></i>Synchronize
+                                        class="flex items-center w-full p-2 whitespace-nowrap  transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2  whitespace-nowrap"></i>Synchronize
                                         Fingerprint
 
                                     </a>
@@ -637,8 +701,8 @@
                                 </li>
                                 <li>
                                     <a routerLink="/maintanence/collect-fingerprint"
-                                        class="flex items-center w-full p-2 whitespace-nowrap text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs whitespace-nowrap"></i>Collect
+                                        class="flex items-center w-full p-2 whitespace-nowrap  transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2  whitespace-nowrap"></i>Collect
                                         Fingerprint
 
                                     </a>
@@ -648,8 +712,8 @@
                                 </li>
                                 <li>
                                     <a routerLink="/maintanence/collect-attendance"
-                                        class="flex items-center w-full p-2 whitespace-nowrap text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs whitespace-nowrap"></i>Collect
+                                        class="flex items-center w-full p-2 whitespace-nowrap  transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2  whitespace-nowrap"></i>Collect
                                         Attendance
 
                                     </a>
@@ -659,8 +723,8 @@
                                 </li>
                                 <li>
                                     <a routerLink="/maintanence/employee-attendance"
-                                        class="flex items-center w-full p-2 whitespace-nowrap text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs whitespace-nowrap"></i>Employee
+                                        class="flex items-center w-full p-2 whitespace-nowrap  transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2  whitespace-nowrap"></i>Employee
                                         Attendance
 
                                     </a>
@@ -677,12 +741,12 @@
                         <!-- System Setting -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex   items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('Setting')">
-                                <mat-icon>supervised_user_circle</mat-icon>
+                                <mat-icon class="text-sm">supervised_user_circle</mat-icon>
 
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">System Setting</span>
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap ">System Setting</span>
 
 
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -691,73 +755,73 @@
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('Setting')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('Setting')" class="py-2 space-y-2 text-[12px]">
                                 <li>
                                     <a routerLink="/setting/company"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i> Company
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i> Company
                                     </a>
                                 </li>
                                 <mat-divider></mat-divider>
                                 <li>
                                     <a routerLink="/setting/pdf"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Pdf Report
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Pdf Report
                                     </a>
                                 </li>
                                 <mat-divider></mat-divider>
 
                                 <li>
                                     <a routerLink="/setting/whatsapp"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Whatsapp
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Whatsapp
                                     </a>
                                 </li>
                                 <mat-divider></mat-divider>
 
                                 <li>
                                     <a routerLink="/setting/sms"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>SMS
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>SMS
                                     </a>
                                 </li>
                                 <mat-divider></mat-divider>
                                 <li>
                                     <a routerLink="/setting/email"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Email
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Email
                                     </a>
                                 </li>
                                 <mat-divider></mat-divider>
 
                                 <li>
                                     <a routerLink="/setting/td"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>TD/MD
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>TD/MD
                                     </a>
                                 </li>
                                 <mat-divider></mat-divider>
 
                                 <li>
                                     <a routerLink="/setting/ftp"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Ftp
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Ftp
                                     </a>
                                 </li>
                                 <mat-divider></mat-divider>
 
                                 <li>
                                     <a routerLink="/setting/alert"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Alert
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Alert
                                     </a>
                                 </li>
                                 <mat-divider></mat-divider>
 
                                 <li>
                                     <a routerLink="/setting/auto-mail-report"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Auto Mail Report
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Auto Mail Report
                                     </a>
                                 </li>
                             </ul>
@@ -766,23 +830,23 @@
                         <!-- File Manager -->
                         <li>
                             <button type="button"
-                                class="flex   items-center w-full p-2 text-base text-gray-900 transition duration-75 
+                                class="flex   items-center w-full p-2   transition duration-75 
                                 rounded-lg group first-letter: hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:text-White active:bg-gradient-to-r from-bgLightblu to-bglightPink focus:bg-gradient-to-r from-bgLightblu to-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:hover:bg-gray-700"
                                 (click)="toggleDropdown('FileManager')">
-                                <mat-icon>assignment</mat-icon>
-                                <span class="flex-1 ml-3 text-left whitespace-nowrap text-sm">File Manager</span>
+                                <mat-icon class="text-sm">assignment</mat-icon>
+                                <span class="flex-1 ml-3 mt-1 text-left whitespace-nowrap ">File Manager</span>
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <ul *ngIf="isDropdownOpen('FileManager')" class="py-2 space-y-2">
+                            <ul *ngIf="isDropdownOpen('FileManager')" class="py-2 space-y-2 text-[12px]">
                                 <li>
                                     <a routerLink="/file-manager/file-manager"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>File Manager
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>File Manager
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -790,9 +854,9 @@
                                 </li>
                                 <li>
                                     <a routerLink="/file-manager/official-documents"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>Official Documents
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>Official Documents
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -800,9 +864,9 @@
                                 </li>
                                 <li>
                                     <a routerLink="/file-manager/file-configuration"
-                                        class="flex items-center w-full p-2  text-gray-900 transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 text-sm">
-                                        <i class="fa-solid fa-circle-dot mx-2 text-xs"></i>File Configuration
-                                        <hr>
+                                        class="flex items-center w-full p-2   transition duration-75 rounded-lg pl-11 group hover:text-bglightPink active:text-bglightPink focus:text-bglightPink focus:text-White dark:text-White dark:hover:bg-gradient-to-r from-bgLightblu to-bglightPink hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ">
+                                        <i class="fa-solid fa-circle-dot mx-2 "></i>File Configuration
+
                                     </a>
                                     <mat-divider>
                                     </mat-divider>
@@ -841,7 +905,7 @@
                 <div class="flex items-center justify-center gap-5 ml-3">
                     <div>
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full  focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            class="flex  bg-gray-800 rounded-full  focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
                             <span class="sr-only">Open user menu</span>
                             <img class="md:w-8 md:h-8 w-4 h-4 object-cover rounded-full"
                                 src="assets/Navsaidbar/India.png" alt="user photo" />
@@ -849,7 +913,7 @@
                     </div>
                     <div>
                         <button type="button"
-                            class="flex   text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            class="flex    bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
                             <span class="sr-only">Open user menu</span>
                             <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/Chnad.png"
                                 alt="user photo" />
@@ -857,7 +921,7 @@
                     </div>
                     <div>
                         <button type="button"
-                            class="flex text-sm  bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            class="flex   bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
                             <span class="sr-only">Open user menu</span>
                             <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/chat.png"
                                 alt="user photo" />
@@ -865,7 +929,7 @@
                     </div>
                     <div>
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            class="flex  bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
                             <span class="sr-only">Open user menu</span>
                             <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/Notifiaction.png"
                                 alt="user photo" />
@@ -873,42 +937,42 @@
                     </div>
                     <div>
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                            class="flex  bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                             aria-expanded="false" data-dropdown-toggle="dropdown-user">
                             <span class="sr-only">Open user menu</span>
                             <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/Profile.png"
                                 alt="user photo" />
                         </button>
                     </div>
-                    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                    <div class="z-50 hidden my-4  list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
                         id="dropdown-user">
                         <div class="px-4 py-3" role="none">
-                            <p class="text-sm text-gray-900 dark:text-white" role="none">
+                            <p class="  dark:text-white" role="none">
                                 Shine Code
                             </p>
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                            <p class=" font-medium  truncate dark:text-gray-300" role="none">
                                 shinecoders.com
                             </p>
                         </div>
                         <ul class="py-1" role="none">
                             <li>
                                 <a routerLink="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    class="block px-4 py-2  text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem">Dashboard</a>
                             </li>
                             <li>
                                 <a routerLink="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    class="block px-4 py-2  text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem">Settings</a>
                             </li>
                             <li>
                                 <a routerLink="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    class="block px-4 py-2  text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem">Earnings</a>
                             </li>
                             <li>
                                 <a routerLink="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    class="block px-4 py-2  text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem">Sign out</a>
                             </li>
                         </ul>
@@ -917,7 +981,7 @@
                         <button type="button" data-drawer-target="drawer-right-example"
                             data-drawer-show="drawer-right-example" data-drawer-placement="right"
                             aria-controls="drawer-right-example"
-                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            class="flex  bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
                             <span class="sr-only">Open user menu</span>
                             <img class="md:w-8 md:h-8 w-4 h-4 rounded-full" src="assets/Navsaidbar/Group 338966.png"
                                 alt="user photo" />
@@ -943,7 +1007,7 @@
     <h5 id="drawer-right-label"></h5>
 
     <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example"
-        class="text-gray-400  bg-Pink w-10 h-10 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+        class="text-gray-400  bg-Pink w-10 h-10 hover:bg-gray-200 hover: rounded-lg  absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
@@ -953,7 +1017,7 @@
 
     <div class="mt-10 text-white pb-10">
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Background
             </label>
             <select
@@ -966,7 +1030,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Layout
             </label>
             <select
@@ -979,7 +1043,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Sidebar
             </label>
             <select
@@ -992,7 +1056,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Sidebar Position
             </label>
             <select
@@ -1005,7 +1069,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Header Position
             </label>
             <select
@@ -1018,7 +1082,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Container
             </label>
             <select
@@ -1031,7 +1095,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Direction
             </label>
             <select
@@ -1044,7 +1108,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Body Font
             </label>
             <select
@@ -1057,7 +1121,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Navigation Header
             </label>
 
@@ -1085,7 +1149,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Header
             </label>
 
@@ -1113,7 +1177,7 @@
 
         </div>
         <div class="w-full  px-3 mb-6 md:mb-0">
-            <label class="block text-sm  tracking-wide  font-bold mb-2" for="grid-first-name ">
+            <label class="block   tracking-wide  font-bold mb-2" for="grid-first-name ">
                 Sidebar
             </label>
 

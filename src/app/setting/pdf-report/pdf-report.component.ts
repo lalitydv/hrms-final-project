@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./pdf-report.component.css']
 })
 export class PdfReportComponent {
-
+  FirstIcons:String="assets/Dashboard/image 78.png"
+  HearderHeding:String="System Setting"
+  panelOpenState = true;
 }

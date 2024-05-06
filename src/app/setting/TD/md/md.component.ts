@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./md.component.css']
 })
 export class MDComponent {
-
+  FirstIcons:String="assets/Dashboard/image 78.png"
+  HearderHeding:String="System Setting"
+  panelOpenState = true;
+  panelOpenState2 = true;
+  checked = true;
 }

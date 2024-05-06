@@ -20,13 +20,12 @@
         <mat-tab-group class="p-4 border-b-2 border-gray-1 flex gap-10" mat-stretch-tabs="false"
             animationDuration="0ms">
             <!-- Daily -->
-            <mat-tab label="Daily" class="py-5 bg-Blue">
+            <mat-tab label="Daily" class="py-5">
                 <div class="bg-white  shadow-2xl rounded-2xl bg-Blue   my-5 p-5">
-                    <mat-accordion class="mx-4 select-dropdown-box">
-                        <mat-expansion-panel (opened)="panelOpenState = false" (closed)="panelOpenState = false"
-                            class="w-full ">
 
-                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                                 <mat-panel-title class="font-medium text-xl ">
                                     Daily Report <span class="flex gap-4 mx-5">
                                         <i
@@ -134,10 +133,8 @@
             <mat-tab label=" Monthly">
                 <div class="bg-white  shadow-2xl rounded-2xl   my-5 p-5">
                     <mat-accordion class="mx-4 select-dropdown-box">
-                        <mat-expansion-panel (opened)="panelOpenState = false" (closed)="panelOpenState = false"
-                            class="w-full ">
-
-                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                                 <mat-panel-title class="font-medium text-xl ">
                                     Monthly Report <span class="flex gap-4 mx-5">
                                         <i
@@ -258,10 +255,8 @@
             <mat-tab label="Yearly">
                 <div class="bg-white  shadow-2xl rounded-2xl   my-5 p-5">
                     <mat-accordion class="mx-4 select-dropdown-box">
-                        <mat-expansion-panel (opened)="panelOpenState = false" (closed)="panelOpenState = false"
-                            class="w-full ">
-
-                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                                 <mat-panel-title class="font-medium text-xl ">
                                     Yearly Report <span class="flex gap-4 mx-5">
                                         <i
@@ -412,10 +407,8 @@
             <mat-tab label="Import Daily Production" class="bg-Blue border-2">
                 <div class="bg-white  shadow-2xl rounded-2xl   my-5 p-5">
                     <mat-accordion class="mx-4 select-dropdown-box">
-                        <mat-expansion-panel (opened)="panelOpenState = false" (closed)="panelOpenState = false"
-                            class="w-full ">
-
-                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                                 <mat-panel-title class="font-medium text-xl ">
                                     Import Daily Production Report
 

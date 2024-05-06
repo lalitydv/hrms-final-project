@@ -27,6 +27,7 @@ import { MDComponent } from './TD/md/md.component';
 import { FtpComponent } from './ftp/ftp.component';
 import { AlertComponent } from './alert/alert.component';
 import { AutoMailReportComponent } from './auto-mail-report/auto-mail-report.component';
+import { AddFtpComponent } from './ftp/add-ftp/add-ftp.component';
 
 
 
@@ -45,7 +46,8 @@ import { AutoMailReportComponent } from './auto-mail-report/auto-mail-report.com
                  MDComponent,
                  FtpComponent,
                  AlertComponent,
-                 AutoMailReportComponent
+                 AutoMailReportComponent,
+                 AddFtpComponent
   ],
   imports: [
     CommonModule,

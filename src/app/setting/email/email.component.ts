@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./email.component.css']
 })
 export class EmailComponent {
-
+  FirstIcons:String="assets/Dashboard/image 78.png"
+  HearderHeding:String="System Setting"
+  panelOpenState = true;
+  checked = true;
 }

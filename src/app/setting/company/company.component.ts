@@ -9,4 +9,7 @@ export class CompanyComponent {
   FirstIcons:String="assets/Dashboard/image 78.png"
   HearderHeding:String="System Setting"
   panelOpenState = true;
+  panelOpenState2 = true;
+  panelOpenState3 = true;
+  panelOpenState4 = true;
 }

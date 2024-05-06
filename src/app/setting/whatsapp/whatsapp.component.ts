@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./whatsapp.component.css']
 })
 export class WhatsappComponent {
-
+  FirstIcons:String="assets/Dashboard/image 78.png"
+  HearderHeding:String="System Setting"
+  panelOpenState = true;
 }
