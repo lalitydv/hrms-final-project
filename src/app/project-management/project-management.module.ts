@@ -13,6 +13,7 @@ import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
 import { EditProjectComponent } from './projects/edit-project/edit-project.component';
 import { ViewProjectOverviewComponent } from './projects/view-project-overview/view-project-overview.component';
 import { CommonTagComponent } from './common-tag/common-tag.component';
+import { ProjectsDetailsTableComponent } from './projects/projects-details-table/projects-details-table.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CommonTagComponent } from './common-tag/common-tag.component';
     AddProjectComponent,
     EditProjectComponent,
     ViewProjectOverviewComponent,
-    CommonTagComponent
+    CommonTagComponent,
+    ProjectsDetailsTableComponent
   ],
   imports: [
     CommonModule,
