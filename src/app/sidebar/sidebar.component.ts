@@ -3,7 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ChangeDetectorRef } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -11,7 +11,9 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 export class SidebarComponent {
   @ViewChild('sidenav', { static: true }) sidenav!: MatSidenav;
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {}
+
+ 
   ngOnInit() {
     // Initialize the sidebar based on the initial view mode
     this.setupSidebar();
@@ -71,5 +73,10 @@ export class SidebarComponent {
   //     this.sideBarService.setDrawer(this.drawer);
   //   }
   // }
+  
+  Logout(){
+  
+    this.router.navigate(['/']);
+  }
   
 }

@@ -1,0 +1,445 @@
+<div class="   my-5 p-5">
+
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    Employee Details
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+
+                <div class="mx-auto grid xl:grid-cols-4 md:grid-cols-4 justify-between grid-cols-1 gap-5">
+
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="PAYCODE" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="	DEPARTMENT	" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="	SUB-DEPT		" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="	CADRE		" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="NAME" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="	DESIGNATION	" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="DIVISION	" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="			" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="F/H Name" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="	CATEGORY	" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="UAN	" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="	ESI" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="COMPANY" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="	LOCATION	" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="DOJ	" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <div class="w-full">
+
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="	DOB" readonly="" />
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <mat-divider></mat-divider>
+                <div class="flex justify-between my-5  ">
+                    <button class="bg-Blue px-5 text-white p-2 rounded-md flex items-center gap-5">
+                        Save
+                    </button>
+
+                </div>
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState1" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    Salary
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <!-- hrere ther Contente  -->
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState2" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    CTC
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <!-- hrere ther Contente  -->
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState3" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    Mode
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="w-full">
+                    <div>
+                        <mat-label class="invisible">Language</mat-label>
+                        <mat-radio-group aria-label=" Select an option" class="flex md:flex-row flex-col gap-5">
+
+
+                            <span>Monthly <mat-checkbox value="" checked="" color="primary"></mat-checkbox></span>
+                            <span>Daily <mat-checkbox value="" checked="" color="primary"></mat-checkbox></span>
+                            <span>Hourly <mat-checkbox value="" checked="" color="primary"></mat-checkbox></span>
+
+
+                        </mat-radio-group>
+                    </div>
+                </div>
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState4" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    Deductions
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="w-full">
+                    <!-- Contenet  -->
+
+                </div>
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState5" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    Fixed Deductions
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="w-full">
+                    <!-- Contenet  -->
+
+                </div>
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState6" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    Deduction Limits
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="w-full">
+                    <!-- Contenet  -->
+
+                </div>
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState7" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    Bank Details
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="w-full">
+                    <div class="bg-Lighitblue w-full pt-4 px-8">
+
+                        <div class="mx-auto grid xl:grid-cols-5 md:grid-cols-5 justify-between grid-cols-1 gap-5">
+
+                            <div class="w-full">
+
+                                <div class="flex flex-col items-center gap-2">
+                                    <mat-label>Account Number:</mat-label>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+
+                                <div class="flex flex-col items-center gap-2">
+                                    <mat-label>IFSC:</mat-label>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+
+                                <div class="flex  flex-col items-center gap-2">
+                                    <mat-label>Bank name:</mat-label>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <mat-select [value]="'All Selected'">
+                                            <mat-option value="All Selected">All Selected</mat-option>
+                                            <mat-option value="Company">Company</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+
+                                </div>
+
+                            </div>
+                            <div class="w-full">
+
+                                <div class="flex flex-col items-center gap-2">
+                                    <mat-label>Bank name:</mat-label>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+
+                                <div class="flex flex-col items-center gap-2">
+                                    <mat-label>Transfer Type:</mat-label>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <mat-select [value]="'All Selected'">
+                                            <mat-option value="All Selected">All Selected</mat-option>
+                                            <mat-option value="Company">Company</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+
+                                <div class="flex items-center gap-2">
+                                    <input type="file" name="" id="">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState8" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    Overtime Rate
+                </mat-panel-title>
+                <mat-panel-title class="font-medium text-xl ">
+                    Working Hours
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="w-full">
+                    <div class="bg-Lighitblue w-full pt-4 px-8">
+
+                        <div class="mx-auto grid xl:grid-cols-3 md:grid-cols-3 justify-between grid-cols-1 gap-5">
+
+                            <div class="w-full">
+
+                                <div class="flex flex-col items-center gap-2">
+
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+                            <div class="w-full">
+
+                                <div class="flex flex-col items-center gap-2">
+
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="" />
+                                    </mat-form-field>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="panelOpenState8" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                <mat-panel-title class="font-medium text-xl ">
+                    Allowances
+                </mat-panel-title>
+
+            </mat-expansion-panel-header>
+            <div class="bg-Lighitblue w-full pt-4 px-8">
+                <div class="w-full">
+                    <div class="bg-Lighitblue w-full pt-4 px-8">
+
+                        <!-- Contenet  -->
+                    </div>
+
+                </div>
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+
+    <div class="flex justify-between my-5  ">
+        <button class="bg-Blue px-5 text-white p-2 rounded-md flex items-center gap-5">
+            Save
+        </button>
+
+    </div>
+
+</div>

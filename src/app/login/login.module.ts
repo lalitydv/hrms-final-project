@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedImportsModule } from '../shared-imports/shared-imports.module';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   imports: [
     CommonModule,
     LoginRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatCheckboxModule,
-    FormsModule,
-    FlexLayoutModule
+    SharedImportsModule
 
   ]
 })

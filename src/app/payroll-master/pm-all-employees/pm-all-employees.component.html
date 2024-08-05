@@ -10,27 +10,17 @@
 
     </div>
     <!-- Hedding  -->
-
-
-
     <!-- Select Box  -->
-
-
-    <div class="   my-5 p-5">
+    <div class="my-5 p-5">
         <div class="flex flex-wrap gap-5">
             <div>
                 <div class="w-full">
                     <button type="submit"
                         class="text-white bg-Pink hover:bg-Pink focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center flex items-center gap-2">
-
                         <mat-icon class="mat-18"> task</mat-icon>
-
                         <span>
-
                             Master Report
                         </span>
-
-
                     </button>
                 </div>
             </div>
@@ -131,8 +121,6 @@
             </mat-expansion-panel>
         </mat-accordion>
     </div>
-
-
     <!-- Select Box  -->
     <!-- table start  -->
     <!-- dawnlod icons  -->
@@ -159,7 +147,7 @@
     <!-- dawnlod icons  -->
 
 
-    <div class="overflow-auto my-5">
+    <div class="overflow-auto my-5 bg-white  shado rounded-2xl">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 text-center">
             <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
@@ -294,7 +282,8 @@
                             required>
                     </div>
                 </th>
-                <td mat-cell *matCellDef="let element"> <span class="text-Blue border-2 border-Blue p-2 rounded-2xl">{{
+                <td mat-cell *matCellDef="let element"> <span routerLink="/employee-master/add-employee"
+                        class="text-Blue border-2 border-Blue p-2 rounded-2xl">{{
                         element.FullInfo }}</span> </td>
             </ng-container>
             <!-- SalaryColumn -->
@@ -310,7 +299,8 @@
                           dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
                             required>
                     </div>
-                <td mat-cell *matCellDef="let element"> <span class="text-Red border-2 border-Red p-2 rounded-2xl">{{
+                <td mat-cell *matCellDef="let element"> <span routerLink="/employee-master/salary"
+                        class="text-Red border-2 border-Red p-2 rounded-2xl">{{
                         element.Salary }}</span> </td>
             </ng-container>
             <!-- File vault Column -->
@@ -326,7 +316,7 @@
                           dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
                             required>
                     </div>
-                <td mat-cell *matCellDef="let element"> <span
+                <td mat-cell *matCellDef="let element"> <span routerLink="/employee-master/file-vault"
                         class="text-[#00BCF7] border-2 border-[#00BCF7] p-2 rounded-2xl">{{
                         element.Filevault }}</span> </td>
             </ng-container>

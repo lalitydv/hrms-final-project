@@ -1,0 +1,90 @@
+<section class="my-5">
+    <!-- ----------------------- -->
+    <div class="service-tab my-4">
+
+        <app-holiday></app-holiday>
+        <div class=" gap-5 my-5">
+            <div class=" bg-opacity-50 rounded-lg">
+                <div class="flex items-center justify-between  bg-blue-100 rounded-lg px-5">
+                    <!-- Pagination -->
+                    <div class="flex justify-end my-5">
+                        <nav aria-label="Page navigation example">
+                            <ul class="inline-flex -space-x-px text-sm">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-10 ml-0 leading-tight text-gray-500 bg-Blue border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 text-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                        <i class="fa-solid fa-caret-left"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-10 leading-tight text-gray-500 bg-Blue border  text-white border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center h-10  px-5  mx-4 leading-tight text-gray-500 bg-Blue border  text-white border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                        Today
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Pagination -->
+                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">{{Salary}}
+                    </div>
+                    <div class="bg-white rounded-md flex justify-between items-center gap-10 px-5">
+                        <div class="rounded-lg   p-3 hover:bg-Blue hover:text-White">
+                            Month
+                        </div>
+                        <div routerLink="/hr-calendar/Week" class="rounded-lg   p-3 hover:bg-Blue hover:text-White">
+                            Week
+                        </div>
+                        <div class="rounded-lg   p-3 hover:bg-Blue hover:text-White"> Day</div>
+                        <div class="rounded-lg   p-3 hover:bg-Blue hover:text-White"> List</div>
+
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="day-calendar">
+                        <div class="day-calendar-header">
+                            <button class="prev-day">&lt;</button>
+                            <div class="day-display">Friday</div>
+                            <button class="next-day">&gt;</button>
+                        </div>
+                        <div class="day-calendar-grid">
+                            <!-- Time Slots -->
+                            <div class="time-slot">All Day</div>
+                            <div class="day-header"></div>
+                            
+                            <div class="time-slot">12AM</div>
+                            <div class="day-calendar-cell"></div>
+                            
+                            <div class="time-slot">1AM</div>
+                            <div class="day-calendar-cell"></div>
+                            
+                            <div class="time-slot">2AM</div>
+                            <div class="day-calendar-cell"></div>
+                            
+                            <div class="time-slot">3AM</div>
+                            <div class="day-calendar-cell"></div>
+                            
+                            <div class="time-slot">4AM</div>
+                            <div class="day-calendar-cell"></div>
+                            
+                            <div class="time-slot">5AM</div>
+                            <div class="day-calendar-cell"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

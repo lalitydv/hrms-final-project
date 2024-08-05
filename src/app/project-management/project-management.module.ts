@@ -14,6 +14,11 @@ import { EditProjectComponent } from './projects/edit-project/edit-project.compo
 import { ViewProjectOverviewComponent } from './projects/view-project-overview/view-project-overview.component';
 import { CommonTagComponent } from './common-tag/common-tag.component';
 import { ProjectsDetailsTableComponent } from './projects/projects-details-table/projects-details-table.component';
+import { AddClientComponent } from './clients/add-client/add-client.component';
+import { EditClientComponent } from './clients/edit-client/edit-client.component';
+import { InvoiceAddComponent } from './invoice/invoice-add/invoice-add.component';
+import { TaxTypeUpdateComponent } from './tax-type/tax-type-update/tax-type-update.component';
+import { AddTaskTestComponent } from './tasks/add-task-test/add-task-test.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { ProjectsDetailsTableComponent } from './projects/projects-details-table
     EditProjectComponent,
     ViewProjectOverviewComponent,
     CommonTagComponent,
-    ProjectsDetailsTableComponent
+    ProjectsDetailsTableComponent,
+    AddClientComponent,
+    EditClientComponent,
+    InvoiceAddComponent,
+    TaxTypeUpdateComponent,
+    AddTaskTestComponent
   ],
   imports: [
     CommonModule,

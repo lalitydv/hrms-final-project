@@ -91,7 +91,7 @@
                         </div>
                     </button>
                     <mat-divider></mat-divider>
-                    
+
                     <button mat-menu-item (click)="selectOption('Option 6')">
                         <div class="flex items-center text-Pink ">
                             <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
@@ -136,7 +136,7 @@
 
     <!-- table start  -->
 
-    <div class="overflow-auto my-5">
+    <div class="overflow-auto my-5 bg-white  shado rounded-2xl">
         <table mat-table [dataSource]="dataSource" class=" text-center">
             <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -164,7 +164,7 @@
             <!-- EventName Column -->
             <ng-container matColumnDef="ComplaintFrom">
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Complaint From</th>
-                <td mat-cell *matCellDef="let element">{{ element.ComplaintFrom }} 
+                <td mat-cell *matCellDef="let element">{{ element.ComplaintFrom }}
                 </td>
 
             </ng-container>
@@ -183,8 +183,8 @@
                 <td mat-cell *matCellDef="let element">{{ element.ComplaintAgainst }}</td>
             </ng-container>
 
-           
-            
+
+
             <!--End Date Column -->
             <ng-container matColumnDef="Date">
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Date</th>
@@ -251,5 +251,3 @@
 
 
 </section>
-
-

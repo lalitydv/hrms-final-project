@@ -16,6 +16,7 @@ import { FileVaultComponent } from './list-employee/file-vault/file-vault.compon
 import { FileVaultTableComponent } from './list-employee/file-vault-table/file-vault-table.component';
 import { EmployeeCodeComponent } from './employee-code/employee-code.component';
 import { SearchIconComponent } from './search-icon/search-icon.component';
+import { SalaryComponent } from './salary/salary.component';
 @NgModule({
   declarations: [
     CardLetterComponent,
@@ -30,7 +31,8 @@ import { SearchIconComponent } from './search-icon/search-icon.component';
     FileVaultComponent,
     FileVaultTableComponent,
     EmployeeCodeComponent,
-    SearchIconComponent
+    SearchIconComponent,
+    SalaryComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,168 @@
+<div class="bg-white rounded-2xl overflow-y-scroll h-screen">
+    <div class="bg-lightPink py-2 ">
+        <div class="flex justify-between mx-5">
+            <div>
+                Add Client
+            </div>
+            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center ">
+                <i class="fa-solid fa-xmark text-Red text-xl"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-5">
+
+
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+
+            <div class=" w-full">
+                <mat-label> First Name*</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="First" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label> Last Name*</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Last" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>Company*</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Company" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>Username</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Username" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>Email</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="xyz@gmail.com" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>Phone*</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Phone" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>Website</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Website" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class=" w-full">
+                <mat-label>Password*</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput type="password" value="*******" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>Address Line 1</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Address Line 1" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>Address Line 2</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Address Line 2" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>City</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="City" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>State/Province</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="State/Province" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>ZIP</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="ZIP" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+
+            <div class="w-full ">
+                <mat-label>Country </mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <mat-select [value]="'--Company--'">
+                        <mat-option value="--Company--">--Company--</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="w-full">
+                <section class="example-section">
+                    <mat-checkbox class="example-margin" color="primary">Active</mat-checkbox>
+                    <!-- <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox> -->
+                </section>
+            </div>
+            <div class="w-full">
+                <mat-label>Award Photo</mat-label>
+                <form action="#"
+                    class="relative border-2 px-20 border-dotted max-w-xs mb-10 bg-white bg-gray-100 rounded-lg shadow-inner">
+                    <input type="file" id="file-upload" class="hidden" />
+                    <label for="file-upload"
+                        class="z-20 flex flex-col-reverse items-center justify-center w-full h-full cursor-pointer">
+                        <p
+                            class="z-10 text-lg font-light whitespace-nowrap text-center text-Pink border-2 border-Pink p-5 rounded-xl">
+                            browse images
+                        </p>
+                        <img src="https://toppng.com/uploads/preview/file-upload-image-icon-115632290507ftgixivqp.png"
+                            alt="" class="w-36 h-36 my-5" />
+                    </label>
+                </form>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="flex gap-5 justify-start items-start my-5">
+            <div class=" flex gap-5 ">
+
+                <button type="button" mat-dialog-close
+                    class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

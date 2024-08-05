@@ -135,7 +135,7 @@
 
     <!-- table start  -->
 
-    <div class="overflow-auto my-5">
+    <div class="overflow-auto my-5 bg-white  shado rounded-2xl">
         <table mat-table [dataSource]="dataSource" class=" text-center">
             <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -187,7 +187,7 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Date</th>
                 <td mat-cell *matCellDef="let element">{{ element.Date }}</td>
             </ng-container>
-            
+
 
             <!-- Action Column -->
             <ng-container matColumnDef="actions">
@@ -249,5 +249,3 @@
 
 
 </section>
-
-

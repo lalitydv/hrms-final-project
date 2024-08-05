@@ -5,8 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   {
     path: 'dashbord' ,
-    component: DashboardComponent
-    
+    component: DashboardComponent 
   },
   { path: '', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)},
   { path: 'setting', loadChildren: () => import('./setting/setting.module').then(m => m.SettingModule)},
@@ -26,6 +25,9 @@ const routes: Routes = [
   { path: 'project-management', loadChildren: () => import('./project-management/project-management.module').then(m => m.ProjectManagementModule)},
   { path: 'help-desk', loadChildren: () => import('./help-desk/help-desk.module').then(m => m.HelpDeskModule)},
   { path: 'meeting', loadChildren: () => import('./meetings/meetings.module').then(m => m.MeetingsModule)},
+  { path: 'performance', loadChildren: () => import('./performance/performance.module').then(m => m.PerformanceModule)},
+  { path: 'training', loadChildren: () => import('./training/training.module').then(m => m.TrainingModule)},
+  { path: 'hr-calendar', loadChildren: () => import('./hr-calendar/hr-calendar.module').then(m => m.HRCalendarModule)},
 ];
 
 @NgModule({

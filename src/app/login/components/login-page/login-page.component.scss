@@ -1,83 +1,227 @@
-:host{
-    display: flex;
-    justify-content: center;
-    // align-items: center;
-    // height: 100vh;
-    margin-top: 54px;
-    padding: 20px;
-   
-}
-.logiiamge{
-object-fit: contain;
-width: full ;
-height: 30px;
+// :host {
+//   display: flex;
+//   justify-content: center;
+
+//   margin-top: 54px;
+//   padding: 20px;
+// }
+// .logiiamge {
+//   object-fit: contain;
+//   width: full;
+//   height: 30px;
+// }
+
+// .login-main {
+//   width: 603px;
+//   height: 509px;
+//   border: 5px solid #0163d2;
+//   border-radius: 9px;
+//   background-color: #fffdfd;
+//   border-top-width: 10px;
+
+//   &-field {
+//     &:nth-child(1) {
+//       margin-top: 15px;
+//     }
+//     width: 80%;
+
+//     display: flex;
+//     flex-direction: column;
+//   }
+//   &-login {
+//     font-size: 21px;
+//     font-weight: 500;
+//     margin-top: 0px;
+//   }
+//   &-admin {
+//     color: #858c8e;
+//     font-size: 12px;
+//     margin-top: 15px;
+//   }
+//   &-remind {
+//     width: 80%;
+//     min-height: 36px;
+//     &-forgot {
+//       font-size: 18px;
+//       color: #0163d2;
+//     }
+//     &-captcha {
+//       width: 70%;
+//       height: 50px;
+//       background-color: #f7f5f5;
+//       &-privacy {
+//         text-align: right;
+//         margin-right: 10px;
+//       }
+//     }
+//     &-text {
+//       color: #acacac;
+//     }
+//   }
+//   &-sign {
+//     background-color: #0163d2;
+//     width: 80%;
+//     height: 50px;
+//     border-radius: 10px;
+//     margin-top: 10px;
+//     &-text {
+//       font-size: 20px;
+//       font-weight: 500;
+//       color: #ffffff;
+//       .mdc-label {
+//         color: #acacac;
+//       }
+//     }
+//   }
+// }
+// label.custom-label {
+//   margin-bottom: 2px !important;
+// }
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  padding: 16px;
 }
 
-.login-main{
-    width: 703px;
-    height: 509px;
-    border: 8px solid #FF3389;
-    border-radius: 9px;
-    background-color: #fffdfd;
-    border-top-width: 14px;
-  
-    
-   
-    &-field{
-        &:nth-child(1){
-            margin-top: 15px;
-        }
-        width: 80%;
-      
-        display: flex;
-        flex-direction: column;
-    }
-    &-login{
-        font-size: 21px;
-        font-weight: 500;
-        margin-top: 0px;
-    }
-    &-admin{
-        color: #858C8E;
-        font-size: 12px;
-        margin-top: 15px;
-    }
-    &-remind{
-        width: 80%;
-        min-height: 36px;
-        &-forgot{
-            font-size: 18px;
-            color: #FF3389;
-        }
-        &-captcha{
-            width: 70%;
-            height: 50px;
-            background-color: #f7f5f5;
-            &-privacy{
-                text-align: right;
-    margin-right: 10px;
-            }
-        }
-        &-text{
-            color: #ACACAC;
-        }
-    }
-    &-sign{
-        background-color: #FF3389;
-        width: 80%;
+.login-card {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  height: 80vh; /* Adjust height as needed */
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+
+  .login-image {
+    background: url("https://www.tailwindtap.com/assets/components/form/userlogin/login_tailwindtap.jpg")
+      no-repeat center center;
+    background-size: cover;
+    flex: 1;
+    height: 100%; /* Ensure it takes full height */
+  }
+
+  .login-main-login {
+    font-size: 21px;
+    font-weight: 500;
+    margin-top: 0px;
+  }
+  .login-main-admin {
+    color: #858c8e;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .login-form {
+    padding: 32px;
+    width: 100%;
+    max-width: 600px; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .login-main-remind {
+      width: 100%;
+      min-height: 36px;
+      &-forgot {
+        font-size: 18px;
+        color: #0163d2;
+      }
+      &-captcha {
+        width: 100%;
         height: 50px;
-        border-radius: 10px;
-        margin-top: 10px;
-        &-text{
-            font-size: 20px;
-            font-weight: 500;
-            color: #ffffff;
-            .mdc-label{
-                color: #acacac;
-            }
+        background-color: #f7f5f5;
+
+        &-privacy {
+          text-align: right;
+          margin-right: 10px;
         }
+      }
+      &-text {
+        color: #acacac;
+      }
     }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    .full-width {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .forget-password {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 16px;
+
+      a {
+        color: #666;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .google-signin {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid #ccc;
+      color: #666;
+      font-weight: bold;
+      margin-top: 16px;
+
+      .google-icon {
+        margin-right: 8px;
+      }
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+
+    .signup {
+      text-align: center;
+      margin-top: 16px;
+
+      span {
+        color: #666;
+
+        a {
+          color: #1976d2;
+          text-decoration: none;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }
-label.custom-label{
-    margin-bottom: 2px !important;
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    height: auto;
+
+    .login-image {
+      height: 200px; /* Adjust as needed */
+    }
+  }
+
+  .login-form {
+    padding: 16px;
+  }
 }

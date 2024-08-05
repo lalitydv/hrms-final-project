@@ -91,7 +91,7 @@
                         </div>
                     </button>
                     <mat-divider></mat-divider>
-                    
+
                     <button mat-menu-item (click)="selectOption('Option 6')">
                         <div class="flex items-center text-Pink ">
                             <input id="default-radio-1" type="radio" value="" name="default-radio" class=" ">
@@ -136,7 +136,7 @@
 
     <!-- table start  -->
 
-    <div class="overflow-auto my-5">
+    <div class="overflow-auto my-5 bg-white  shado rounded-2xl">
         <table mat-table [dataSource]="dataSource" class=" text-center">
             <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -164,7 +164,7 @@
             <!-- EventName Column -->
             <ng-container matColumnDef="Employee">
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Employee</th>
-                <td mat-cell *matCellDef="let element">{{ element.Employee }} 
+                <td mat-cell *matCellDef="let element">{{ element.Employee }}
                 </td>
 
             </ng-container>
@@ -183,15 +183,16 @@
                 <td mat-cell *matCellDef="let element">{{ element.Subject }}</td>
             </ng-container>
 
-           
-            
+
+
             <!--End Date Column -->
             <ng-container matColumnDef="Status">
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">Status</th>
                 <td mat-cell *matCellDef="let element">{{ element.Status }}<div
-                    class="bg-[#def9cc] rounded-md p-1 text-Green my-1 ">
-                    Solved
-                </div></td>
+                        class="bg-[#def9cc] rounded-md p-1 text-Green my-1 ">
+                        Solved
+                    </div>
+                </td>
             </ng-container>
 
             <!-- Action Column -->
@@ -254,6 +255,3 @@
 
 
 </section>
-
-
-

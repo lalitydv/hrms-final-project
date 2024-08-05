@@ -46,7 +46,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Nunito, "Nunito", sans-serif;
 }
 .mat-dialog-container {
   padding: 2px !important;
@@ -171,7 +171,7 @@ th {
 .shado {
   box-shadow: 0 0 5px 5px rgb(238, 237, 237);
 }
-.tab-group{
+.tab-group {
   border: 0.1rem solid lightgrey;
   border-radius: 10px;
   box-shadow: 1px 0px 9x 2px gray !important;
@@ -180,3 +180,28 @@ th {
   border: none !important;
   box-shadow: 1px 0px 9x 2px gray !important;
 }
+.tableselet {
+  color: white !important;
+}
+/* Set the header background color to gray */
+.custom-table th {
+  background-color: #dfdfdf28;
+  
+}
+
+/* Remove vertical lines (borders) from table cells */
+.custom-table {
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border-right: none !important;
+}
+
+.custom-table th:last-child,
+.custom-table td:last-child {
+  border-right: none;
+}
+
+/* -----------------------------------------------  */

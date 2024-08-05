@@ -8,6 +8,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ResignEmployeeComponent } from './resign-employee/resign-employee.component';
 import { ListEmployeeComponent } from './list-employee/list-employee.component';
 import { FileVaultComponent } from './list-employee/file-vault/file-vault.component';
+import { SalaryComponent } from './salary/salary.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,9 @@ const routes: Routes = [
   },
   {
     path: 'file-vault', component:FileVaultComponent
+  },
+  {
+    path: 'salary', component:SalaryComponent
   },
 ];
 

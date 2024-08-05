@@ -1,0 +1,204 @@
+<div class="bg-white rounded-2xl overflow-y-scroll h-screen">
+    <div class="bg-lightPink py-2 ">
+        <div class="flex justify-between mx-5">
+            <div>
+                Add Invoice
+            </div>
+            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center ">
+                <i class="fa-solid fa-xmark text-Red text-xl"></i>
+            </div>
+        </div>
+
+    </div>
+    <div class="p-5">
+
+
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-5 mb-5">
+
+            <div class=" w-full">
+                <mat-label>Invoice Number</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Invoice" />
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="w-full ">
+                <mat-label>Project </mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <mat-select [value]="'--Company--'">
+                        <mat-option value="--Company--">--Company--</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class=" w-full">
+                <mat-label>Invoice Date</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Invoice" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full">
+                <mat-label>Due Date</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Invoice" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-5 mb-5">
+
+            <div class=" w-full">
+                <mat-label>Item</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="Item" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+
+
+                <div class="">
+                    <mat-label>Qty</mat-label>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class=" my-2" appearance="outline">
+                            <input matInput value="0" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class=" ">
+                    <mat-label>Unit Price</mat-label>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class=" my-2" appearance="outline">
+                            <input matInput value="0" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full ">
+                <mat-label>Tax Type </mat-label>
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <mat-select [value]="'--Company--'">
+                        <mat-option value="--Company--">--Company--</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                        <mat-option value="ShineCoder">ShineCoder</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="grid grid-cols-2">
+
+
+                <div class=" w-full">
+                    <mat-label>Tax Rate</mat-label>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class="w-full my-2" appearance="outline">
+                            <input matInput value="0" />
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class=" w-full">
+                    <mat-label>Sub Total</mat-label>
+                    <div class="flex items-center gap-2">
+                        <mat-form-field class="w-full my-2" appearance="outline">
+                            <input matInput value="0" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex gap-5 justify-start items-start my-5">
+            <div class=" flex gap-5 ">
+
+                <button type="button" mat-dialog-close
+                    class="bg-Blue text-White p-2 px-5 rounded-md border-0 outline-none">Add Item</button>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 grid-col-1  gap-5  my-5">
+            <div class="invisible"></div>
+            <div>
+                <mat-divider></mat-divider>
+                <div class="flex justify-between my-5">
+                    <div>Sub Total</div>
+                    <div>0</div>
+
+                </div>
+                <mat-divider></mat-divider>
+                <div class="flex justify-between my-5">
+                    <div>Tax Rate</div>
+                    <div>0</div>
+
+                </div>
+                <mat-divider></mat-divider>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                    <div class="w-full ">
+                        <mat-label>Discount Type </mat-label>
+                        <mat-form-field class="w-full my-2" appearance="outline">
+                            <mat-select [value]="'--Company--'">
+                                <mat-option value="--Company--">--Company--</mat-option>
+                                <mat-option value="ShineCoder">ShineCoder</mat-option>
+                                <mat-option value="ShineCoder">ShineCoder</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="grid md:grid-cols-2 grid-col-1 ">
+
+
+                        <div class=" w-full">
+                            <mat-label>Discount</mat-label>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="0" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class=" w-full px-2">
+                            <mat-label>Discount Amount</mat-label>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="0" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <mat-divider></mat-divider>
+                <div class="flex justify-between my-5">
+                    <div>Grand Total</div>
+                    <div>0</div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class=" w-full">
+            <mat-label>Invoice Note</mat-label>
+            <div class="flex items-center gap-2">
+                <mat-form-field class="w-full my-2" appearance="outline">
+                    <textarea matInput></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="flex gap-5 justify-end items-start my-5">
+            <div class=" flex gap-5 ">
+                <button type="button" mat-dialog-close
+                    class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">Submit Invoice</button>
+            </div>
+        </div>
+    </div>
+</div>

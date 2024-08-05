@@ -5,9 +5,16 @@ module.exports = {
     "./node_modules/flowbite/**/*.js", // add this line
   ],
   theme: {
-    extend: {},
+    extend: {
+
+      backgroundImage: {
+        'login': "url('https://www.tailwindtap.com/assets/components/form/userlogin/login_tailwindtap.jpg')",
+        
+      }
+    },
     colors: {
-      Pink: "#FF3389",
+      Pink: "#1E50A0",
+      // Pink: "#FF3389",
       lightPink: "#F9F6FF",
       Blue: "#2E108E",
       Green: "#3BB77E",
@@ -23,6 +30,7 @@ module.exports = {
       bgLightblu: "#54178D",
       bglightPink: "#ED3089",
       lightBlue: "#1E50A0",
+      Newsidcolor: "#1E50A0",
     },
   },
   plugins: [
