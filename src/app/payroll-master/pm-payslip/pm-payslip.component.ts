@@ -8,11 +8,12 @@ import { RangepopupComponent } from './rangepopup/rangepopup.component';
 })
 export class PmPayslipComponent {
   panelOpenState = true;
-  FirstIcons:String="assets/Dashboard/image 78.png"
-  HearderHeding:String="Payslip"
+  Payslips = true;
+  FirstIcons: String = "assets/Dashboard/image 78.png"
+  HearderHeding: String = "Payslip"
 
   constructor(public dialog: MatDialog) { }
-  openDialog (){
+  openDialog() {
     this.dialog.open(RangepopupComponent);
   }
 

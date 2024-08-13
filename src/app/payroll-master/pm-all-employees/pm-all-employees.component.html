@@ -159,9 +159,9 @@
 
                     <div class="relative invisible">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                            <mat-icon class="text-sm">search</mat-icon>
                         </div>
-                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
                          focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
                           dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
                             required>
@@ -174,15 +174,16 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
                     User ID
 
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                    <div class="relative ">
+                        <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg searchicon">search</mat-icon>
                         </div>
-                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
-                            required>
+                        <input type="text" id="UserID" class="block w-32 p-2 pl-10 text-sm input-filter text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                            focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                            dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
+                            placeholder="User ID" required>
                     </div>
+
 
                 </th>
                 <td mat-cell *matCellDef="let element">{{ element.UserID }}</td>
@@ -192,12 +193,12 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
                     Name
                     <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                        <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg searchicon">search</mat-icon>
                         </div>
-                        <input type="Name" id="Name" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="Name"
+                        <input type="Name" id="Name" class="block w-32 p-2 pl-10 text-sm input-filter text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                            focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                            dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="Name"
                             required>
                     </div>
                 </th>
@@ -208,12 +209,12 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
                     DOJ
                     <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                        <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg searchicon">search</mat-icon>
                         </div>
-                        <input type="DOJ" id="DOJ" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="DOJ"
+                        <input type="DOJ" id="DOJ" class="block w-32 p-2 pl-10 text-sm input-filter text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                            focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                            dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="DOJ"
                             required>
                     </div>
                 </th>
@@ -225,12 +226,12 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
                     F./H. Name
                     <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                        <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg searchicon">search</mat-icon>
                         </div>
-                        <input type="FHName" id="FHName" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="FHName"
+                        <input type="FHName" id="FHName" class="block w-32 p-2 pl-10 text-sm input-filter text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                            focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                            dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="FHName"
                             required>
                     </div>
                 </th>
@@ -241,12 +242,12 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
                     Department
                     <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                        <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg searchicon">search</mat-icon>
                         </div>
-                        <input type="Department" id="Department" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
+                        <input type="Department" id="Department" class="block w-32 p-2 pl-10 text-sm input-filter text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                            focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                            dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
                             placeholder="Department" required>
                     </div>
                 </th>
@@ -257,12 +258,12 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
                     Designation
                     <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                        <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg searchicon">search</mat-icon>
                         </div>
-                        <input type="search" id="search" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
+                        <input type="search" id="search" class="block w-32 p-2 pl-10 text-sm input-filter text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                            focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                            dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
                             placeholder="Designation" required>
                     </div>
                 </th>
@@ -273,13 +274,13 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
                     Full Info
                     <div class="relative invisible">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                        <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg searchicon">search</mat-icon>
                         </div>
-                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
-                            required>
+                        <input type="UserID" id="UserID" class="block w-32 p-2 pl-10 text-sm input-filter text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                            focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                            dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
+                            placeholder="User ID" required>
                     </div>
                 </th>
                 <td mat-cell *matCellDef="let element"> <span routerLink="/employee-master/add-employee"
@@ -291,13 +292,13 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
                     Salary
                     <div class="relative invisible">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                        <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg searchicon">search</mat-icon>
                         </div>
-                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
-                            required>
+                        <input type="UserID" id="UserID" class="block w-32 p-2 pl-10 text-sm input-filter text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                            focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                            dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
+                            placeholder="User ID" required>
                     </div>
                 <td mat-cell *matCellDef="let element"> <span routerLink="/employee-master/salary"
                         class="text-Red border-2 border-Red p-2 rounded-2xl">{{
@@ -308,13 +309,13 @@
                 <th mat-header-cell *matHeaderCellDef class="bg-lightPink whitespace-nowrap">
                     File vault
                     <div class="relative invisible">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <mat-icon class="text-lg">search</mat-icon>
+                        <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
+                            <mat-icon class="text-lg searchicon">search</mat-icon>
                         </div>
-                        <input type="UserID" id="UserID" class="block w-full lg:w-40 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50
-                         focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
-                          dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="User ID"
-                            required>
+                        <input type="UserID" id="UserID" class="block w-32 p-2 pl-10 text-sm input-filter text-gray-900 border border-gray-300 rounded-lg bg-gray-50
+                            focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+                            dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue"
+                            placeholder="User ID" required>
                     </div>
                 <td mat-cell *matCellDef="let element"> <span routerLink="/employee-master/file-vault"
                         class="text-[#00BCF7] border-2 border-[#00BCF7] p-2 rounded-2xl">{{

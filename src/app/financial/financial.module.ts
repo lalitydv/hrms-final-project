@@ -8,6 +8,8 @@ import { CustomTableComponent } from '../common/custom-table/custom-table.compon
 import { MatTableModule } from '@angular/material/table';
 import { SharedImportsModule } from '../shared-imports/shared-imports.module';
 import { TablefinacialComponent } from './tablefinacial/tablefinacial.component';
+import { SharedTableComponent } from '../shared-table/shared-table/shared-table.component';
+import { SharedTableModule } from '../shared-table/shared-table.module';
 
 
 @NgModule({
@@ -20,8 +22,9 @@ import { TablefinacialComponent } from './tablefinacial/tablefinacial.component'
   imports: [
     CommonModule,
     FinancialRoutingModule,
-    SharedImportsModule
-    
+    SharedImportsModule,
+    SharedTableModule
+
   ]
 })
 export class FinancialModule { }

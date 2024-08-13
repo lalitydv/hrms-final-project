@@ -18,16 +18,24 @@
   <link href="path-to/tailwind.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-
+  <style>
+    .loading-gif {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
 </head>
 
 <body class="mat-typography" style="font-family: 'Nunito', sans-serif;">
   <app-root>
-    <div class="fade show" style="text-align: center; padding-top: calc(100vh / 2); height: 100vh">
-      <i class="spinner-grow spinner-grow-sm"></i>
-      <span class="m-1">Loading...</span>
+    <div class="fade show"
+      style="text-align: center; display: flex; justify-content: center; align-items: center;  height: 100vh">
+      <img src="./assets/Animation - 1723546316526.gif" alt="Loading..." class="loading-gif">
+      <!-- <span class="m-1">Loading...</span> -->
     </div>
+
   </app-root>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script> -->
 </body>

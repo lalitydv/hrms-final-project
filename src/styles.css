@@ -8,20 +8,19 @@
   height: 5px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+Track ::-webkit-scrollbar-track {
+  background: #fff;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #cccc;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #9a9a9a;
 }
 .chart {
   width: 70%;
@@ -39,6 +38,13 @@ mat-icon {
   height: 20px !important;
 }
 body {
+  font-family: Nunito, sans-serif;
+  font-size: 14px;
+  color: #5b6670;
+  line-height: 1.5;
+  background-color: #fafbfe;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 html,
 body {
@@ -46,25 +52,13 @@ body {
 }
 body {
   margin: 0;
-  font-family: Nunito, "Nunito", sans-serif;
+  /* font-family: Nunito, "Nunito", sans-serif; */
 }
 .mat-dialog-container {
   padding: 2px !important;
   border-radius: 20px !important;
 }
-/* .bg-gray-900\/50 {
-  background-color: none !important;
-} */
-/* .z-30 {
-  z-index: 0 !important;
-}
 
-.inset-0 {
-  inset: 0px !important;
-} */
-th.mat-header-cell {
-  text-align: center !important;
-}
 mat-label {
   font-weight: 500 !important;
 }
@@ -80,49 +74,11 @@ mat-form-field {
 .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
   padding: 10px 0px;
 }
-.mat-elevation-z8 {
+/* .mat-elevation-z8 {
   border-radius: 10px !important;
   padding: 20px;
-}
+} */
 
-/* tables Setting  */
-mat-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center !important;
-}
-
-.tablestart {
-  border-radius: 20px !important;
-}
-
-th,
-td {
-  border: 1px solid #ddd; /* Add a 1px solid border to each table cell */
-  padding: 8px; /* Add some padding to improve the spacing */
-  text-align: left; /* Adjust text alignment as needed */
-  white-space: nowrap; /*
-}
-th,
-td:hover {
-  background-color: #f8f8f8 !important;
-}
-
-th {
-  background-color: #f8f8f8 !important; /* Add a background color to the table header */
-}
-
-.custom-row:hover {
-  background-color: #f8f8f8 !important;
-}
-.mat-mdc-table .mat-mdc-header-cell {
-  text-align: center !important;
-  font-weight: bold !important;
-}
-.mdc-data-table__cell,
-.mdc-data-table__header-cell {
-  text-align: center !important;
-}
 .mat-mdc-tab.mdc-tab {
   flex-grow: 0 !important;
   margin: 0px 10px !important;
@@ -147,17 +103,17 @@ th {
   outline: 0 !important;
 }
 .line {
-  background: #ff3389;
+  background: #1e50a0;
   width: 90%;
   height: 1px;
   position: relative;
 }
 
 .line span {
-  color: #ff3389;
+  color: #1e50a0;
   position: relative;
-  top: -7px;
-  left: -3px;
+  top: -9.5px;
+  left: -6px;
 }
 /* ------------- */
 .mat-accordion > .mat-expansion-panel-spacing:first-child,
@@ -169,8 +125,10 @@ th {
 
 /* ------------- */
 .shado {
-  box-shadow: 0 0 5px 5px rgb(238, 237, 237);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
+
 .tab-group {
   border: 0.1rem solid lightgrey;
   border-radius: 10px;
@@ -183,25 +141,53 @@ th {
 .tableselet {
   color: white !important;
 }
-/* Set the header background color to gray */
-.custom-table th {
-  background-color: #dfdfdf28;
-  
-}
 
-/* Remove vertical lines (borders) from table cells */
-.custom-table {
-  border-collapse: collapse;
+.mat-icon {
+  width: 0px;
 }
-
-.custom-table th,
-.custom-table td {
-  border-right: none !important;
-}
-
-.custom-table th:last-child,
-.custom-table td:last-child {
-  border-right: none;
-}
-
 /* -----------------------------------------------  */
+.mat-table {
+  white-space: nowrap !important;
+  /* border-collapse: collapse !important; */
+  text-align: center !important;
+}
+
+.mat-elevation-z8,
+.mat-mdc-elevation-specific.mat-elevation-z8 {
+  box-shadow: none !important;
+  text-align: center !important;
+}
+
+.mat-header-cell,
+.mat-cell {
+  text-align: center !important;
+  padding: 8px !important; /* Adjust padding as needed */
+}
+.mat-mdc-header-cell {
+  /* text-align: center !important; */
+  font-weight: 600 !important;
+  background-color: #f8f8f8 !important;
+  padding: 5px !important;
+  font-size: 14px !important;
+}
+
+.mat-mdc-table tbody,
+.mat-mdc-table tfoot,
+.mat-mdc-table thead,
+.mat-mdc-cell,
+.mat-mdc-footer-cell,
+.mat-mdc-header-row,
+.mat-mdc-row,
+.mat-mdc-footer-row,
+.mat-mdc-table .mat-mdc-header-cell {
+  /* text-align: center !important; */
+}
+.mat-mdc-row {
+  font-size: 12px !important;
+}
+.input-filter {
+  font-size: 10px !important;
+}
+.searchicon {
+  font-size: 15px !important;
+}

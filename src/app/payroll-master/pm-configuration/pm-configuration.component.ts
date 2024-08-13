@@ -9,16 +9,23 @@ import { BulkImportPayrollMasterComponent } from './bulk-import-payroll-master/b
 })
 export class PmConfigurationComponent {
   panelOpenState = true;
-  FirstIcons:String="assets/Dashboard/image 78.png"
-  HearderHeding:String="Payroll Configurations"
-  AddBUthon : string = "Payroll Bulk Entry"
+  Salary1 = true;
+  CTC2 = true;
+  Allowance2 = true;
+  Deductions2 = true;
+  Deduction2 = true;
+  Setting = true;
+
+  FirstIcons: String = "assets/Dashboard/image 78.png"
+  HearderHeding: String = "Payroll Configurations"
+  AddBUthon: string = "Payroll Bulk Entry"
   Salary: String = "Salary Heads"
   CTC: String = "CTC Heads"
   Allowance: String = "Allowance Heads"
   Deductions: String = "Deductions"
   Deduction: String = "Deduction Salary Mapping"
   constructor(public dialog: MatDialog) { }
-  openDialog (){
+  openDialog() {
     this.dialog.open(BulkImportPayrollMasterComponent);
   }
   checked = true;

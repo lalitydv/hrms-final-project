@@ -10,6 +10,7 @@ import { PmPayrollReportingComponent } from './pm-payroll-reporting/pm-payroll-r
 import { SharedImportsModule } from '../shared-imports/shared-imports.module';
 import { RangepopupComponent } from './pm-payslip/rangepopup/rangepopup.component';
 import { BulkImportPayrollMasterComponent } from './pm-configuration/bulk-import-payroll-master/bulk-import-payroll-master.component';
+import { SharedTableModule } from '../shared-table/shared-table.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { BulkImportPayrollMasterComponent } from './pm-configuration/bulk-import
   imports: [
     CommonModule,
     PayrollMasterRoutingModule,
-    SharedImportsModule
+    SharedImportsModule,
+    SharedTableModule
   ]
 })
 export class PayrollMasterModule { }

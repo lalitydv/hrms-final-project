@@ -1,0 +1,33 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Define columns dynamically -->
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
+      <th mat-header-cell *matHeaderCellDef class="bold-header"> {{ column.header }} </th>
+      <td class="cont-tble" mat-cell *matCellDef="let element" [innerHTML]="column.cell(element)"></td>
+    </ng-container>
+  
+    <!-- Define the Action column if actions are provided -->
+    <ng-container *ngIf="actions.length" matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef class="bold-header"> Action </th>
+      <td mat-cell *matCellDef="let row" class="bold-action">
+        <ng-container *ngFor="let action of actions">
+          <button mat-icon-button [ngClass]="{
+                    'edit-button': action.icon === 'edit',
+                    'delete-button': action.icon === 'delete',
+                    'visibility-button': action.icon === 'visibility',
+                    'fullscreen-button': action.icon === 'fullscreen',
+                    'download-button': action.icon === 'download_2',
+                    'cancel-button': action.icon === 'cancel'
+                  }" [matTooltip]="action.tooltip" (click)="action.action(row)">
+            <mat-icon>{{ action.icon }}</mat-icon>
+          </button>
+        </ng-container>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{
+              'pending': row.status === 'Pending',
+              'complete': row.status === 'Complete'
+            }">
+    </tr>
+  </table>

@@ -9,8 +9,9 @@ declare const Calendar: any;
 })
 export class PmBonusSettingComponent {
   panelOpenState = true;
-  FirstIcons:String="assets/Dashboard/image 78.png"
-  HearderHeding:String="Bonus Setting"
+  Bonus = true;
+  FirstIcons: String = "assets/Dashboard/image 78.png"
+  HearderHeding: String = "Bonus Setting"
 
   constructor() { }
 
@@ -20,26 +21,26 @@ export class PmBonusSettingComponent {
 
   initCalendar(): void {
     const calendar = new Calendar({
-      crudManager : {
-        eventStore : {
-          fields : [
-            { name : 'room' }
+      crudManager: {
+        eventStore: {
+          fields: [
+            { name: 'room' }
           ]
         },
-        transport : {
-          load : {
-            url : 'data/data.json'
+        transport: {
+          load: {
+            url: 'data/data.json'
           }
         },
-        autoLoad : true
+        autoLoad: true
       },
-      appendTo : 'container',
-      sidebar : null,
-      modes : {
-        agenda : null,
-        year   : null,
-        week   : null,
-        day    : null
+      appendTo: 'container',
+      sidebar: null,
+      modes: {
+        agenda: null,
+        year: null,
+        week: null,
+        day: null
       }
     });
   }

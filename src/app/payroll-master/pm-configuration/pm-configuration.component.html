@@ -21,264 +21,309 @@
             <!-- basic -->
             <mat-tab label="Basic">
                 <div class="grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-5 my-5">
-                    <div class="bg-Gray2 bg-opacity-50 rounded-lg">
-                        <div class="flex items-center justify-center bg-white">
-                            <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">{{Salary}}
-                            </div>
-                            <div class="line">
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 20 20">
-                                        <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
-                                            <path
-                                                d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
-                                            <path
-                                                d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
-                                        </g>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                       
-                        <div class="flex px-2  my-2 ">
-                            <button
-                                class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex  px-5 p-1 rounded-lg">
-                                Add
-                                <mat-icon class="text-base">add_circle</mat-icon>
-                            </button>
-                        </div>
-                        <div class="flex items-center gap-5 px-2 ">
-                            <div class="w-full">
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel [(expanded)]="Salary1" class="w-full">
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                                <mat-panel-title class="font-medium text-xl">
+                                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">{{Salary}}
+                                    </div>
+                                    <div class="line">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                viewBox="0 0 20 20">
+                                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                                    <path
+                                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                                    <path
+                                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <!-- </div> -->
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
 
-                                <div class="flex items-center gap-2">
-                                    <mat-form-field class="w-full my-2" appearance="outline">
-                                        <input matInput value="Basic" />
-                                    </mat-form-field>
+                            <div class="bg-Lighitblue w-full pt-4 px-8">
 
+
+
+                                <div class="flex px-2 my-2">
+                                    <button
+                                        class="border-2 hover:bg-yellow-500 hover:text-white border-yellow-500 text-yellow-500 items-center flex px-5 py-1 rounded-lg">
+                                        Add
+                                        <mat-icon class="text-base">add_circle</mat-icon>
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="border-2 border-Red text-Red items-center flex text-center">
-                                <mat-icon class="">delete</mat-icon>
-                            </div>
 
-                        </div>
-                        <div class="flex items-center gap-5 px-2 ">
-                            <div class="w-full">
-
-                                <div class="flex items-center gap-2">
-                                    <mat-form-field class="w-full my-2" appearance="outline">
-                                        <input matInput value="HRW" />
-                                    </mat-form-field>
-
+                                <div class="flex items-center gap-5 px-2">
+                                    <div class="w-full">
+                                        <div class="flex items-center gap-2">
+                                            <mat-form-field class="w-full my-2" appearance="outline">
+                                                <input matInput value="Basic" />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="border-2 p-0.5 border-red-500 text-red-500 items-center flex text-center">
+                                        <mat-icon class="">delete</mat-icon>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="border-2 border-Red text-Red items-center flex text-center">
-                                <mat-icon class="">delete</mat-icon>
-                            </div>
 
-                        </div>
-                        <div class="flex items-center gap-5 px-2 ">
-                            <div class="w-full">
-
-                                <div class="flex items-center gap-2">
-                                    <mat-form-field class="w-full my-2" appearance="outline">
-                                        <input matInput value="CONV" />
-                                    </mat-form-field>
-
+                                <div class="flex items-center gap-5 px-2">
+                                    <div class="w-full">
+                                        <div class="flex items-center gap-2">
+                                            <mat-form-field class="w-full my-2" appearance="outline">
+                                                <input matInput value="HRW" />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="border-2 p-0.5 border-red-500 text-red-500 items-center flex text-center">
+                                        <mat-icon class="">delete</mat-icon>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="border-2 border-Red text-Red items-center flex text-center">
-                                <mat-icon class="">delete</mat-icon>
-                            </div>
 
-                        </div>
-
-
-                    </div>
-                    <div class="bg-Gray2 bg-opacity-50 rounded-lg">
-                        <div class="flex items-center justify-center bg-white">
-                            <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">{{CTC}}
-                            </div>
-                            <div class="line">
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 20 20">
-                                        <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
-                                            <path
-                                                d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
-                                            <path
-                                                d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
-                                        </g>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-
-
-                        <div class="flex px-2  my-2 ">
-                            <button
-                                class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex  px-5 p-1 rounded-lg">
-                                Add
-                                <mat-icon class="text-base">add_circle</mat-icon>
-                            </button>
-                        </div>
-                        <div class="flex items-center gap-5 px-2 ">
-                            <div class="w-full">
-                                <div class="flex items-center gap-2">
-                                    <mat-form-field class="w-full my-2" appearance="outline">
-                                        <input matInput value="Basic" />
-                                    </mat-form-field>
-
+                                <div class="flex items-center gap-5 px-2">
+                                    <div class="w-full">
+                                        <div class="flex items-center gap-2">
+                                            <mat-form-field class="w-full my-2" appearance="outline">
+                                                <input matInput value="CONV" />
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="border-2 p-0.5 border-red-500 text-red-500 items-center flex text-center">
+                                        <mat-icon class="">delete</mat-icon>
+                                    </div>
                                 </div>
                             </div>
 
-                        </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel [(expanded)]="CTC2" class="w-full">
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                                <mat-panel-title class="font-medium text-xl">
+                                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">{{CTC}}
+                                    </div>
+                                    <div class="line">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                viewBox="0 0 20 20">
+                                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                                    <path
+                                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                                    <path
+                                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <!-- </div> -->
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
 
-                        <div class="flex  px-2  my-2 ">
-                            <button class="border-2 text-white bg-Green items-center  flex   px-5 p-2 rounded-lg">
-                                Submit
+                            <div class="bg-Lighitblue w-full pt-4 px-8">
 
-                            </button>
-                        </div>
+                                <div class="flex px-2  my-2 ">
+                                    <button
+                                        class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex  px-5 p-1 rounded-lg">
+                                        Add
+                                        <mat-icon class="text-base">add_circle</mat-icon>
+                                    </button>
+                                </div>
+                                <div class="flex items-center gap-5 px-2 ">
+                                    <div class="w-full">
+                                        <div class="flex items-center gap-2">
+                                            <mat-form-field class="w-full my-2" appearance="outline">
+                                                <input matInput value="Basic" />
+                                            </mat-form-field>
 
+                                        </div>
+                                    </div>
 
-                    </div>
-                    <div class="bg-Gray2 bg-opacity-50 rounded-lg">
+                                </div>
 
+                                <div class="flex  px-2  my-2 ">
+                                    <button
+                                        class="border-2 text-white bg-Green items-center  flex   px-5 p-2 rounded-lg">
+                                        Submit
 
-
-                        <div class="flex items-center justify-center bg-white">
-                            <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">{{Allowance}}
+                                    </button>
+                                </div>
                             </div>
-                            <div class="line">
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 20 20">
-                                        <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
-                                            <path
-                                                d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
-                                            <path
-                                                d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
-                                        </g>
-                                    </svg>
-                                </span>
+
+                        </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel [(expanded)]="Allowance2" class="w-full">
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                                <mat-panel-title class="font-medium text-xl">
+                                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">{{Allowance}}
+                                    </div>
+                                    <div class="line">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                viewBox="0 0 20 20">
+                                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                                    <path
+                                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                                    <path
+                                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <!-- </div> -->
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <div class="bg-Lighitblue w-full pt-4 px-8">
+
+                                <div class="flex px-2  my-2 ">
+                                    <button
+                                        class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex  px-5 p-1 rounded-lg">
+                                        Add
+                                        <mat-icon class="text-base">add_circle</mat-icon>
+                                    </button>
+                                </div>
+                                <div class="flex items-center justify-center gap-5 px-2 ">
+                                    <div class="font-bold text-center my-8">
+                                        No Allowance Heads
+                                    </div>
+
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="flex px-2  my-2 ">
-                            <button
-                                class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex  px-5 p-1 rounded-lg">
-                                Add
-                                <mat-icon class="text-base">add_circle</mat-icon>
-                            </button>
-                        </div>
-                        <div class="flex items-center justify-center gap-5 px-2 ">
-                            <div class="font-bold text-center my-8">
-                                No Allowance Heads
-                            </div>
-
-                        </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
 
 
 
-
-                    </div>
 
                 </div>
                 <!-- 3 colume section  -->
                 <!-- 2 colume section  -->
 
                 <div class="grid md:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-5">
-                    <div class="bg-Gray2 bg-opacity-50 rounded-lg">
 
 
-                        <div class="flex items-center justify-center bg-white">
-                            <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">{{Deductions}}
-                            </div>
-                            <div class="line">
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 20 20">
-                                        <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
-                                            <path
-                                                d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
-                                            <path
-                                                d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
-                                        </g>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex px-2  my-2 ">
-                            <button
-                                class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex  px-5 p-1 rounded-lg">
-                                Add
-                                <mat-icon class="text-base">add_circle</mat-icon>
-                            </button>
-                        </div>
-                        <div class="flex items-center gap-5 px-2 ">
-                            <div class="w-full">
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel [(expanded)]="Deductions2" class="w-full">
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                                <mat-panel-title class="font-medium text-xl">
+                                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">{{Deductions}}
+                                    </div>
+                                    <div class="line">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                viewBox="0 0 20 20">
+                                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                                    <path
+                                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                                    <path
+                                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <!-- </div> -->
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
 
-                                <div class="flex items-center gap-2">
-                                    <mat-form-field class="w-full my-2" appearance="outline">
-                                        <input matInput value="Basic" />
-                                    </mat-form-field>
+                            <div class="bg-Lighitblue w-full pt-4 px-8">
+
+                                <div class="flex px-2  my-2 ">
+                                    <button
+                                        class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex  px-5 p-1 rounded-lg">
+                                        Add
+                                        <mat-icon class="text-base">add_circle</mat-icon>
+                                    </button>
+                                </div>
+                                <div class="flex items-center gap-5 px-2 ">
+                                    <div class="w-full">
+
+                                        <div class="flex items-center gap-2">
+                                            <mat-form-field class="w-full my-2" appearance="outline">
+                                                <input matInput value="Basic" />
+                                            </mat-form-field>
+
+                                        </div>
+                                    </div>
+                                    <div class="w-full">
+
+                                        <div class="flex items-center gap-2">
+                                            <mat-form-field class="w-full my-2" appearance="outline">
+                                                <input matInput value="Basic" />
+                                            </mat-form-field>
+
+                                        </div>
+                                    </div>
+
 
                                 </div>
-                            </div>
-                            <div class="w-full">
+                                <div class="flex  px-2  my-2 ">
+                                    <button
+                                        class="border-2 text-white bg-Green items-center  flex   px-5 p-2 rounded-lg">
+                                        Submit
 
-                                <div class="flex items-center gap-2">
-                                    <mat-form-field class="w-full my-2" appearance="outline">
-                                        <input matInput value="Basic" />
-                                    </mat-form-field>
-
+                                    </button>
                                 </div>
+
+
+
                             </div>
 
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                    <mat-accordion class="mx-4 select-dropdown-box">
+                        <mat-expansion-panel [(expanded)]="Deduction2" class="w-full">
+                            <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                                <mat-panel-title class="font-medium text-xl">
+                                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">{{Deduction}}
+                                    </div>
+                                    <div class="line">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                                viewBox="0 0 20 20">
+                                                <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                                    <path
+                                                        d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                                    <path
+                                                        d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <!-- </div> -->
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
 
-                        </div>
-                        <div class="flex  px-2  my-2 ">
-                            <button class="border-2 text-white bg-Green items-center  flex   px-5 p-2 rounded-lg">
-                                Submit
+                            <div class="bg-Lighitblue w-full pt-4 px-8">
 
-                            </button>
-                        </div>
+                                <div class="flex  px-2  my-2 ">
+                                    <button
+                                        class="border-2 text-white bg-Green items-center  flex   px-5 p-2 rounded-lg">
+                                        Submit
+
+                                    </button>
+                                </div>
 
 
 
-
-
-                    </div>
-                    <div class="bg-Gray2 bg-opacity-50 rounded-lg">
-                        <div class="flex items-center justify-center bg-white">
-                            <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">{{Deduction}}
                             </div>
-                            <div class="line">
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                        viewBox="0 0 20 20">
-                                        <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
-                                            <path
-                                                d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
-                                            <path
-                                                d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
-                                        </g>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
+
+                        </mat-expansion-panel>
+                    </mat-accordion>
 
 
-                        <div class="flex  px-2  my-2 ">
-                            <button class="border-2 text-white bg-Green items-center  flex   px-5 p-2 rounded-lg">
-                                Submit
-
-                            </button>
-                        </div>
-
-
-                    </div>
 
 
                 </div>
@@ -286,231 +331,245 @@
             <!--  Advanced -->
             <mat-tab label=" Advanced">
 
-                <div class="bg-Gray2 bg-opacity-50 rounded-lg">
+                <mat-accordion class="mx-4 select-dropdown-box">
+                    <mat-expansion-panel [(expanded)]="Setting" class="w-full">
+                        <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                            <mat-panel-title class="font-medium text-xl">
+                                <!-- <div class="flex items-center justify-center bg-white"> -->
+                                <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">Setting
+                                </div>
+                                <div class="line">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 20 20">
+                                            <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                                <path
+                                                    d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                                <path
+                                                    d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <!-- </div> -->
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
 
-                    <div class="flex items-center justify-center bg-white">
-                        <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Setting
+                        <div class="bg-Lighitblue w-full pt-4 px-8">
+
+
+
+
+
+                            <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class=" ">
+                                    Bonus Percentage
+                                </div>
+                                <div>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="805.7" />
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class="">
+                                    PF Logic
+                                </div>
+                                <div>
+                                    <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
+                                            class="text-Blue font-bold">Earning</span>
+                                    </mat-checkbox>
+                                    <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
+                                        [(ngModel)]="unchecked"><span class="text-Gray">Days</span>
+                                    </mat-checkbox>
+
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class=" ">
+                                    Gratuity Years
+                                </div>
+                                <div>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="5" />
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class="">
+                                    EL Encashment
+                                </div>
+                                <div>
+                                    <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
+                                            class="text-Blue font-bold underline-offset-2">Basic</span>
+                                    </mat-checkbox>
+                                    <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
+                                        [(ngModel)]="unchecked"><span class="text-Gray">All</span>
+                                    </mat-checkbox>
+
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class="">
+                                    Show OT as Incentive
+                                </div>
+                                <div>
+                                    <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
+                                            class="text-Blue font-bold underline-offset-2">True</span>
+                                    </mat-checkbox>
+                                    <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
+                                        [(ngModel)]="unchecked"><span class="text-Gray">False</span>
+                                    </mat-checkbox>
+
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+
+                            <div class="flex justify-between md:flex-row flex-col   items-center px-5 p-2 ">
+                                <div class=" ">
+                                    OT Incentive Head
+                                </div>
+                                <div>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="OTHER_ALW" />
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+
+                            <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class=" ">
+                                    LWF limit
+                                </div>
+                                <div>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="25" />
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class=" ">
+                                    Default Night Allowance Rate
+                                </div>
+                                <div>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="25" />
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class=" ">
+                                    Night all Head
+                                </div>
+                                <div>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="NIGHT_ALL" />
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class=" ">
+                                    Night all Shifts
+                                </div>
+                                <div>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="" />
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class=" ">
+                                    Actual OT days
+                                </div>
+                                <div>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="26" />
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+
+
+                            <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class="">
+                                    Fix OT Calculation Days
+                                </div>
+                                <div>
+                                    <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
+                                            class="text-Blue font-bold underline-offset-2">true</span>
+                                    </mat-checkbox>
+                                    <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
+                                        [(ngModel)]="unchecked"><span class="text-Gray">False</span>
+                                    </mat-checkbox>
+
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+                            <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class="">
+                                    Is OT1 calc days different <br> from Actual OT days
+                                </div>
+                                <div>
+                                    <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
+                                            class="text-Blue font-bold underline-offset-2">true</span>
+                                    </mat-checkbox>
+                                    <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
+                                        [(ngModel)]="unchecked"><span class="text-Gray">False</span>
+                                    </mat-checkbox>
+
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+
+                            <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
+                                <div class=" ">
+                                    OT1 calc days
+                                </div>
+                                <div>
+                                    <mat-form-field class="w-full my-2" appearance="outline">
+                                        <input matInput value="26" />
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <mat-divider></mat-divider>
+
+                            <div class="flex  px-2  my-10 ">
+                                <button class="border-2 text-white bg-Green items-center  flex   px-5 p-2 rounded-lg">
+                                    Save Changes
+                                </button>
+                            </div>
+
+
+
+
                         </div>
-                        <div class="line">
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
-                                    <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
-                                        <path
-                                            d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
-                                        <path
-                                            d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
-                                    </g>
-                                </svg>
-                            </span>
-                        </div>
-                    </div>
 
-                    <div class="bg-white rounded-md shadow my-10">
+                    </mat-expansion-panel>
+                </mat-accordion>
 
-
-                        <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class=" ">
-                                Bonus Percentage
-                            </div>
-                            <div>
-                                <mat-form-field class="w-full my-2" appearance="outline">
-                                    <input matInput value="805.7" />
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class="">
-                                PF Logic
-                            </div>
-                            <div>
-                                <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
-                                        class="text-Blue font-bold">Earning</span>
-                                </mat-checkbox>
-                                <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
-                                    [(ngModel)]="unchecked"><span class="text-Gray">Days</span>
-                                </mat-checkbox>
-
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class=" ">
-                                Gratuity Years
-                            </div>
-                            <div>
-                                <mat-form-field class="w-full my-2" appearance="outline">
-                                    <input matInput value="5" />
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class="">
-                                EL Encashment
-                            </div>
-                            <div>
-                                <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
-                                        class="text-Blue font-bold underline-offset-2">Basic</span>
-                                </mat-checkbox>
-                                <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
-                                    [(ngModel)]="unchecked"><span class="text-Gray">All</span>
-                                </mat-checkbox>
-
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class="">
-                                Show OT as Incentive
-                            </div>
-                            <div>
-                                <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
-                                        class="text-Blue font-bold underline-offset-2">True</span>
-                                </mat-checkbox>
-                                <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
-                                    [(ngModel)]="unchecked"><span class="text-Gray">False</span>
-                                </mat-checkbox>
-
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-
-                        <div class="flex justify-between md:flex-row flex-col   items-center px-5 p-2 ">
-                            <div class=" ">
-                                OT Incentive Head
-                            </div>
-                            <div>
-                                <mat-form-field class="w-full my-2" appearance="outline">
-                                    <input matInput value="OTHER_ALW" />
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-
-                        <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class=" ">
-                                LWF limit
-                            </div>
-                            <div>
-                                <mat-form-field class="w-full my-2" appearance="outline">
-                                    <input matInput value="25" />
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class=" ">
-                                Default Night Allowance Rate
-                            </div>
-                            <div>
-                                <mat-form-field class="w-full my-2" appearance="outline">
-                                    <input matInput value="25" />
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class=" ">
-                                Night all Head
-                            </div>
-                            <div>
-                                <mat-form-field class="w-full my-2" appearance="outline">
-                                    <input matInput value="NIGHT_ALL" />
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class=" ">
-                                Night all Shifts
-                            </div>
-                            <div>
-                                <mat-form-field class="w-full my-2" appearance="outline">
-                                    <input matInput value="" />
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div class="flex justify-between  md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class=" ">
-                                Actual OT days
-                            </div>
-                            <div>
-                                <mat-form-field class="w-full my-2" appearance="outline">
-                                    <input matInput value="26" />
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-
-
-                        <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class="">
-                                Fix OT Calculation Days
-                            </div>
-                            <div>
-                                <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
-                                        class="text-Blue font-bold underline-offset-2">true</span>
-                                </mat-checkbox>
-                                <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
-                                    [(ngModel)]="unchecked"><span class="text-Gray">False</span>
-                                </mat-checkbox>
-
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-                        <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class="">
-                                Is OT1 calc days different <br> from Actual OT days
-                            </div>
-                            <div>
-                                <mat-checkbox color="primary" class="example-margin " [(ngModel)]="checked"><span
-                                        class="text-Blue font-bold underline-offset-2">true</span>
-                                </mat-checkbox>
-                                <mat-checkbox color="Gray" class="mx-5 example-margin text-Gray fill-Gray"
-                                    [(ngModel)]="unchecked"><span class="text-Gray">False</span>
-                                </mat-checkbox>
-
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-
-                        <div class="flex justify-between md:flex-row flex-col  items-center px-5 p-2 ">
-                            <div class=" ">
-                                OT1 calc days
-                            </div>
-                            <div>
-                                <mat-form-field class="w-full my-2" appearance="outline">
-                                    <input matInput value="26" />
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <mat-divider></mat-divider>
-
-                        <div class="flex  px-2  my-10 ">
-                            <button class="border-2 text-white bg-Green items-center  flex   px-5 p-2 rounded-lg">
-                                Save Changes
-                            </button>
-                        </div>
-
-                    </div>
-
-                </div>
+           
 
             </mat-tab>
 

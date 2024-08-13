@@ -11,24 +11,26 @@ import { Router } from '@angular/router';
 })
 export class SidebarComponent {
   @ViewChild('sidenav', { static: true }) sidenav!: MatSidenav;
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {}
+  isMobile: boolean = false;
+  sliderMode: string = 'side';
 
- 
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) { }
+
   ngOnInit() {
     // Initialize the sidebar based on the initial view mode
     this.setupSidebar();
 
-
-    this.breakpointObserver.observe([Breakpoints.XSmall, Breakpoints.Small])
-    .subscribe(result => {
-      this.isMobile = result.matches;
-      if (this.isMobile) {
-        this.sliderMode = 'over'
-      } else {
-        this.sliderMode = 'side'
-      }
-
-    });
+    this.breakpointObserver.observe(['(max-width: 720px)'])
+      .subscribe(result => {
+        this.isMobile = result.matches;
+        if (this.isMobile) {
+          this.sidenav.close();
+          this.sliderMode = 'over';
+        } else {
+          this.sidenav.open();
+          this.sliderMode = 'side';
+        }
+      });
   }
 
   // Function to toggle the sidebar and adjust the main content
@@ -38,7 +40,7 @@ export class SidebarComponent {
 
   private setupSidebar() {
     // Determine the view mode (desktop or mobile)
-    const isMobile = this.breakpointObserver.isMatched(Breakpoints.Handset);
+    const isMobile = this.breakpointObserver.isMatched('(max-width: 720px)');
 
     // Set sidebar behavior based on the view mode
     if (isMobile) {
@@ -49,34 +51,40 @@ export class SidebarComponent {
       this.sidenav.open(); // Open the sidebar in desktop mode
     }
   }
-    dropdownState: { [key: string]: boolean } = {};
+
+  dropdownStates: { [key: string]: boolean } = {};
 
   toggleDropdown(key: string): void {
-    this.dropdownState[key] = !this.dropdownState[key];
+    for (let dropdownKey in this.dropdownStates) {
+      if (dropdownKey !== key) {
+        this.dropdownStates[dropdownKey] = false;
+      }
+    }
+
+    this.dropdownStates[key] = !this.dropdownStates[key];
   }
 
   isDropdownOpen(key: string): boolean {
-    return this.dropdownState[key];
+    return !!this.dropdownStates[key];
   }
 
   @ViewChild('drawer') drawer: MatDrawer | undefined;
-  isMobile!: boolean;
-  sliderMode: any;
 
 
 
 
- 
+
+
 
   // ngAfterViewInit(): void {
   //   if (this.drawer) {
   //     this.sideBarService.setDrawer(this.drawer);
   //   }
   // }
-  
-  Logout(){
-  
+
+  Logout() {
+
     this.router.navigate(['/']);
   }
-  
+
 }

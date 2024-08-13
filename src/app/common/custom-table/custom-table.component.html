@@ -11,25 +11,19 @@
 <!-- app-custom-table.component.html -->
 <mat-table [dataSource]="data" class="tablestart">
   <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
-    <mat-header-cell *matHeaderCellDef class="">{{ getColumnHeader(column) }}</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef class="coustum-table-heder">{{ getColumnHeader(column) }}</mat-header-cell>
     <mat-cell *matCellDef="let row" class="">
       <!-- Check if the column is 'Action' and render the content accordingly -->
       <ng-container *ngIf="column !== 'Action'; else iconColumn">
         {{ row[column] }}
       </ng-container>
-      <!-- <ng-template #iconColumn>
-        <ng-container *ngFor="let imagePath of row.Action">
-          <img [src]="imagePath" alt="Image" class="mx-2 w-7 h-7" />
-        </ng-container>
-      </ng-template> -->
+
       <ng-template #iconColumn>
         <img *ngFor="let imagePath of row.Action" [src]="imagePath" alt="Image" class="mx-2 w-7 h-7" />
         <button *ngIf="row.Action && row.Action.length > 0" mat-icon-button (click)="openDeleteConfirmation(row)">
           <mat-icon>delete</mat-icon>
         </button>
-        <!-- <button *ngIf="row.Action && row.Action.length > 0" mat-icon-button (click)="openEditPopup(row)">
-          <mat-icon>edit</mat-icon>
-        </button> -->
+
       </ng-template>
     </mat-cell>
 

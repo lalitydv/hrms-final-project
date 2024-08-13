@@ -6,11 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-
       backgroundImage: {
-        'login': "url('https://www.tailwindtap.com/assets/components/form/userlogin/login_tailwindtap.jpg')",
-        
-      }
+        login:
+          "url('https://www.tailwindtap.com/assets/components/form/userlogin/login_tailwindtap.jpg')",
+      },
     },
     colors: {
       Pink: "#1E50A0",
@@ -28,7 +27,7 @@ module.exports = {
       White: "#ffffff",
       PinkDark: "#8A2080",
       bgLightblu: "#54178D",
-      bglightPink: "#ED3089",
+      bglightPink: "#1E50A0",
       lightBlue: "#1E50A0",
       Newsidcolor: "#1E50A0",
     },

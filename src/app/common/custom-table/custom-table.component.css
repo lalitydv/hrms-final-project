@@ -1,9 +1,14 @@
 mat-table {
   width: 100%;
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 20px 0;
+  text-align: center;
 }
 
 .table-container {
   border-radius: 50px !important;
+}
+.coustum-table-heder {
+  border: 1px solid #ccc;
+ 
 }

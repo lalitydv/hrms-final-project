@@ -1,0 +1,108 @@
+/* 
+
+
+table.mat-elevation-z8 {
+  width: 100%;
+  border-collapse: collapse; 
+  border: 1px solid #ddd;
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  border-right: 1px solid #ddd; 
+  padding: 8px; 
+  white-space: nowrap; 
+}
+
+th.mat-header-cell {
+  border-right: 1px solid #ddd;
+  background-color: #f1f1f1; 
+  font-weight: bold;
+}
+
+
+.mat-header-row th.mat-header-cell:last-child,
+.mat-row td.mat-cell:last-child {
+  border-right: none;
+}
+
+ */
+
+table.mat-elevation-z8 {
+  width: 100%;
+  border-collapse: collapse; /* Ensures that borders don't have gaps */
+  /* border: 1px solid #ddd; */
+}
+
+th.mat-header-cell,
+td.mat-cell {
+  border: 1px solid #ddd; /* Border on all sides */
+  padding: 8px; /* Adjust padding as needed */
+  white-space: nowrap; /* Prevents text from wrapping */
+  font-weight: 500;
+}
+
+th.mat-header-cell {
+  background-color: #f1f1f1; /* Adjust the background color as needed */
+  font-weight: bold;
+}
+
+.mat-icon {
+  cursor: pointer;
+  margin: 0 0px;
+}
+
+/* Define styles for the edit button */
+.edit-button {
+  color: blue; /* Icon color for edit */
+}
+
+.edit-button:hover {
+  color: darkblue; /* Icon color on hover */
+}
+
+/* Define styles for the delete button */
+.delete-button {
+  color: red; /* Icon color for delete */
+}
+.cancel-button {
+  color: red; /* Icon color for delete */
+}
+
+.delete-button:hover {
+  color: darkred; /* Icon color on hover */
+}
+
+.visibility-button:hover {
+  color: darkblue;
+}
+
+/* pending-order.component.css */
+
+.visibility-button {
+  color: #073b74;
+}
+
+.fullscreen-button {
+  color: green; /* Example color for full screen button */
+}
+.download-button {
+  color: #3bb77e; /* Example color for full screen button */
+}
+
+/* Optional: Define styles for buttons if needed */
+.mat-icon-button {
+  /* Additional button styles if needed */
+}
+.bold-header {
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+}
+.bold-action {
+  white-space: nowrap;
+  text-align: center;
+}
+.cont-tble {
+  text-align: center;
+}
