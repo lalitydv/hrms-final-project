@@ -10,21 +10,21 @@ import { DeletComponent } from 'src/app/common/custom-table/delet/delet.componen
 })
 export class SubDivisionComponent {
 
-  Heading ='Sub Division'
-  panelOpenState = false;
-  displayedColumns = ['position','SubDivision', 'actions'];
+  Heading = 'Sub Division'
+  panelOpenState = true;
+  displayedColumns = ['position', 'SubDivision', 'actions'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   masterCheckbox = false;
   masterCheckbox2 = false;
-  
- 
+
+
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
-  constructor(public dialog: MatDialog ) { }
-  openDialog (){
+  constructor(public dialog: MatDialog) { }
+  openDialog() {
     this.dialog.open(DeletComponent);
   }
   selectedOption: string | null = null;
@@ -38,15 +38,15 @@ export interface Element {
   // Year: string;
 
 
- 
+
 
 }
 
 const ELEMENT_DATA: Element[] = [
-  { position: 1,  SubDivision: 'Calpro Specialities Pvt Ltd',},
-  { position: 2,  SubDivision: 'Calpro Specialities Pvt Ltd',},
-  { position: 3,  SubDivision: 'Calpro Specialities Pvt Ltd',},
-  { position: 4,  SubDivision: 'Calpro Specialities Pvt Ltd',},
-  { position: 5,  SubDivision: 'Calpro Specialities Pvt Ltd',},
-  
+  { position: 1, SubDivision: 'Calpro Specialities Pvt Ltd', },
+  { position: 2, SubDivision: 'Calpro Specialities Pvt Ltd', },
+  { position: 3, SubDivision: 'Calpro Specialities Pvt Ltd', },
+  { position: 4, SubDivision: 'Calpro Specialities Pvt Ltd', },
+  { position: 5, SubDivision: 'Calpro Specialities Pvt Ltd', },
+
 ];

@@ -23,10 +23,11 @@
     <mat-accordion class="mx-4 select-dropdown-box">
         <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Personal Information
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">Personal Information
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -37,9 +38,10 @@
                                 </g>
                             </svg>
                         </span>
-
                     </div>
-                </div>
+                    <!-- </div> -->
+                </mat-panel-title>
+
             </mat-expansion-panel-header>
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
@@ -223,7 +225,7 @@
                         <div class="w-full">
                             <div class="flex items-center justify-between">
                                 <mat-label> Father/Husband name *</mat-label>
-                                <mat-icon (click)="openDialogsearch()"class="mat-18 text-Gray">search</mat-icon>
+                                <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -470,10 +472,13 @@
     <mat-accordion class="mx-4 select-dropdown-box">
         <mat-expansion-panel [(expanded)]="Qualification" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Qualification
+
+
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">Qualification
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -485,7 +490,8 @@
                             </svg>
                         </span>
                     </div>
-                </div>
+                    <!-- </div> -->
+                </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
@@ -583,10 +589,11 @@
     <mat-accordion class="mx-4 select-dropdown-box">
         <mat-expansion-panel [(expanded)]="Examination" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Examination
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">Examination
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -598,7 +605,8 @@
                             </svg>
                         </span>
                     </div>
-                </div>
+                    <!-- </div> -->
+                </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
@@ -676,14 +684,29 @@
         </mat-expansion-panel>
     </mat-accordion>
     <!-- Examination -->
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Job Information -->
     <mat-accordion class="mx-4 select-dropdown-box">
         <mat-expansion-panel [(expanded)]="Job" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Job Information
+
+
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">Job Information
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -695,7 +718,8 @@
                             </svg>
                         </span>
                     </div>
-                </div>
+                    <!-- </div> -->
+                </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
@@ -936,11 +960,38 @@
 
 
             </div>
-            <div class="bg-white rounded-md  shado p-1 m-2">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Family Members
+
+
+
+
+
+
+
+
+
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!-- Job Information -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Family Members -->
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="Family" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">Family Members
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -952,8 +1003,9 @@
                             </svg>
                         </span>
                     </div>
-                </div>
-            </div>
+                    <!-- </div> -->
+                </mat-panel-title>
+            </mat-expansion-panel-header>
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
                     <div class="grid lg:grid-cols-7 md:grid-cols-5 grid-cols-1 gap-5">
@@ -1168,12 +1220,19 @@
 
 
             </div>
-            <!-- PF Details -->
-            <div class="bg-white rounded-md  shado p-1 m-2">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">PF Details
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <!-- PF Details -->
+
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="PF" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">PF Details
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -1185,8 +1244,12 @@
                             </svg>
                         </span>
                     </div>
-                </div>
-            </div>
+                    <!-- </div> -->
+                </mat-panel-title>
+
+
+            </mat-expansion-panel-header>
+            <!-- PF Details -->
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
                     <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-5">
@@ -1246,12 +1309,21 @@
                     </div>
                 </div>
             </div>
-            <!-- ESI Details -->
-            <div class="bg-white rounded-md  shado p-1 m-2">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">ESI Details
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <!-- ESI Details -->
+
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="ESI" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">ESI Details
+
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -1263,8 +1335,12 @@
                             </svg>
                         </span>
                     </div>
-                </div>
-            </div>
+                    <!-- </div> -->
+                </mat-panel-title>
+
+
+            </mat-expansion-panel-header>
+            <!-- ESI Details -->
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
                     <div class="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1 gap-5">
@@ -1329,12 +1405,21 @@
                     </div>
                 </div>
             </div>
-            <!--Gratuity Details -->
-            <div class="bg-white rounded-md  shado p-1 m-2">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Gratuity Details
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <!--Gratuity Details -->
+
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="Gratuity" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">Gratuity Details
+
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -1346,8 +1431,12 @@
                             </svg>
                         </span>
                     </div>
-                </div>
-            </div>
+                    <!-- </div> -->
+                </mat-panel-title>
+
+
+            </mat-expansion-panel-header>
+
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
                     <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-5">
@@ -1380,12 +1469,20 @@
                     </div>
                 </div>
             </div>
-            <!--LWF Details -->
-            <div class="bg-white rounded-md  shado p-1 m-2">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">LWF
+
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!--LWF Details -->
+
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="LWF" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">LWF Details
+
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -1397,8 +1494,12 @@
                             </svg>
                         </span>
                     </div>
-                </div>
-            </div>
+                    <!-- </div> -->
+                </mat-panel-title>
+
+
+            </mat-expansion-panel-header>
+
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
                     <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-5">
@@ -1417,12 +1518,20 @@
                     </div>
                 </div>
             </div>
-            <!--Leaves Details -->
-            <div class="bg-white rounded-md  shado p-1 m-2">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Leaves
+
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!--Leaves Details -->
+
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="Leaves" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">Leaves Details
+
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -1434,8 +1543,12 @@
                             </svg>
                         </span>
                     </div>
-                </div>
-            </div>
+                    <!-- </div> -->
+                </mat-panel-title>
+
+
+            </mat-expansion-panel-header>
+
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
                     <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-5">
@@ -1474,12 +1587,21 @@
                     </div>
                 </div>
             </div>
-            <!--Other Details Details -->
-            <div class="bg-white rounded-md  shado p-1 m-2">
-                <div class="flex items-center justify-center bg-white w-full">
-                    <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Other Details
+
+
+        </mat-expansion-panel>
+    </mat-accordion>
+    <!--Other Details Details -->
+
+    <mat-accordion class="mx-4 select-dropdown-box">
+        <mat-expansion-panel [(expanded)]="Other" class="w-full">
+            <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
+                <mat-panel-title class="font-medium text-xl">
+                    <!-- <div class="flex items-center justify-center bg-white"> -->
+                    <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">Other Details Details
+
                     </div>
-                    <div class=" flex line ">
+                    <div class="line">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -1491,8 +1613,12 @@
                             </svg>
                         </span>
                     </div>
-                </div>
-            </div>
+                    <!-- </div> -->
+                </mat-panel-title>
+
+
+            </mat-expansion-panel-header>
+
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
                     <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-1 gap-5">
@@ -1558,18 +1684,18 @@
                     </div>
                 </div>
             </div>
-            <div class="flex gap-5 justify-start items-start my-5">
-                <div class=" flex gap-5 px-10 ">
 
-                    <button type="button" mat-dialog-close
-                        class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">Save</button>
-                </div>
-            </div>
 
         </mat-expansion-panel>
     </mat-accordion>
-    <!-- Job Information -->
 
 
+    <div class="flex gap-5 justify-start items-start my-5">
+        <div class=" flex gap-5 px-10 ">
+
+            <button type="button" mat-dialog-close
+                class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">Save</button>
+        </div>
+    </div>
 
 </section>

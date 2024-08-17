@@ -9,16 +9,23 @@ import { BulkImportPayrollMasterComponent } from '../pm-configuration/bulk-impor
 })
 export class PmPayrollReportingComponent {
   panelOpenState = true;
-  FirstIcons:String="assets/Dashboard/image 78.png"
-  HearderHeding:String="Payroll Reporting"
+  Monthly = true;
+  Lock = true;
+  ESI = true;
+  PF = true;
+  Process = true;
+  Yearly = true;
+  Management = true;
+  FirstIcons: String = "assets/Dashboard/image 78.png"
+  HearderHeding: String = "Payroll Reporting"
 
-  
+
   CTC: String = "CTC Heads"
   Allowance: String = "Allowance Heads"
   Deductions: String = "Deductions"
   Deduction: String = "Deduction Salary Mapping"
   constructor(public dialog: MatDialog) { }
-  openDialog (){
+  openDialog() {
     this.dialog.open(BulkImportPayrollMasterComponent);
   }
   checked = true;

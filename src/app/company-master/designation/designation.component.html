@@ -25,7 +25,7 @@
 
     <div class="bg-white  shadow-2xl rounded-2xl   my-5 p-5">
         <mat-accordion class="mx-4 select-dropdown-box">
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="w-full ">
+            <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
 
                 <mat-expansion-panel-header class="shadow-md bg-white border-white">
                     <mat-panel-title class="font-medium text-xl ">

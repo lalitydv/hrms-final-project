@@ -10,20 +10,27 @@ import { SearchIconComponent } from '../search-icon/search-icon.component';
 })
 export class AddEmployeeComponent {
 
-  FirstIcons:String="assets/Dashboard/image 78.png"
-  HearderHeding:String="Add Employees"
+  FirstIcons: String = "assets/Dashboard/image 78.png"
+  HearderHeding: String = "Add Employees"
 
-panelOpenState = true;
-Qualification = true;
-Examination = true;
-Job = true;
-isChecked: boolean = true;
+  panelOpenState = true;
+  Qualification = true;
+  Examination = true;
+  Job = true;
+  Family = true;
+  PF = true;
+  ESI = true;
+  Gratuity = true;
+  LWF = true;
+  Leaves = true;
+  Other = true;
+  isChecked: boolean = true;
 
-constructor(public dialog: MatDialog ) { }
-  openDialog (){
+  constructor(public dialog: MatDialog) { }
+  openDialog() {
     this.dialog.open(EmployeeCodeComponent);
   }
-  openDialogsearch (){
+  openDialogsearch() {
     this.dialog.open(SearchIconComponent);
   }
 }

@@ -9,20 +9,20 @@ import { DeletComponent } from 'src/app/common/custom-table/delet/delet.componen
   styleUrls: ['./company.component.css']
 })
 export class CompanyComponent {
-  panelOpenState = false;
-  displayedColumns = ['position','CompanyName', 'actions'];
+  panelOpenState = true;
+  displayedColumns = ['position', 'CompanyName', 'actions'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   masterCheckbox = false;
   masterCheckbox2 = false;
-  
- 
+
+
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
-  constructor(public dialog: MatDialog ) { }
-  openDialog (){
+  constructor(public dialog: MatDialog) { }
+  openDialog() {
     this.dialog.open(DeletComponent);
   }
   selectedOption: string | null = null;
@@ -36,15 +36,15 @@ export interface Element {
   // Year: string;
 
 
- 
+
 
 }
 
 const ELEMENT_DATA: Element[] = [
-  { position: 1,  CompanyName: 'Calpro Specialities Pvt Ltd',},
-  { position: 2,  CompanyName: 'Calpro Specialities Pvt Ltd',},
-  { position: 3,  CompanyName: 'Calpro Specialities Pvt Ltd',},
-  { position: 4,  CompanyName: 'Calpro Specialities Pvt Ltd',},
-  { position: 5,  CompanyName: 'Calpro Specialities Pvt Ltd',},
-  
+  { position: 1, CompanyName: 'Calpro Specialities Pvt Ltd', },
+  { position: 2, CompanyName: 'Calpro Specialities Pvt Ltd', },
+  { position: 3, CompanyName: 'Calpro Specialities Pvt Ltd', },
+  { position: 4, CompanyName: 'Calpro Specialities Pvt Ltd', },
+  { position: 5, CompanyName: 'Calpro Specialities Pvt Ltd', },
+
 ];

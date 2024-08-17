@@ -1,0 +1,14 @@
+/* styles.css or styles.scss */
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    border-radius: 16px !important; /* More rounded */
+    border-color: #3498db !important; /* Custom border color */
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    border-width: 30px !important; /* Adjust border thickness */
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-gap {
+    border-color: #3498db !important; /* Border color for the gap */
+  }
+  

@@ -164,99 +164,92 @@
         <!-- table start  -->
 
 
-
-
         <div class="overflow-auto my-5 bg-white  shado rounded-2xl">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
+                <!-- Checkbox Column -->
+                <ng-container matColumnDef="checkbox">
+                    <th mat-header-cell *matHeaderCellDef class="bg-lightPink"><mat-checkbox></mat-checkbox></th>
+                    <td mat-cell *matCellDef="let row">
+                        <mat-checkbox [(ngModel)]="row.selected"></mat-checkbox>
+                    </td>
+                </ng-container>
 
-            <div class="overflow-auto my-5 bg-white  shado rounded-2xl">
-                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef>Sno.</th>
+                    <td mat-cell *matCellDef="let element">{{element.position}}</td>
+                </ng-container>
 
-                    <!-- Checkbox Column -->
-                    <ng-container matColumnDef="checkbox">
-                        <th mat-header-cell *matHeaderCellDef class="bg-lightPink"><mat-checkbox></mat-checkbox></th>
-                        <td mat-cell *matCellDef="let row">
-                            <mat-checkbox [(ngModel)]="row.selected"></mat-checkbox>
-                        </td>
-                    </ng-container>
+                <!-- Ticket Code Column -->
+                <ng-container matColumnDef="TicketCode">
+                    <th mat-header-cell *matHeaderCellDef>Ticket Code</th>
+                    <td mat-cell *matCellDef="let element">{{element.TicketCode}}</td>
+                </ng-container>
 
-                    <!-- Position Column -->
-                    <ng-container matColumnDef="position">
-                        <th mat-header-cell *matHeaderCellDef>Sno.</th>
-                        <td mat-cell *matCellDef="let element">{{element.position}}</td>
-                    </ng-container>
+                <!-- Employee Column -->
+                <ng-container matColumnDef="Employee">
+                    <th mat-header-cell *matHeaderCellDef>Employee</th>
+                    <td mat-cell *matCellDef="let element">{{element.Employee}}</td>
+                </ng-container>
 
-                    <!-- Ticket Code Column -->
-                    <ng-container matColumnDef="TicketCode">
-                        <th mat-header-cell *matHeaderCellDef>Ticket Code</th>
-                        <td mat-cell *matCellDef="let element">{{element.TicketCode}}</td>
-                    </ng-container>
+                <!-- Company Column -->
+                <ng-container matColumnDef="Company">
+                    <th mat-header-cell *matHeaderCellDef>Company</th>
+                    <td mat-cell *matCellDef="let element">{{element.Company}}</td>
+                </ng-container>
 
-                    <!-- Employee Column -->
-                    <ng-container matColumnDef="Employee">
-                        <th mat-header-cell *matHeaderCellDef>Employee</th>
-                        <td mat-cell *matCellDef="let element">{{element.Employee}}</td>
-                    </ng-container>
+                <!-- Subject Column -->
+                <ng-container matColumnDef="Subject">
+                    <th mat-header-cell *matHeaderCellDef>Subject</th>
+                    <td mat-cell *matCellDef="let element">{{element.Subject}}</td>
+                </ng-container>
 
-                    <!-- Company Column -->
-                    <ng-container matColumnDef="Company">
-                        <th mat-header-cell *matHeaderCellDef>Company</th>
-                        <td mat-cell *matCellDef="let element">{{element.Company}}</td>
-                    </ng-container>
+                <!-- Priority Column -->
+                <ng-container matColumnDef="Priority">
+                    <th mat-header-cell *matHeaderCellDef>Priority</th>
+                    <td mat-cell *matCellDef="let element">{{element.Priority}}</td>
+                </ng-container>
 
-                    <!-- Subject Column -->
-                    <ng-container matColumnDef="Subject">
-                        <th mat-header-cell *matHeaderCellDef>Subject</th>
-                        <td mat-cell *matCellDef="let element">{{element.Subject}}</td>
-                    </ng-container>
+                <!-- Status Column -->
+                <ng-container matColumnDef="Status">
+                    <th mat-header-cell *matHeaderCellDef>Status</th>
+                    <td mat-cell *matCellDef="let element">{{element.Status}}</td>
+                </ng-container>
 
-                    <!-- Priority Column -->
-                    <ng-container matColumnDef="Priority">
-                        <th mat-header-cell *matHeaderCellDef>Priority</th>
-                        <td mat-cell *matCellDef="let element">{{element.Priority}}</td>
-                    </ng-container>
+                <!-- Date Column -->
+                <ng-container matColumnDef="Date">
+                    <th mat-header-cell *matHeaderCellDef>Date</th>
+                    <td mat-cell *matCellDef="let element">{{element.Date}}</td>
+                </ng-container>
 
-                    <!-- Status Column -->
-                    <ng-container matColumnDef="Status">
-                        <th mat-header-cell *matHeaderCellDef>Status</th>
-                        <td mat-cell *matCellDef="let element">{{element.Status}}</td>
-                    </ng-container>
-
-                    <!-- Date Column -->
-                    <ng-container matColumnDef="Date">
-                        <th mat-header-cell *matHeaderCellDef>Date</th>
-                        <td mat-cell *matCellDef="let element">{{element.Date}}</td>
-                    </ng-container>
-
-                    <!-- Actions Column -->
-                    <ng-container matColumnDef="actions">
-                        <th mat-header-cell *matHeaderCellDef>Actions</th>
-                        <td mat-cell *matCellDef="let element">
-                            <span class="flex gap-5 ">
-                                <span class="border-2 p-1 flex w-fit rounded-lg text-center border-Green text-Green">
-                                    <mat-icon>visibility</mat-icon>
-                                </span>
-                                <span (click)="openDialogEddit()"
-                                    class="border-2 p-1 flex w-fit rounded-lg text-center border-Blue text-Blue">
-                                    <mat-icon>border_color</mat-icon>
-                                </span>
-                                <span (click)="openDialog()"
-                                    class="border-2 p-1 flex w-fit cursor-pointer rounded-lg text-center border-Red text-Red">
-                                    <mat-icon>delete</mat-icon>
-                                </span>
+                <!-- Actions Column -->
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef>Actions</th>
+                    <td mat-cell *matCellDef="let element">
+                        <span class="flex gap-5 ">
+                            <span class="border-2 p-1 flex w-fit rounded-lg text-center border-Green text-Green">
+                                <mat-icon>visibility</mat-icon>
                             </span>
-                        </td>
-                    </ng-container>
+                            <span (click)="openDialogEddit()"
+                                class="border-2 p-1 flex w-fit rounded-lg text-center border-Blue text-Blue">
+                                <mat-icon>border_color</mat-icon>
+                            </span>
+                            <span (click)="openDialog()"
+                                class="border-2 p-1 flex w-fit cursor-pointer rounded-lg text-center border-Red text-Red">
+                                <mat-icon>delete</mat-icon>
+                            </span>
+                        </span>
+                    </td>
+                </ng-container>
 
-                    <!-- Table Rows -->
-                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-            </div>
-
-
-
+                <!-- Table Rows -->
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
         </div>
+
+
         <!-- pagition   -->
         <div class="flex justify-end my-5">
             <nav aria-label="Page navigation example">

@@ -10,21 +10,21 @@ import { DeletComponent } from 'src/app/common/custom-table/delet/delet.componen
 })
 export class CadreComponent {
 
-  Heading ='Cadre'
-  panelOpenState = false;
-  displayedColumns = ['position','cadre', 'actions'];
+  Heading = 'Cadre'
+  panelOpenState = true;
+  displayedColumns = ['position', 'cadre', 'actions'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   masterCheckbox = false;
   masterCheckbox2 = false;
-  
- 
+
+
   applyFilter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
     this.dataSource.filter = filterValue;
   }
-  constructor(public dialog: MatDialog ) { }
-  openDialog (){
+  constructor(public dialog: MatDialog) { }
+  openDialog() {
     this.dialog.open(DeletComponent);
   }
   selectedOption: string | null = null;
@@ -38,17 +38,17 @@ export interface Element {
   // Year: string;
 
 
- 
+
 
 }
 
 const ELEMENT_DATA: Element[] = [
-  { position: 1,  cadre: 'Calpro Specialities Pvt Ltd',},
-  { position: 2,  cadre: 'Calpro Specialities Pvt Ltd',},
-  { position: 3,  cadre: 'Calpro Specialities Pvt Ltd',},
-  { position: 4,  cadre: 'Calpro Specialities Pvt Ltd',},
-  { position: 5,  cadre: 'Calpro Specialities Pvt Ltd',},
-  
+  { position: 1, cadre: 'Calpro Specialities Pvt Ltd', },
+  { position: 2, cadre: 'Calpro Specialities Pvt Ltd', },
+  { position: 3, cadre: 'Calpro Specialities Pvt Ltd', },
+  { position: 4, cadre: 'Calpro Specialities Pvt Ltd', },
+  { position: 5, cadre: 'Calpro Specialities Pvt Ltd', },
+
 ];
 
 
