@@ -2,7 +2,7 @@
 
 .sidenav-container {
   height: 100%;
-  background-color: #fff;
+  background-color: #fafbfe;
 }
 
 .sidenav {
@@ -31,7 +31,12 @@
   width: 100px !important;
 }
 
-.mat-toolbar-row,
+/* .mat-toolbar-row,
 .mat-toolbar-single-row {
   padding: 0 5px !important ;
+} */
+.fas{
+  height: 1rem;
+  width: 1.2rem;
+  text-align: center;
 }

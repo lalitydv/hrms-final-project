@@ -1,0 +1,307 @@
+<section class="my-5">
+    <!-- Hedding  -->
+    <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
+        <div class="flex items-center gap-5">
+
+            <div class="text-3xl font-bold ">Full & Final</div>
+        </div>
+
+    </div>
+    <!-- Hedding  -->
+
+
+
+    <!-- Select Box  -->
+
+
+    <div class="my-5">
+        <mat-accordion class="mx-4 select-dropdown-box">
+            <mat-expansion-panel [disabled]="true" [expanded]="true" [disabled]="true" class="w-full">
+                <div class="bg-Lighitblue w-full pt-4 px-8">
+                    <div class="mx-auto grid xl:grid-cols-5 md:grid-cols-5 justify-between grid-cols-1 gap-5">
+                        <div class="w-full">
+                            <mat-label>User Id</mat-label>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                        <div class="w-full">
+                            <mat-label>Left Date</mat-label>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput [matDatepicker]="startDatePicker" placeholder="mm/dd/yyyy">
+                                    <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                                    <mat-datepicker #startDatePicker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="w-full">
+                            <mat-label>FnF Date</mat-label>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput [matDatepicker]="startDatePicker" placeholder="mm/dd/yyyy">
+                                    <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                                    <mat-datepicker #startDatePicker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="w-full">
+                            <mat-label>Reson For leaving</mat-label>
+                            <div class="flex items-center gap-2">
+                                <mat-form-field class="w-full my-2" appearance="outline">
+                                    <input matInput value="" />
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <mat-label class="invisible">Location</mat-label>
+                            <div class="w-full my-2">
+                                <button type="submit"
+                                    class="text-white bg-Pink hover:bg-Pink focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-10 py-2.5 text-center">
+                                    Prepare
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+    <div class="grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-5 mt-5">
+        <mat-accordion class="select-dropdown-box">
+            <mat-expansion-panel [disabled]="true" [expanded]="true" class="w-full h-full">
+                <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                    <mat-panel-title class="font-medium text-xl">
+                        <!-- <div class="flex items-center justify-center bg-white"> -->
+                        <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">DETAILS
+                        </div>
+                        <div class="line">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                    <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path
+                                            d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                        <path
+                                            d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                        <!-- </div> -->
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="bg-Lighitblue w-full pt-4 px-4 gap-3 grid grid-cols-2">
+                    <span>Paycode</span>
+                    <span>Name</span>
+                    <mat-divider class="col-span-2"></mat-divider>
+                    <span>DOL</span>
+                    <span>Month</span>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion class="select-dropdown-box">
+            <mat-expansion-panel [disabled]="true" [expanded]="true" class="w-full h-full">
+                <mat-expansion-panel-header class="shadow-md bg-white border-white">
+                    <mat-panel-title class="font-medium text-xl">
+                        <!-- <div class="flex items-center justify-center bg-white"> -->
+                        <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">EARNINGS
+                        </div>
+                        <div class="line">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                                    <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path
+                                            d="M15.499 9.134a1 1 0 0 1 0 1.732l-10 5.769A1 1 0 0 1 4 15.769V4.23a1 1 0 0 1 1.5-.866z" />
+                                        <path
+                                            d="M5.5 16.635a1 1 0 0 1-1.5-.866V4.23a1 1 0 0 1 1.5-.866l9.999 5.769a1 1 0 0 1 0 1.732zM10.997 10L7 7.694v4.612z" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                        <!-- </div> -->
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <div class="bg-Lighitblue w-full pt-4 px-4 grid grid-cols-2 gap-1">
+                    <div class="w-full">
+                        <mat-label>Bonus Last Year</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button
+                            class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex gap-2  px-5 p-1 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20.5 5.835A10.49 10.49 0 0 0 12 1.5c-5.427 0-9.89 4.115-10.443 9.396l-.104.994l1.99.209l.103-.995A8.501 8.501 0 0 1 19.213 7.5H15.5v2h7v-7h-2zm.057 6.066l-.104.995A8.501 8.501 0 0 1 4.787 16.5H8.5v-2h-7v7h2v-3.335A10.49 10.49 0 0 0 12 22.5c5.426 0 9.89-4.115 10.442-9.396l.104-.994z" />
+                            </svg>
+                            fetch
+                        </button>
+                    </div>
+                    <mat-divider class="col-span-2"></mat-divider>
+                    <div class="w-full">
+                        <mat-label>Bonus Curr Year</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button
+                            class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex gap-2  px-5 p-1 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20.5 5.835A10.49 10.49 0 0 0 12 1.5c-5.427 0-9.89 4.115-10.443 9.396l-.104.994l1.99.209l.103-.995A8.501 8.501 0 0 1 19.213 7.5H15.5v2h7v-7h-2zm.057 6.066l-.104.995A8.501 8.501 0 0 1 4.787 16.5H8.5v-2h-7v7h2v-3.335A10.49 10.49 0 0 0 12 22.5c5.426 0 9.89-4.115 10.442-9.396l.104-.994z" />
+                            </svg>
+                            fetch
+                        </button>
+                    </div>
+                    <mat-divider class="col-span-2"></mat-divider>
+                    <div class="w-full">
+                        <mat-label>Gratuity</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button
+                            class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex gap-2  px-5 p-1 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20.5 5.835A10.49 10.49 0 0 0 12 1.5c-5.427 0-9.89 4.115-10.443 9.396l-.104.994l1.99.209l.103-.995A8.501 8.501 0 0 1 19.213 7.5H15.5v2h7v-7h-2zm.057 6.066l-.104.995A8.501 8.501 0 0 1 4.787 16.5H8.5v-2h-7v7h2v-3.335A10.49 10.49 0 0 0 12 22.5c5.426 0 9.89-4.115 10.442-9.396l.104-.994z" />
+                            </svg>
+                            fetch
+                        </button>
+                    </div>
+                    <mat-divider class="col-span-2"></mat-divider>
+                    <div class="w-full">
+                        <mat-label>LTA</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button
+                            class="border-2 hover:bg-Yello hover:text-White border-Yello text-Yello items-center  flex gap-2  px-5 p-1 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="0.8em" height="0.8em" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20.5 5.835A10.49 10.49 0 0 0 12 1.5c-5.427 0-9.89 4.115-10.443 9.396l-.104.994l1.99.209l.103-.995A8.501 8.501 0 0 1 19.213 7.5H15.5v2h7v-7h-2zm.057 6.066l-.104.995A8.501 8.501 0 0 1 4.787 16.5H8.5v-2h-7v7h2v-3.335A10.49 10.49 0 0 0 12 22.5c5.426 0 9.89-4.115 10.442-9.396l.104-.994z" />
+                            </svg>
+                            fetch
+                        </button>
+                    </div>
+                    <mat-divider class="col-span-2"></mat-divider>
+                </div>
+
+            </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion class="select-dropdown-box">
+            <mat-expansion-panel [disabled]="true" [expanded]="true" class="w-full h-full">
+                <div class="bg-Lighitblue w-full pt-4 px-4 grid grid-cols-1 gap-1">
+                    <div class="w-full">
+                        <mat-label>Notice Pay</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-divider class=""></mat-divider>
+                    <div class="w-full">
+                        <mat-label>Misc</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-divider class=""></mat-divider>
+                    <div class="w-full">
+                        <mat-label>Pending salary</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-divider class=""></mat-divider>
+                    <div class="w-full">
+                        <mat-label>Pending OT</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-divider class=""></mat-divider>
+                    <div class="w-full">
+                        <mat-label>Security Payable</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-divider class=""></mat-divider>
+                    <div class="w-full">
+                        <mat-label>Imprest Payable</mat-label>
+                        <div class="flex items-center gap-2">
+                            <mat-form-field class="w-full my-2" appearance="outline">
+                                <input matInput value="" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <mat-divider class=""></mat-divider>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+    <div class="my-5 bg-white p-5 rounded-lg shadow-md">
+        <p class="font-bold text-xl">DEDUCTIONS</p>
+        <div class="grid grid-cols-5 gap-3">
+            <div class="w-full">
+                <mat-label>Notice Pay</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="w-full">
+                <mat-label>Other</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center gap-5 my-5">
+            <button type="submit"
+                class="text-white bg-Yello hover:bg-Yello focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                Update Calculation
+            </button>
+            <button type="submit"
+                class="text-white bg-Green hover:bg-Green focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                Finalize
+            </button>
+        </div>
+    </div>
+</section>

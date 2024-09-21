@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
-import { HelpDeskAddComponent } from 'src/app/help-desk/help-desk-add/help-desk-add.component';
-import { HelpDeskEditComponent } from 'src/app/help-desk/help-desk-edit/help-desk-edit.component';
 import { HolidayDeleteComponent } from 'src/app/holidays/holiday-delete/holiday-delete.component';
-import { AddEventComponent } from '../events/add-event/add-event.component';
-import { UpdateEventComponent } from '../events/update-event/update-event.component';
-import { EventInfoComponent } from '../events/event-info/event-info.component';
+import { AddMeetingComponent } from './add-meeting/add-meeting.component';
+import { UpdateMeetingComponent } from './update-meeting/update-meeting.component';
+import { MeetingInfoComponent } from './meeting-info/meeting-info.component';
 
 export interface Element {
   position: number;
@@ -46,13 +44,13 @@ export class MeetingsComponent {
     this.dialog.open(HolidayDeleteComponent);
   }
   openDialogAdd() {
-    this.dialog.open(AddEventComponent);
+    this.dialog.open(AddMeetingComponent);
   }
   openDialogEddit() {
-    this.dialog.open(UpdateEventComponent);
+    this.dialog.open(UpdateMeetingComponent);
   }
   openDialogview() {
-    this.dialog.open(EventInfoComponent);
+    this.dialog.open(MeetingInfoComponent);
   }
 
   selectedOption: string | null = null;

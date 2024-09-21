@@ -30,7 +30,7 @@ const ELEMENT_DATA: Element[] = [
 export class TranGoalTypeComponent {
 
   FirstIcons: string = "assets/Dashboard/image 78.png";
-  HeaderHeading: string = "Training";
+  HeaderHeading: string = "Training List";
 
   // Table 
   displayedColumns = ['position', 'checkbox', 'TrainingType', 'Employee', 'Trainer', 'Company', 'StartDate', 'EndDate', 'actions'];

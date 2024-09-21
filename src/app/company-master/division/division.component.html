@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Heading  -->
     <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1  ">
-                <img src="assets/Dashboard/image 78.png" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
-            </div>
+        <div class="flex items-center gap-5">
+          
             <div class="text-3xl font-bold ">{{Heading}}</div>
         </div>
         <div>
@@ -23,9 +21,9 @@
     <!-- Select Box  -->
 
 
-    <div class="bg-white  shadow-2xl rounded-2xl   my-5 p-5">
+    <div class="bg-white  shadow-md rounded-2xl my-5 p-5">
         <mat-accordion class="mx-4 select-dropdown-box">
-            <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+            <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState" [disabled]="true"class="w-full">
 
                 <mat-expansion-panel-header class="shadow-md bg-white border-white">
                     <mat-panel-title class="font-medium text-xl ">
@@ -61,7 +59,7 @@
         <div class="flex items-center gap-5 my-5">
             <button type="submit"
                 class="text-white bg-Yello hover:bg-Yello focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
-                Save <i class="fa-solid fa-plus border-2 rounded-full p-0.5"></i>
+                Save
             </button>
             <button type="submit"
                 class="text-white bg-Green hover:bg-Green focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">

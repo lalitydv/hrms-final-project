@@ -11,6 +11,7 @@ import { SharedImportsModule } from '../shared-imports/shared-imports.module';
 import { RangepopupComponent } from './pm-payslip/rangepopup/rangepopup.component';
 import { BulkImportPayrollMasterComponent } from './pm-configuration/bulk-import-payroll-master/bulk-import-payroll-master.component';
 import { SharedTableModule } from '../shared-table/shared-table.module';
+import { FullNdFinalComponent } from './full-nd-final/full-nd-final.component';
 
 
 @NgModule({
@@ -21,13 +22,17 @@ import { SharedTableModule } from '../shared-table/shared-table.module';
     PmBonusSettingComponent,
     PmPayrollReportingComponent,
     RangepopupComponent,
-    BulkImportPayrollMasterComponent
+    BulkImportPayrollMasterComponent,
+    FullNdFinalComponent
   ],
   imports: [
     CommonModule,
     PayrollMasterRoutingModule,
     SharedImportsModule,
     SharedTableModule
+  ],
+  exports:[
+    PmAllEmployeesComponent
   ]
 })
 export class PayrollMasterModule { }

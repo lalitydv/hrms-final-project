@@ -40,7 +40,7 @@
     padding: 12px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 5px 15px 0px !important;
     border-radius: 20px;
-    margin: auto 10px;
+    
   }
   .example-container {
     overflow: auto;
@@ -85,11 +85,11 @@
   }
   ::ng-deep .service-tab .mat-mdc-tab-ripple {
     border: 2px solid #01257f !important;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
   }
   ::ng-deep .service-tab .mdc-tab--active {
     background-color: #01257f !important;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
   }
   ::ng-deep .service-tab .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
     color: white !important;

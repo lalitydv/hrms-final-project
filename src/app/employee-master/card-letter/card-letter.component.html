@@ -1,27 +1,25 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
-        <div class="flex items-center mx-5 gap-5">
+        <div class="flex items-center gap-5">
 
 
-            <div class="shadow-2xl bg-white rounded-full p-1  ">
-                <img src="assets/Dashboard/image 78.png" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
-            </div>
+          
 
             <div class="text-3xl font-bold ">{{HearderHeding}}</div>
         </div>
         <div class="flex gap-5">
 
             <a routerLink="/employee-master/card-letter">
-                <button class="bg-Pink text-white flex justify-center flex-row p-3 px-3 text-[20px] rounded-lg 
-                 items-center gap-2">
+                <button class="bg-Pink text-white flex justify-center flex-row p-3 px-3 text-[18px] rounded-lg border-2 border-transparent
+                 items-center gap-1">
                     ID Card
                 </button>
             </a>
 
             <a routerLink="/employee-master/confirmation-letter">
-                <button class=" text-Pink border-2 border-Pink  flex justify-center flex-row p-3 px-3 text-[20px] rounded-lg 
-                 items-center gap-2">
+                <button class=" text-Pink border-2 border-Pink  flex justify-center flex-row p-3 px-3 text-[18px] rounded-lg 
+                 items-center gap-1">
                     Confirmation Letter
                 </button>
             </a>
@@ -31,7 +29,7 @@
 
 
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState" [disabled]="true"class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->

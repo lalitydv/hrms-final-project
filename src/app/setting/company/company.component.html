@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1">
-                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
-            </div>
+        <div class="flex items-center gap-5">
+          
             <div class="text-3xl font-bold">{{ HearderHeding }}</div>
         </div>
     </div>
@@ -14,12 +12,12 @@
 
 
     <mat-accordion class="mx-4 select-dropdown-box ">
-        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full custom-accordion">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState" [disabled]="true"class="w-full custom-accordion">
             <mat-expansion-panel-header class="shadow-md  border-white w-full">
-                <div class="flex items-center justify-center  w-full">
+                <div class="flex items-center  w-full">
                     <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Company Logo Review
                     </div>
-                    <div class=" flex line ">
+                    <!-- <div class=" flex line ">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -31,7 +29,7 @@
                             </svg>
                         </span>
 
-                    </div>
+                    </div> -->
                 </div>
 
             </mat-expansion-panel-header>
@@ -64,26 +62,24 @@
     <!-- Company Logo Review Information -->
     <!-- Company Details in Report  Information -->
     <mat-accordion class="mx-4 select-dropdown-box ">
-        <mat-expansion-panel [(expanded)]="panelOpenState2" class="w-full custom-accordion">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState2" class="w-full custom-accordion">
             <mat-expansion-panel-header class="shadow-md  border-white w-full">
-               
-
-
-                <mat-panel-title class="font-medium text-xl ">
-
+                <mat-panel-title class="font-medium text-xl">
                     <div class="rounded-lg text-lg px-1 py-3 whitespace-nowrap font-bold">
                         Company Details in
                         Report
                     </div>
                     <span class="flex gap-4 mx-5">
-                        <i
-                            class="fa-solid fa-file-excel text-xl text-white border-0 p-1 px-3 bg-DarkGreen rounded-md"></i>
-
-                        <i
-                            class="fa-solid fa-file-pdf text-xl text-white border-0 p-1 px-3 bg-Red rounded-md"></i>
-                        <i
-                            class="fa-solid fa-print text-xl text-white border-0 p-1 px-3 bg-Yello rounded-md"></i>
-
+                        <div class="">
+                            <i
+                                class="fa-solid fa-file-excel text-xl text-white border-0 p-1  bg-DarkGreen rounded-md "></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-file-pdf text-xl text-white border-0 p-1  bg-Red rounded-md"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-print text-xl text-white border-0 p-1  bg-Yello rounded-md"></i>
+                        </div>
                     </span>
                     <div class="line md:visible invisible">
                         <span>
@@ -113,10 +109,10 @@
                                 <input type="file" id="file-upload" class="hidden" />
                                 <label for="file-upload"
                                     class="z-20 flex flex-col-reverse items-center justify-center w-full h-full cursor-pointer">
-                                    <p
+                                    <!-- <p
                                         class="z-10 text-lg font-light whitespace-nowrap text-center text-Pink border-2 border-Pink p-5 rounded-xl">
                                         browse images
-                                    </p>
+                                    </p> -->
                                     <img src="https://toppng.com/uploads/preview/file-upload-image-icon-115632290507ftgixivqp.png"
                                         alt="" class="w-36 h-36 my-5" />
                                 </label>
@@ -151,15 +147,11 @@
                                     <mat-form-field class="w-full my-2" appearance="outline">
                                         <input matInput value="" />
                                     </mat-form-field>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
             </div>
         </mat-expansion-panel>
     </mat-accordion>
@@ -167,7 +159,7 @@
     <!-- Company Details in Report Information -->
     <!-- Company Information  Information -->
     <mat-accordion class="mx-4 select-dropdown-box ">
-        <mat-expansion-panel [(expanded)]="panelOpenState3" class="w-full custom-accordion">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState3" class="w-full custom-accordion">
             <mat-expansion-panel-header class="shadow-md  border-white w-full">
                
 
@@ -177,14 +169,16 @@
                         Company Information
                     </div>
                     <span class="flex gap-4 mx-5">
-                        <i
-                            class="fa-solid fa-file-excel text-xl text-white border-0 p-1 px-3 bg-DarkGreen rounded-md"></i>
-
-                        <i
-                            class="fa-solid fa-file-pdf text-xl text-white border-0 p-1 px-3 bg-Red rounded-md"></i>
-                        <i
-                            class="fa-solid fa-print text-xl text-white border-0 p-1 px-3 bg-Yello rounded-md"></i>
-
+                        <div class="">
+                            <i
+                                class="fa-solid fa-file-excel text-xl text-white border-0 p-1  bg-DarkGreen rounded-md "></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-file-pdf text-xl text-white border-0 p-1  bg-Red rounded-md"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-print text-xl text-white border-0 p-1  bg-Yello rounded-md"></i>
+                        </div>
                     </span>
                     <div class="line md:visible invisible">
                         <span>
@@ -305,12 +299,12 @@
     <!-- Company Information Information -->
     <!-- Email Signature  Information -->
     <mat-accordion class="mx-4 select-dropdown-box ">
-        <mat-expansion-panel [(expanded)]="panelOpenState4" class="w-full custom-accordion">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState4" class="w-full custom-accordion">
             <mat-expansion-panel-header class="shadow-md  border-white w-full">
-                <div class="flex items-center   w-full">
+                <div class="flex items-center  w-full">
                     <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Email Signature
                     </div>
-                    <div class=" flex line ">
+                    <!-- <div class=" flex line ">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -322,7 +316,7 @@
                             </svg>
                         </span>
 
-                    </div>
+                    </div> -->
                 </div>
             </mat-expansion-panel-header>
             <div class="bg-Lighitblue w-full pt-4 px-8">

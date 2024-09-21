@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1">
-                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
-            </div>
+        <div class="flex items-center gap-5">
+          
             <div class="text-3xl font-bold">{{ HearderHeding }}</div>
         </div>
     </div>
@@ -14,13 +12,13 @@
 
 
     <mat-accordion class="mx-4 select-dropdown-box ">
-        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full custom-accordion">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState" [disabled]="true"class="w-full custom-accordion">
             <mat-expansion-panel-header class="shadow-md  border-white w-full">
-                <div class="flex items-center justify-center  w-full">
+                <div class="flex items-center  w-full">
                     <div class=" rounded-lg text-lg px-2 py-3 whitespace-nowrap  font-bold">Sms Settings
 
                     </div>
-                    <div class=" flex line ">
+                    <!-- <div class=" flex line ">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
                                 <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -32,7 +30,7 @@
                             </svg>
                         </span>
 
-                    </div>
+                    </div> -->
                 </div>
 
             </mat-expansion-panel-header>

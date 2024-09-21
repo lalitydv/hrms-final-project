@@ -17,6 +17,8 @@ import { FileVaultTableComponent } from './list-employee/file-vault-table/file-v
 import { EmployeeCodeComponent } from './employee-code/employee-code.component';
 import { SearchIconComponent } from './search-icon/search-icon.component';
 import { SalaryComponent } from './salary/salary.component';
+import { UploadFileComponent } from './list-employee/upload-file/upload-file.component';
+import { PayrollMasterModule } from '../payroll-master/payroll-master.module';
 @NgModule({
   declarations: [
     CardLetterComponent,
@@ -32,12 +34,14 @@ import { SalaryComponent } from './salary/salary.component';
     FileVaultTableComponent,
     EmployeeCodeComponent,
     SearchIconComponent,
-    SalaryComponent
+    SalaryComponent,
+    UploadFileComponent
   ],
   imports: [
     CommonModule,
     EmployeeMasterRoutingModule,
-    SharedImportsModule
+    SharedImportsModule,
+    PayrollMasterModule
   ]
 })
 export class EmployeeMasterModule { }

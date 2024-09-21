@@ -1,10 +1,10 @@
-<div class="bg-white rounded-2xl overflow-y-scroll h-screen">
+<div class="bg-white rounded-2xl overflow-y-scroll max-h-[85vh]">
     <div class="bg-lightPink py-2 ">
-        <div class="flex justify-between mx-5">
+        <div class="flex justify-between items-center mx-5">
             <div>
                 Add Holiday
             </div>
-            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center ">
+            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center items-center">
                 <i class="fa-solid fa-xmark text-Red text-xl"></i>
             </div>
         </div>
@@ -20,7 +20,7 @@
 
 
             <div class=" w-full">
-                <mat-label> Event Name*</mat-label>
+                <mat-label> Event Name<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput value="Eid Ul Adha" />
@@ -46,7 +46,7 @@
 
 
             <div class="w-full">
-                <mat-label>Start Date *</mat-label>
+                <mat-label>Start Date<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput [matDatepicker]="startDatePicker" placeholder="05-06-2024">
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="w-full">
-                <mat-label>End Date *</mat-label>
+                <mat-label>End Date<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput [matDatepicker]="endDatePicker" placeholder="05-06-2024">
@@ -82,7 +82,7 @@
             </div>
 
             <div class=" w-full">
-                <mat-label> Description*</mat-label>
+                <mat-label> Description<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <textarea matInput rows=""

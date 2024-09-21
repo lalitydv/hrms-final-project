@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { HolidayDeleteComponent } from 'src/app/holidays/holiday-delete/holiday-delete.component';
+import { DeviceEdditComponent } from '../device-eddit/device-eddit.component';
 
 export interface Element {
   position: number;
@@ -37,6 +38,9 @@ export class DeviceListComponent {
 
   openDialog() {
     this.dialog.open(HolidayDeleteComponent);
+  }
+  openEdit() {
+    this.dialog.open(DeviceEdditComponent);
   }
 
   selectedOption: string | null = null;

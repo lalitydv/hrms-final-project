@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1  ">
-                <img src="{{FirstIcons}}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
-            </div>
+        <div class="flex items-center gap-5">
+           
             <div class="text-3xl font-bold ">{{HearderHeding}}</div>
         </div>
 
@@ -16,9 +14,9 @@
     <!-- Select Box  -->
 
 
-    <div class="   my-5 p-5">
-        <div class="flex flex-wrap gap-5">
-            <div>
+    <div class="my-5">
+        <div class="flex justify-between flex-wrap gap-5">
+            <div class="w-1/2 sm:w-auto">
                 <div class="w-full">
                     <button type="submit"
                         class="text-white bg-Pink hover:bg-Pink focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center flex items-center gap-2">
@@ -35,7 +33,7 @@
                 </div>
             </div>
 
-            <div>
+            <div class="w-full sm:w-auto">
                 <label for="search"
                     class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div class="relative">
@@ -50,13 +48,13 @@
                  focus:ring-lightBlue focus:border-lightBlue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
                   dark:text-white dark:focus:ring-lightBlue dark:focus:border-lightBlue" placeholder="Search" required>
                     <button (click)="popup()" type="submit" class="text-white absolute right-0 bottom-0 top-0 bg-lightBlue hover:bg-lightBlue focus:ring-4 
-                focus:outline-none focus:ring-lightBlue font-medium rounded-lg text-sm px-5 py-4 dark:bg-lightBlue
+                focus:outline-none focus:ring-lightBlue font-medium rounded-lg text-sm px-5 py-2 dark:bg-lightBlue
                  dark:hover:bg-lightBlue dark:focus:ring-blue-800">Org wide Search</button>
                 </div>
             </div>
         </div>
         <mat-accordion class="mx-4 select-dropdown-box">
-            <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+            <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState" [disabled]="true"class="w-full">
                 <mat-expansion-panel-header class="shadow-md bg-white border-white">
                     <mat-panel-title class="font-medium text-xl ">
                         Employee list
@@ -137,21 +135,21 @@
     <!-- Select Box  -->
     <!-- table start  -->
     <!-- dawnlod icons  -->
-    <div class="flex items-center flex-wrap gap-5">
-        <button class=" flex justify-center items-center bg-Gray text-white p-2 px-2 rounded-md gap-2 ">
+    <div class="flex items-center flex-wrap gap-2">
+        <button class=" flex justify-center items-center bg-Gray text-white p-2 px-3 rounded-md gap-1 ">
             <mat-icon class="mat-18">autorenew</mat-icon>
             Refresh
         </button>
-        <button class=" flex justify-center items-center bg-Red text-white p-2 px-2 rounded-md gap-2 ">
+        <button class=" flex justify-center items-center bg-Red text-white p-2 px-3 rounded-md gap-1 ">
             <mat-icon class="mat-18">download_2</mat-icon>
             Filtered
         </button>
-        <button class=" flex justify-center items-center bg-Green text-white p-2 px-2 rounded-md gap-2 ">
+        <button class=" flex justify-center items-center bg-Green text-white p-2 px-3 rounded-md gap-1 ">
             <mat-icon class="mat-18">download_2</mat-icon>
             All
         </button>
 
-        <button class=" flex justify-center items-center bg-Yello text-white p-2 px-2 rounded-md gap-2 ">
+        <button class=" flex justify-center items-center bg-Yello text-white p-2 px-3 rounded-md gap-1 ">
             <mat-icon class="mat-18">print</mat-icon>
             Print
         </button>
@@ -167,9 +165,7 @@
             <!-- Position Column -->
 
             <ng-container matColumnDef="position">
-                <th mat-header-cell *matHeaderCellDef class="bg-lightPink">S.no.
-
-
+                <th mat-header-cell *matHeaderCellDef class="bg-lightPink custom_header">S.no.
                     <div class="relative invisible">
                         <div class="absolute inset-y-0 -top-2 left-0 flex items-center pl-3 pointer-events-none">
                             <mat-icon class="text-lg searchicon">search</mat-icon>
@@ -180,7 +176,7 @@
                             placeholder="User ID" required>
                     </div>
                 </th>
-                <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+                <td mat-cell *matCellDef="let element" class="h-20 custom_header">{{ element.position }}</td>
             </ng-container>
             <!-- UserID Column -->
             <ng-container matColumnDef="UserID" class="">

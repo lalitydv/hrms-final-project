@@ -1,9 +1,7 @@
 <section class="my-5">
     <!-- Hedding  -->
-    <div class="flex items-center mx-5 gap-5">
-        <div class="shadow-2xl bg-white rounded-full p-1">
-            <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
-        </div>
+    <div class="flex items-center gap-5">
+   
         <div class="text-3xl font-bold">{{ HearderHeding }}</div>
     </div>
     <div class="flex gap-10 flex-wrap my-5">
@@ -21,7 +19,7 @@
     <!-- Hedding  -->
     <!-- Personal Information -->
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState" [disabled]="true"class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -45,12 +43,11 @@
             </mat-expansion-panel-header>
             <div class="bg-Lighitblue w-full pt-4 px-8">
                 <div class="mx-auto grid  justify-between grid-cols-1 gap-5">
-
-                    <div class="grid md:grid-cols-3 grid-cols-1 gap-5">
-                        <div class="grid md:col-span-2 col-span-1 md:grid-cols-4 gap-5 grid-cols-1">
+                    <div class="grid md:grid-cols-4 grid-cols-1 gap-x-5">
+                        <div class="grid md:col-span-3 col-span-1 md:grid-cols-3 gap-x-5 gap-y-3 grid-cols-1">
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
-                                    <mat-label> Paycode *</mat-label>
+                                    <mat-label> Paycode<span class="required-asterisk">*</span></mat-label>
                                     <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                                 </div>
                                 <div class="flex items-center gap-2">
@@ -62,7 +59,7 @@
                             </div>
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
-                                    <mat-label> User Id*</mat-label>
+                                    <mat-label> User Id<span class="required-asterisk">*</span></mat-label>
                                     <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                                 </div>
                                 <div class="flex items-center gap-2">
@@ -74,7 +71,7 @@
                             </div>
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
-                                    <mat-label>Adhaar *</mat-label>
+                                    <mat-label>Adhaar<span class="required-asterisk">*</span></mat-label>
                                     <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                                 </div>
                                 <div class="flex items-center gap-2">
@@ -86,7 +83,7 @@
                             </div>
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
-                                    <mat-label>DOB *</mat-label>
+                                    <mat-label>DOB<span class="required-asterisk">*</span></mat-label>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <mat-form-field class="w-full my-2" appearance="outline">
@@ -97,8 +94,6 @@
                                     </mat-form-field>
                                 </div>
                             </div>
-
-
 
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
@@ -138,7 +133,7 @@
                             </div>
                             <div class="w-full">
                                 <div class="flex items-center justify-between">
-                                    <mat-label>DOJ *</mat-label>
+                                    <mat-label>DOJ<span class="required-asterisk">*</span></mat-label>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <mat-form-field class="w-full my-2" appearance="outline">
@@ -149,12 +144,8 @@
                                     </mat-form-field>
                                 </div>
                             </div>
-
-
-
-
                         </div>
-                        <div>
+                        <div class="md:row-span-3">
                             <img src="assets/EMP/Rectangle 12349.png" alt="">
                         </div>
 
@@ -163,7 +154,7 @@
                     <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-5 grid-cols-1">
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label> Name *</mat-label>
+                                <mat-label> Name<span class="required-asterisk">*</span></mat-label>
                                 <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                             </div>
                             <div class="flex items-center gap-2">
@@ -176,7 +167,7 @@
 
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label> Gender *</mat-label>
+                                <mat-label> Gender<span class="required-asterisk">*</span></mat-label>
 
                             </div>
                             <div class="flex items-center gap-2">
@@ -191,7 +182,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label> Marital Status*</mat-label>
+                                <mat-label> Marital Status<span class="required-asterisk">*</span></mat-label>
 
                             </div>
                             <div class="flex items-center gap-2">
@@ -206,7 +197,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label>DOJ *</mat-label>
+                                <mat-label>DOJ<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -224,7 +215,7 @@
                     <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-5 grid-cols-1">
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label> Father/Husband name *</mat-label>
+                                <mat-label> Father/Husband name<span class="required-asterisk">*</span></mat-label>
                                 <mat-icon (click)="openDialogsearch()" class="mat-18 text-Gray">search</mat-icon>
                             </div>
                             <div class="flex items-center gap-2">
@@ -287,7 +278,7 @@
                     <div class="grid  lg:grid-cols-5 md:grid-cols-3  gap-5 grid-cols-1">
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label> Primary Contact*</mat-label>
+                                <mat-label> Primary Contact<span class="required-asterisk">*</span></mat-label>
 
                             </div>
                             <div class="flex items-center gap-2">
@@ -299,7 +290,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label>Secondary Contact*</mat-label>
+                                <mat-label>Secondary Contact<span class="required-asterisk">*</span></mat-label>
 
                             </div>
                             <div class="flex items-center gap-2">
@@ -399,7 +390,7 @@
                     <div class="grid  lg:grid-cols-2 md:grid-cols-2  gap-5 grid-cols-1">
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label> Primary Contact*</mat-label>
+                                <mat-label> Primary Contact<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -470,7 +461,7 @@
     <!-- Personal Information -->
     <!-- Qualification -->
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="Qualification" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="Qualification" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
 
 
@@ -587,7 +578,7 @@
     <!-- Qualification -->
     <!-- Examination -->
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="Examination" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="Examination" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -698,7 +689,7 @@
 
     <!-- Job Information -->
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="Job" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="Job" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
 
 
@@ -727,7 +718,7 @@
 
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label> Company*</mat-label>
+                                <mat-label> Company<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -741,7 +732,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label>Designation*</mat-label>
+                                <mat-label>Designation<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -769,7 +760,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label> Department*</mat-label>
+                                <mat-label> Department<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -783,7 +774,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label>Sub Department*</mat-label>
+                                <mat-label>Sub Department<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -825,7 +816,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label>Location*</mat-label>
+                                <mat-label>Location<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -867,7 +858,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label>Category*</mat-label>
+                                <mat-label>Category<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -881,7 +872,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label>Overtime Type*</mat-label>
+                                <mat-label>Overtime Type<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -895,7 +886,7 @@
                         </div>
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label>Shift Code*</mat-label>
+                                <mat-label>Shift Code<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -938,7 +929,7 @@
 
                         <div class="w-full">
                             <div class="flex items-center justify-between">
-                                <mat-label>Weekly Off*</mat-label>
+                                <mat-label>Weekly Off<span class="required-asterisk">*</span></mat-label>
                             </div>
                             <div class="flex items-center gap-2">
                                 <mat-form-field class="w-full my-2" appearance="outline">
@@ -985,7 +976,7 @@
 
     <!-- Family Members -->
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="Family" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="Family" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -1226,7 +1217,7 @@
     <!-- PF Details -->
 
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="PF" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="PF" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -1316,7 +1307,7 @@
     <!-- ESI Details -->
 
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="ESI" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="ESI" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -1412,7 +1403,7 @@
     <!--Gratuity Details -->
 
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="Gratuity" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="Gratuity" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -1475,7 +1466,7 @@
     <!--LWF Details -->
 
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="LWF" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="LWF" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -1524,7 +1515,7 @@
     <!--Leaves Details -->
 
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="Leaves" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="Leaves" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -1594,7 +1585,7 @@
     <!--Other Details Details -->
 
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="Other" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="Other" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white w-full">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->

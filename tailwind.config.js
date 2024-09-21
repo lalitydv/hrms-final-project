@@ -11,12 +11,15 @@ module.exports = {
           "url('https://www.tailwindtap.com/assets/components/form/userlogin/login_tailwindtap.jpg')",
       },
     },
+    fontFamily: {
+      'nunito': ['Nunito', 'sans-serif']
+    },
     colors: {
-      Pink: "#1E50A0",
+      Pink: "#01247b",
       // Pink: "#FF3389",
       lightPink: "#F9F6FF",
-      Blue: "#2E108E",
-      Green: "#3BB77E",
+      Blue: "#01247b",
+      Green: "#1abd00",
       DarkGreen: "#006B04",
       Gray: "#7B7B7B",
       Gray2: "#F5F4F4",
@@ -27,12 +30,15 @@ module.exports = {
       White: "#ffffff",
       PinkDark: "#8A2080",
       bgLightblu: "#54178D",
-      bglightPink: "#1E50A0",
-      lightBlue: "#1E50A0",
-      Newsidcolor: "#1E50A0",
+      bglightPink: "#01247b",
+      lightBlue: "#01247b",
+      Newsidcolor: "#cddaef8f",
     },
   },
   plugins: [
-    require("flowbite/plugin"), // add this line
+    require("flowbite/plugin"),
+    require('postcss-nesting'),
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 };

@@ -13,7 +13,7 @@ import { TrainingTypeEditComponent } from './training-type-edit/training-type-ed
 export class TranGoalTrackingComponent {
 
   FirstIcons:String="assets/Dashboard/image 78.png"
-  HearderHeding:String="Training"
+  HearderHeding:String="Training Type"
   panelOpenState = true;
     displayedColumns = ['position','TrainingName', 'actions'];
     dataSource = new MatTableDataSource(ELEMENT_DATA);

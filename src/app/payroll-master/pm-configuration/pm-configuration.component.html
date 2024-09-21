@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1  ">
-                <img src="{{FirstIcons}}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
-            </div>
+        <div class="flex items-center gap-5">
+           
             <div class="text-3xl font-bold ">{{HearderHeding}}</div>
         </div>
         <div>
@@ -17,12 +15,12 @@
 
 
     <div class="service-tab my-4">
-        <mat-tab-group class="p-4 border-b-2 border-gray-1" mat-stretch-tabs="false" animationDuration="0ms">
+        <mat-tab-group class="border-b-2 border-gray-1" mat-stretch-tabs="false" animationDuration="0ms">
             <!-- basic -->
             <mat-tab label="Basic">
-                <div class="grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-5 my-5">
+                <div class="grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-5 mt-5">
                     <mat-accordion class="mx-4 select-dropdown-box">
-                        <mat-expansion-panel [(expanded)]="Salary1" class="w-full">
+                        <mat-expansion-panel [disabled]="true" [(expanded)]="Salary1" class="w-full">
                             <mat-expansion-panel-header class="shadow-md bg-white border-white">
                                 <mat-panel-title class="font-medium text-xl">
                                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -45,13 +43,10 @@
                                 </mat-panel-title>
                             </mat-expansion-panel-header>
 
-                            <div class="bg-Lighitblue w-full pt-4 px-8">
-
-
-
+                            <div class="bg-Lighitblue w-full pt-4 md:px-8 px-4">
                                 <div class="flex px-2 my-2">
                                     <button
-                                        class="border-2 hover:bg-yellow-500 hover:text-white border-yellow-500 text-yellow-500 items-center flex px-5 py-1 rounded-lg">
+                                        class="border-2 hover:bg-Yello hover:text-white border-Yello text-Yello items-center flex px-5 py-1 rounded-lg">
                                         Add
                                         <mat-icon class="text-base">add_circle</mat-icon>
                                     </button>
@@ -66,7 +61,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="border-2 p-0.5 border-red-500 text-red-500 items-center flex text-center">
+                                        class="border-2 p-0.5 border-Red text-Red items-center flex text-center rounded-md">
                                         <mat-icon class="">delete</mat-icon>
                                     </div>
                                 </div>
@@ -80,7 +75,7 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="border-2 p-0.5 border-red-500 text-red-500 items-center flex text-center">
+                                        class="border-2 p-0.5 border-Red text-Red items-center flex text-center rounded-md">
                                         <mat-icon class="">delete</mat-icon>
                                     </div>
                                 </div>
@@ -94,16 +89,15 @@
                                         </div>
                                     </div>
                                     <div
-                                        class="border-2 p-0.5 border-red-500 text-red-500 items-center flex text-center">
+                                        class="border-2 p-0.5 border-Red text-Red items-center flex text-center rounded-md">
                                         <mat-icon class="">delete</mat-icon>
                                     </div>
                                 </div>
                             </div>
-
                         </mat-expansion-panel>
                     </mat-accordion>
                     <mat-accordion class="mx-4 select-dropdown-box">
-                        <mat-expansion-panel [(expanded)]="CTC2" class="w-full">
+                        <mat-expansion-panel [disabled]="true" [(expanded)]="CTC2" class="w-full">
                             <mat-expansion-panel-header class="shadow-md bg-white border-white">
                                 <mat-panel-title class="font-medium text-xl">
                                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -160,7 +154,7 @@
                     </mat-accordion>
 
                     <mat-accordion class="mx-4 select-dropdown-box">
-                        <mat-expansion-panel [(expanded)]="Allowance2" class="w-full">
+                        <mat-expansion-panel [disabled]="true" [(expanded)]="Allowance2" class="w-full">
                             <mat-expansion-panel-header class="shadow-md bg-white border-white">
                                 <mat-panel-title class="font-medium text-xl">
                                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -210,11 +204,11 @@
                 <!-- 3 colume section  -->
                 <!-- 2 colume section  -->
 
-                <div class="grid md:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-5">
+                <div class="grid md:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-5 mt-5">
 
 
                     <mat-accordion class="mx-4 select-dropdown-box">
-                        <mat-expansion-panel [(expanded)]="Deductions2" class="w-full">
+                        <mat-expansion-panel [disabled]="true" [(expanded)]="Deductions2" class="w-full">
                             <mat-expansion-panel-header class="shadow-md bg-white border-white">
                                 <mat-panel-title class="font-medium text-xl">
                                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -246,7 +240,7 @@
                                         <mat-icon class="text-base">add_circle</mat-icon>
                                     </button>
                                 </div>
-                                <div class="flex items-center gap-5 px-2 ">
+                                <div class="flex items-center flex-wrap gap-5 px-2 ">
                                     <div class="w-full">
 
                                         <div class="flex items-center gap-2">
@@ -283,7 +277,7 @@
                         </mat-expansion-panel>
                     </mat-accordion>
                     <mat-accordion class="mx-4 select-dropdown-box">
-                        <mat-expansion-panel [(expanded)]="Deduction2" class="w-full">
+                        <mat-expansion-panel [disabled]="true" [(expanded)]="Deduction2" class="w-full">
                             <mat-expansion-panel-header class="shadow-md bg-white border-white">
                                 <mat-panel-title class="font-medium text-xl">
                                     <!-- <div class="flex items-center justify-center bg-white"> -->
@@ -332,7 +326,7 @@
             <mat-tab label=" Advanced">
 
                 <mat-accordion class="mx-4 select-dropdown-box">
-                    <mat-expansion-panel [(expanded)]="Setting" class="w-full">
+                    <mat-expansion-panel [disabled]="true" [(expanded)]="Setting" class="w-full">
                         <mat-expansion-panel-header class="shadow-md bg-white border-white">
                             <mat-panel-title class="font-medium text-xl">
                                 <!-- <div class="flex items-center justify-center bg-white"> -->

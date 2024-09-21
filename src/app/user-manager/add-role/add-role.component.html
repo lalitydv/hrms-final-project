@@ -1,0 +1,136 @@
+<div class="bg-white rounded-2xl overflow-y-scroll">
+    <div class="bg-lightPink py-2 ">
+        <div class="flex justify-between items-center mx-5">
+            <div>
+                Add New Role
+            </div>
+            <!-- <div mat-dialog-close
+                class="border-2 rounded-full border-Red w-7 h-7 flex justify-center  items-center">
+                <i class="fa-solid fa-xmark text-Red text-xl"></i>
+            </div> -->
+        </div>
+
+    </div>
+    <div class="p-5">
+        <div class="grid grid-cols-1 gap-5 mb-5">
+            <div class="w-full">
+                <mat-label>Role Name<span class="required-asterisk">*</span></mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <input matInput value="" />
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class=" w-full ">
+                <mat-label>Description</mat-label>
+                <div class="flex items-center gap-2">
+                    <mat-form-field class="w-full my-2" appearance="outline">
+                        <textarea matInput value=""></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="flex gap-5 justify-start items-start my-10">
+                <div class=" flex gap-5 ">
+                    <button type="button" mat-dialog-close
+                        class="bg-Green text-White p-2 px-5 rounded-md border-0 outline-none">Save</button>
+                    <button type="button" mat-dialog-close
+                        class="bg-Gray text-White p-2 px-5 rounded-md border-0 outline-none">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-div">
+            <table class="w-full text-sm text-left border">
+                <thead class="text-sm uppercase text-gray-700">
+                    <tr class="border-b">
+                        <th scope="col" class="px-6 py-3 ">Main Menu</th>
+                        <th scope="col" class="px-6 py-3 ">View</th>
+                        <th scope="col" class="px-6 py-3 ">Edit</th>
+                        <th scope="col" class="px-6 py-3 ">Delete</th>
+                        <th scope="col" class="px-6 py-3">Sub menu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b hover:bg-[#f8f8f8]">
+                        <td class="px-6 py-3">
+                            <div class="flex gap-2 items-center">
+                                <input type="checkbox" class="custom_checkbox accent-Pink">
+                                Master Settings
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 ">
+                            <div class="grid gap-2">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 ">
+                            <div class="grid gap-2">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 ">
+                            <div class="grid gap-2">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 ">
+                            <div class="grid">
+                                <span>Package (Kit) Master</span>
+                                <span>Settings</span>
+                                <span>Document Upload</span>
+                                <span>Testimonials</span>
+                                <span>Image Gallery</span>
+                                <span>Visiting Card And ID</span>
+                                <span>FAQ Master</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="border-b hover:bg-[#f8f8f8]">
+                        <td class="px-6 py-3 ">
+                            <div class="flex gap-2 items-center">
+                                <input type="checkbox" class="custom_checkbox accent-Pink">
+                                Master Settings
+                            </div>
+                        </td>
+                        <td class="px-6 py-3  ">
+                            <div class="grid gap-2">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 ">
+                            <div class="grid gap-2">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                            </div>
+                        </td>
+                        <td class="px-6 py-3 ">
+                            <div class="grid gap-2">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                                <input type="checkbox" class="custom_checkbox">
+                            </div>
+                        </td>
+                        <td class="px-6 py-3">
+                            <div class="grid">
+                                <span>Package (Kit) Master</span>
+                                <span>Settings</span>
+                                <span>Document Upload</span>
+                                <span>Testimonials</span>
+                                <span>Image Gallery</span>
+                                <span>Visiting Card And ID</span>
+                                <span>FAQ Master</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>

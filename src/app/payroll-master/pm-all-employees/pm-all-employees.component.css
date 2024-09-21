@@ -1,0 +1,23 @@
+.mat-column-position{
+    left:0
+}
+
+.mat-column-userId{
+    left: 4rem;
+}
+
+.mat-column-name{
+    left: 13.3rem;
+}
+
+.mat-column-DOJ{
+    left: 22.5rem;
+}
+.mat-column-fName{
+    left: 31.8rem;
+}
+
+.shadow-right{
+    box-shadow: inset -2px 0px 1px 0px #e0e0e0;
+    padding-right: 10px !important;
+}

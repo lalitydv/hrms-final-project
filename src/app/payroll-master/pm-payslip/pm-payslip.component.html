@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1  ">
-                <img src="{{FirstIcons}}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
-            </div>
+        <div class="flex items-center gap-5">
+           
             <div class="text-3xl font-bold ">{{HearderHeding}}</div>
         </div>
     </div>
@@ -15,10 +13,10 @@
     <!-- Select Box  -->
 
 
-    <div class="   my-5 p-5">
+    <div class="   my-5">
 
         <mat-accordion class="mx-4 select-dropdown-box">
-            <mat-expansion-panel [(expanded)]="panelOpenState" class="w-full">
+            <mat-expansion-panel [disabled]="true" [(expanded)]="panelOpenState" [disabled]="true" class="w-full">
                 <mat-expansion-panel-header class="shadow-md bg-white border-white">
                     <mat-panel-title class="font-medium text-xl ">
                         Payslip
@@ -164,13 +162,13 @@
     </div>
 
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="Payslips" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="Payslips" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white">
                 <mat-panel-title class="font-medium text-xl flex whitespace-nowrap gap-3">
                     <!-- <div class="flex items-center justify-center bg-white"> -->
                     <div class="font-bold text-lg">Payslips per page</div>
                     <div>
-                        <select name="" id="" class="rounded-md px-5 h-10">
+                        <select name="" id="" class="rounded-md py-1 pr-1 pl-2 border border-[#b2abab]"class="rounded-md px-5 h-10">
                             <option value="20">20</option>
                             <option value="20">20</option>
                         </select>

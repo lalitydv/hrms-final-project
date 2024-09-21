@@ -1,10 +1,10 @@
-<div class="bg-white rounded-2xl overflow-y-scroll h-screen">
+<div class="bg-white rounded-2xl overflow-y-scroll max-h-[85vh]">
     <div class="bg-lightPink py-2 ">
-        <div class="flex justify-between mx-5">
+        <div class="flex justify-between items-center mx-5">
             <div>
                 Add New Goal Tracking
             </div>
-            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center ">
+            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center items-center">
                 <i class="fa-solid fa-xmark text-Red text-xl"></i>
             </div>
         </div>
@@ -13,27 +13,27 @@
     <div class="p-5">
         <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
             <div class="w-full ">
-                <mat-label>Company Type* </mat-label>
+                <mat-label>Company Type<span class="required-asterisk">*</span></mat-label>
                 <mat-form-field class="w-full my-2" appearance="outline">
-                    <mat-select [value]="'--Company--'">
-                        <mat-option value="--Company--">--Company--</mat-option>
+                    <mat-select [value]="'--Select--'">
+                        <mat-option value="--Select--">--Select--</mat-option>
                         <mat-option value="ShineCoder">ShineCoder</mat-option>
                         <mat-option value="ShineCoder">ShineCoder</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
             <div class="w-full ">
-                <mat-label>Goal Type* </mat-label>
+                <mat-label>Goal Type<span class="required-asterisk">*</span></mat-label>
                 <mat-form-field class="w-full my-2" appearance="outline">
-                    <mat-select [value]="'--Company--'">
-                        <mat-option value="--Company--">--Company--</mat-option>
+                    <mat-select [value]="'--Select--'">
+                        <mat-option value="--Select--">--Select--</mat-option>
                         <mat-option value="ShineCoder">ShineCoder</mat-option>
                         <mat-option value="ShineCoder">ShineCoder</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
             <div class=" w-full ">
-                <mat-label>Subject*</mat-label>
+                <mat-label>Subject<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput value="First" />
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class=" w-full ">
-                <mat-label>Target Achievement*</mat-label>
+                <mat-label>Target Achievement<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput value="First" />
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="w-full">
-                <mat-label>Start Date *</mat-label>
+                <mat-label>Start Date<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput [matDatepicker]="startDatePicker" placeholder="Start Date">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="w-full">
-                <mat-label>End Date *</mat-label>
+                <mat-label>End Date<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput [matDatepicker]="endDatePicker" placeholder="End Date">

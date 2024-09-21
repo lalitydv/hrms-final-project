@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1">
-                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
-            </div>
+        <div class="flex items-center gap-5">
+          
             <div class="text-3xl font-bold">{{ HearderHeding }}</div>
         </div>
 
@@ -43,8 +41,8 @@
         <div class="w-full ">
             <mat-label>Tax Type </mat-label>
             <mat-form-field class="w-full my-2" appearance="outline">
-                <mat-select [value]="'--Company--'">
-                    <mat-option value="--Company--">--Company--</mat-option>
+                <mat-select [value]="'--Select--'">
+                    <mat-option value="--Select--">--Select--</mat-option>
                     <mat-option value="ShineCoder">ShineCoder</mat-option>
                     <mat-option value="ShineCoder">ShineCoder</mat-option>
                 </mat-select>
@@ -67,9 +65,9 @@
             <div class=" flex gap-2">
 
 
-                <div class="flex gap-2 items-center">
+                <div class="md:flex gap-2 items-center text-[#b2abab] hidden">
                     <span>Display</span>
-                    <select name="" id="">
+                    <select name="" id="" class="rounded-md py-1 pr-1 pl-2 border border-[#b2abab]">
                         <option value="25">25</option>
                         <option value="10">10</option>
                     </select>
@@ -79,17 +77,17 @@
                 <span class="flex gap-4 mx-5">
                     <div>
                         <i
-                            class="fa-solid fa-file-excel text-xl text-white border-0 p-1 px-3 bg-DarkGreen rounded-md"></i>
+                            class="fa-solid fa-file-excel text-xl text-white border-0 p-1  bg-DarkGreen rounded-md"></i>
                     </div>
                     <div>
-                        <i class="fa-solid fa-file-pdf text-xl text-white border-0 p-1 px-3 bg-Red rounded-md"></i>
+                        <i class="fa-solid fa-file-pdf text-xl text-white border-0 p-1  bg-Red rounded-md"></i>
                     </div>
                     <div>
-                        <i class="fa-solid fa-print text-xl text-white border-0 p-1 px-3 bg-Yello rounded-md"></i>
+                        <i class="fa-solid fa-print text-xl text-white border-0 p-1  bg-Yello rounded-md"></i>
                     </div>
                     <div mat-button>
                         <i
-                            class="fa-solid fa-eye text-xl text-white border-0 p-1 px-3 bg-LightSlateBlue rounded-md"></i>
+                            class="fa-solid fa-eye text-xl text-white border-0 p-1  bg-LightSlateBlue rounded-md"></i>
                     </div>
 
 
@@ -114,7 +112,7 @@
                         class="block w-full lg:w-96 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-Pink focus:border-Pink dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-Pink dark:focus:border-Pink"
                         placeholder="Search" required />
                     <button type="submit"
-                        class="text-white absolute right-0 bottom-0 top-0 bg-Pink hover:bg-Pink focus:outline-none focus:ring-Pink font-medium rounded-lg text-sm px-5 py-4 dark:bg-Pink dark:hover:bg-Pink dark:focus:ring-Pink">
+                        class="text-white absolute right-0 bottom-0 top-0 bg-Pink hover:bg-Pink focus:outline-none focus:ring-Pink font-medium rounded-lg text-sm px-5 py-2 dark:bg-Pink dark:hover:bg-Pink dark:focus:ring-Pink">
                         Get Emp Info
                     </button>
                 </div>

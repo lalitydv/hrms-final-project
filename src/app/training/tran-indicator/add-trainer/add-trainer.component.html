@@ -1,10 +1,10 @@
-<div class="bg-white rounded-2xl overflow-y-scroll ">
+<div class="bg-white rounded-2xl overflow-y-scroll max-h-[85vh]">
     <div class="bg-lightPink py-2 ">
-        <div class="flex justify-between mx-5">
+        <div class="flex justify-between items-center mx-5">
             <div>
                 Add Trainer
             </div>
-            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center ">
+            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center items-center">
                 <i class="fa-solid fa-xmark text-Red text-xl"></i>
             </div>
         </div>
@@ -16,7 +16,7 @@
         <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
 
             <div class=" w-full ">
-                <mat-label> First Name*</mat-label>
+                <mat-label> First Name<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput value="First" />
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class=" w-full ">
-                <mat-label> Last Name*</mat-label>
+                <mat-label> Last Name<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput value="First" />
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class=" w-full ">
-                <mat-label>Phone*</mat-label>
+                <mat-label>Phone<span class="required-asterisk">*</span></mat-label>
                 <div class="flex items-center gap-2">
                     <mat-form-field class="w-full my-2" appearance="outline">
                         <input matInput value="First" />

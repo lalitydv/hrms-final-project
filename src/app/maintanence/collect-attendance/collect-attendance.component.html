@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1">
-                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
-            </div>
+        <div class="flex items-center gap-5">
+          
             <div class="text-3xl font-bold">{{ HearderHeding }}</div>
         </div>
 
@@ -19,7 +17,7 @@
 
         </div>
         <div class=" w-full my-2">
-            <mat-label>Date *</mat-label>
+            <mat-label>Date<span class="required-asterisk">*</span></mat-label>
             <div class="flex items-center gap-2">
                 <mat-form-field class="w-full my-2" appearance="outline">
                     <input matInput value="09/18/2023 - 09/18/2023" />

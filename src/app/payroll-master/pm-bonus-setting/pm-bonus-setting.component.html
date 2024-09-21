@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between  gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1  ">
-                <img src="{{FirstIcons}}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full">
-            </div>
+        <div class="flex items-center gap-5">
+           
             <div class="text-3xl font-bold ">{{HearderHeding}}</div>
         </div>
 
@@ -12,7 +10,7 @@
     <!-- Hedding  -->
 
     <mat-accordion class="mx-4 select-dropdown-box">
-        <mat-expansion-panel [(expanded)]="Bonus" class="w-full">
+        <mat-expansion-panel [disabled]="true" [(expanded)]="Bonus" [disabled]="true" class="w-full">
             <mat-expansion-panel-header class="shadow-md bg-white border-white">
                 <mat-panel-title class="font-medium text-xl">
                     <!-- <div class="flex items-center justify-center bg-white"> -->

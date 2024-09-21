@@ -6,6 +6,7 @@ import { PmConfigurationComponent } from './pm-configuration/pm-configuration.co
 import { PmPayrollReportingComponent } from './pm-payroll-reporting/pm-payroll-reporting.component';
 import { PmPayslipComponent } from './pm-payslip/pm-payslip.component';
 import { BulkImportPayrollMasterComponent } from './pm-configuration/bulk-import-payroll-master/bulk-import-payroll-master.component';
+import { FullNdFinalComponent } from './full-nd-final/full-nd-final.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,9 @@ const routes: Routes = [
   },
   {
     path:'payslip',component: PmPayslipComponent
+  },
+  {
+    path:'full-and-final',component: FullNdFinalComponent
   },
 ];
 

@@ -1,0 +1,15 @@
+[type='checkbox']:checked {
+    background-image:none !important;
+    background-color: #01247b;
+}
+
+[type='checkbox'] {
+    border-radius: 4px !important;
+}
+
+[type='checkbox']:focus, [type='radio']:focus {
+    box-shadow: none !important;
+}
+[type='checkbox'], [type='radio'] {
+    background-color: #7b7b7b;
+  }

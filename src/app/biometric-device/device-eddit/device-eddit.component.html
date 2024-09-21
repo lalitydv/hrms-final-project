@@ -1,37 +1,35 @@
-<section class="my-5">
+<section class="my-5 px-5 overflow-y-scroll max-h-[85vh]">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1">
-                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
-            </div>
+        <div class="flex items-center gap-5">
+          
             <div class="text-3xl font-bold">{{ HeaderHeading }}</div>
         </div>
         <div class="flex gap-4 flex-wrap">
 
             <button class="border-2 border-Pink text-Pink rounded-md p-2 px-2
-             flex gap-2 items-center">
+             flex gap-2 items-center text-[#b2abab]">
                 <mat-icon class="mat-18">power_settings_new</mat-icon> Sign out
             </button>
         </div>
     </div>
 
     <div class="flex gap-5 my-10 px-5">
-        <div class="flex gap-5 text-center justify-center">
+        <div class="flex gap-2 text-center justify-center">
             <div class=" w-full h-full rounded-xl">
                 <mat-icon class="save">smartphone</mat-icon>
             </div>
             <div>
-                <span class="text-2xl font-bold">Device</span> <br>
+                <span class="md:text-2xl text-lg font-bold">Device</span> <br>
                 <small>Device</small>
             </div>
         </div>
-        <div class="flex gap-5 text-center justify-center">
+        <div class="flex gap-2 text-center justify-center">
             <div class="w-full h-full rounded-xl">
                 <mat-icon class="save">save</mat-icon>
             </div>
             <div>
-                <span class="text-2xl font-bold whitespace-nowrap">Save Device </span> <br>
+                <span class="md:text-2xl text-lg font-bold whitespace-nowrap">Save Device </span> <br>
                 <small>Save Device </small>
             </div>
         </div>
@@ -48,7 +46,7 @@
             <!-- Device Name -->
             <div class="w-full">
                 <div class="flex items-center justify-between">
-                    <mat-label>Device Name *</mat-label>
+                    <mat-label>Device Name<span class="required-asterisk">*</span></mat-label>
 
                 </div>
                 <div class="flex items-center gap-2">
@@ -60,7 +58,7 @@
             <!-- IP Address -->
             <div class="w-full">
                 <div class="flex items-center justify-between">
-                    <mat-label>IP Address *</mat-label>
+                    <mat-label>IP Address<span class="required-asterisk">*</span></mat-label>
 
                 </div>
                 <div class="flex items-center gap-2">
@@ -84,7 +82,7 @@
             <!-- Device Code -->
             <div class="w-full">
                 <div class="flex items-center justify-between">
-                    <mat-label>Device Code *</mat-label>
+                    <mat-label>Device Code<span class="required-asterisk">*</span></mat-label>
 
                 </div>
                 <div class="flex items-center gap-2">
@@ -108,7 +106,7 @@
             <!-- Address -->
             <div class="w-full">
                 <div class="flex items-center justify-between">
-                    <mat-label>Address *</mat-label>
+                    <mat-label>Address<span class="required-asterisk">*</span></mat-label>
 
                 </div>
                 <div class="flex items-center gap-2">

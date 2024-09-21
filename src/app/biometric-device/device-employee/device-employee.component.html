@@ -1,10 +1,8 @@
 <section class="my-5">
     <!-- Hedding  -->
     <div class="flex md:flex flex-wrap items-center justify-between gap-5">
-        <div class="flex items-center mx-5 gap-5">
-            <div class="shadow-2xl bg-white rounded-full p-1">
-                <img src="{{ FirstIcons }}" alt="" class="w-10 h-10 shadow-2xl bg-white rounded-full" />
-            </div>
+        <div class="flex items-center gap-5">
+          
             <div class="text-3xl font-bold">{{ HeaderHeading }}</div>
         </div>
 
@@ -33,7 +31,7 @@
                         class="block w-full lg:w-96 p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-Pink focus:border-Pink dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-Pink dark:focus:border-Pink"
                         placeholder="Search" required />
                     <button type="submit"
-                        class="text-white absolute right-0 bottom-0 top-0 bg-Pink hover:bg-Pink focus:outline-none focus:ring-Pink font-medium rounded-lg text-sm px-5 py-4 dark:bg-Pink dark:hover:bg-Pink dark:focus:ring-Pink">
+                        class="text-white absolute right-0 bottom-0 top-0 bg-Pink hover:bg-Pink focus:outline-none focus:ring-Pink font-medium rounded-lg text-sm px-5 py-2 dark:bg-Pink dark:hover:bg-Pink dark:focus:ring-Pink">
                         Get Emp Info
                     </button>
                 </div>
@@ -59,7 +57,7 @@
                         <div class="flex items-center justify-between">
                             {{element.FullName}}
                             <img [src]="getProfileImageUrl(element)" alt="Profile Image"
-                                class="w-10  rounded-full mr-2 object-contain">
+                                class="w-10 hidden md:block rounded-full mr-2 object-contain">
 
                         </div>
                     </td>

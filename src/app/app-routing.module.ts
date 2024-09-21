@@ -28,6 +28,9 @@ const routes: Routes = [
   { path: 'performance', loadChildren: () => import('./performance/performance.module').then(m => m.PerformanceModule)},
   { path: 'training', loadChildren: () => import('./training/training.module').then(m => m.TrainingModule)},
   { path: 'hr-calendar', loadChildren: () => import('./hr-calendar/hr-calendar.module').then(m => m.HRCalendarModule)},
+  { path: 'user-manager', loadChildren: () => import('./user-manager/user-manager.module').then(m => m.UserManagerModule)},
+  { path: 'my-profile', loadChildren: () => import('./dashbord-profile/dashbord-profile.module').then(m => m.DashbordProfileModule)},
+  
 ];
 
 @NgModule({

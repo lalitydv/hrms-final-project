@@ -1,10 +1,10 @@
-<div class="bg-white rounded-2xl overflow-y-scroll h-screen">
+<div class="bg-white rounded-2xl overflow-y-scroll max-h-[85vh]">
     <div class="bg-lightPink py-2 ">
-        <div class="flex justify-between mx-5">
+        <div class="flex justify-between items-center mx-5">
             <div>
                 Update File
             </div>
-            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center ">
+            <div mat-dialog-close class="border-2 rounded-full border-Red w-7 h-7 flex justify-center text-center items-center">
                 <i class="fa-solid fa-xmark text-Red text-xl"></i>
             </div>
         </div>
@@ -40,8 +40,8 @@
             <div class="  ">
                 <mat-label>Tax Type </mat-label>
                 <mat-form-field class="w-full my-2 " appearance="outline">
-                    <mat-select [value]="'--Company--'">
-                        <mat-option value="--Company--">--Company--</mat-option>
+                    <mat-select [value]="'--Select--'">
+                        <mat-option value="--Select--">--Select--</mat-option>
                         <mat-option value="ShineCoder">ShineCoder</mat-option>
                         <mat-option value="ShineCoder">ShineCoder</mat-option>
                     </mat-select>
