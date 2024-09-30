@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content>
+	<meta name="description" content="CRM Admin Template | CRM Bootstrap Website Template| CRMS">
+	<meta name="author" content="shinecoder">
+
+	<title>Shinecoder HRMS - Complete HR Management System Dashboard Angular 16</title>
+
+	<!-- App favicon -->
+	<link rel="shortcut icon" href="assets/img/logo/HRMS LOGO (1).png">
+
+	<!-- Vendor -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/prism.css" rel="stylesheet">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+	<!-- Main CSS -->
+	<link id="mainCss" href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<main class="wrapper sb-default">
+		<!-- Loader -->
+		<div id="loader-wrapper">
+			<div class="loader-ellipsis">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+		<!-- Header -->
+		<header class="header">
+			<div class="container-fluid">
+				<div class="header-left">
+					<div class="left-header me-2">
+						<a href="javascript:void(0)" class="sidebar-toggle">
+							<span class="outer-ring">
+								<span class="inner-ring"></span>
+							</span>
+						</a>
+					</div>
+					<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+						<li><a href="mailto:support@shinecoder.in" class="nav-link px-2 link-body-emphasis"><i
+									class="fa-solid fa-headset me-2"></i>Support</a></li>
+						<li><a href="https://calendly.com/shinecoder" class="nav-link px-2 link-body-emphasis"
+								target="_blank"><i class="fa-brands fa-hire-a-helper me-2"></i>Hire Us</a></li>
+						<li><a href="https://themeforest.net/user/shinecoder" class="nav-link px-2 link-body-emphasis"
+								target="_blank"><i class="fa-brands fa-hire-a-helper me-2"></i>Our Envato</a></li>
+					</ul>
+
+					<div class="right-header">
+						<div class="me-2 header-item theme-light">
+							<button type="button" class="btn-topbar tools-item mode" data-bs-theme-tool="light">
+								<span class="feather-icon"><i data-feather="moon"></i></span>
+							</button>
+						</div>
+						<div class="me-2 header-item theme-dark">
+							<button type="button" class="btn-topbar tools-item mode active" data-bs-theme-tool="dark">
+								<span class="feather-icon"><i data-feather="sun"></i></span>
+							</button>
+						</div>
+					</div>
+					<div class="text-end">
+						<a href="https://crms.shinecoder.com/" target="_blank" class="btn btn-white btn-sm me-2"><i
+								class="fa-solid fa-link me-2"></i>Live Demo</a>
+						<a href="https://themeforest.net/item/crms-bootstrap-admin-template/27850087"
+							class="btn btn-primary btn-sm" target="_blank"><i class="fa-solid fa-cart-plus me-2"></i>Buy
+							Now</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="doc-progress">
+			<div class="doc-progress-inner" id="scrollProgress">
+
+			</div>
+		</div>
+
+		<div class="sidebar-overlay"></div>
+		<div class="sidebar" data-mode="light">
+			<div class="sidebar-logo">
+				<a href="index.html" class="sb-full"><img src="assets/img/logo/HRMS LOGO (1).png" alt="logo"><span
+						class="badge badge-soft-info fs-14 ms-1">Changelog</span></a>
+				<a href="index.html" class="sb-collapse"><img src="assets/img/logo/HRMS LOGO (1).png" alt="logo"></a>
+			</div>
+			<div class="sidebar-inner">
+				<div class="sidebar-menu">
+					<ul id="menu-main-menu" class="sidebar-nav">
+
+						<li class="menu-item">
+							<a href="#changelog" class="page-link">
+								<span class="feather-icon"><i data-feather="hexagon"></i></span><span
+									class="condense"><span class="hover-title">Change
+										Log</span> </span><span
+									class="badge badge-changelog badge-soft-info fw-semibold fs-8 px-2 ms-2 condense">v2.2</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- main content -->
+		<div class="main-content">
+			<div class="container-fluid">
+				<!-- Page title & breadcrumb -->
+				<div class="page-title">
+					<div class="breadcrumb">
+						<h1>Getting Started</h1>
+						<ul>
+							<li><a href="index.html">CRMS</a></li>
+							<li>Getting Started</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row sections">
+					<div class="col-xl-12 col-md-12">
+						<section class="custom-card page-block hentry" id="changelog">
+							<div class="card-body">
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.2<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>21 Aug 2024</small>
+										</div>
+										<div class="card-body">
+											<span class="badge btn-soft-danger">HTML</span>
+											<span class="badge btn-soft-warning">Codeigniter4</span>
+											<span class="badge btn-soft-info">Laravel</span>
+											<span class="badge btn-soft-success">Angular</span>
+											<span class="badge btn-soft-warning">React</span>
+											<span class="badge btn-soft-dark">Vue</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Code Standard Upgrade
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Plugins Version Upgrade
+											</ul>
+											<ul>
+												<span class="badge btn-soft-secondary">Php</span>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added Php Template & Template-rtl
+												</li>
+											</ul>
+
+										</div>
+
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.1.9<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>03 July 2024</small>
+										</div>
+										<div class="card-body">
+											<span class="badge btn-soft-danger">HTML</span>
+											<span class="badge btn-soft-warning">Codeigniter4</span>
+											<span class="badge btn-soft-info">Laravel</span>
+											<span class="badge btn-soft-success">Angular</span>
+											<span class="badge btn-soft-warning">React</span>
+											<span class="badge btn-soft-dark">Vue</span>
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-danger rounded-pill me-2">Fixed</span>
+													Lead , deals and ui form validation issues fixed
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.1.8<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>19 Jun 2024</small>
+										</div>
+										<div class="card-body">
+											<span class="badge btn-soft-danger">Html</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Plugins version Upgradation
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Proposals,Contracts,Estimations,Invoices and Payments pages added
+													template and template-rtl
+												</li>
+											</ul>
+											<span class="badge btn-soft-warning">Laravel</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Laravel version upgraded v11.2.0 to v11.7.0
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Proposals,Contracts,Estimations,Invoices and Payments pages added in
+													Laravel template and template-rtl
+												</li>
+											</ul>
+											<span class="badge btn-soft-info">Codeigniter4</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Proposals,Contracts,Estimations,Invoices and Payments pages added in
+													CI template and template-rtl
+												</li>
+											</ul>
+											<span class="badge btn-soft-danger">Angular</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Angular version upgraded from v17.3.5 to v18.0.3
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Proposals,Contracts,Estimations,Invoices and Payments pages added in
+													Angular template and template-rtl
+												</li>
+											</ul>
+											<span class="badge btn-soft-success">React</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													React version 18.2.0
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Proposals,Contracts,Estimations,Invoices and Payments pages added in
+													React template and template-rtl
+												</li>
+											</ul>
+											<span class="badge btn-soft-info">Nodejs</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Proposals,Contracts,Estimations,Invoices and Payments pages added in
+													Node template and template-rtl
+												</li>
+											</ul>
+											<span class="badge btn-soft-secondary">vue</span>
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Vue version 3.4.27
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Proposals,Contracts,Estimations,Invoices and Payments pages added in
+													Vue template and template-rtl
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.1.7<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>08 APR 2024</small>
+										</div>
+										<div class="card-body">
+											<span class="badge btn-soft-warning">Codeigniter4</span>
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added Codeigniter4 Template & Template-rtl
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.1.6<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>02 APR 2024</small>
+										</div>
+										<div class="card-body">
+											<span class="badge btn-soft-danger">Html</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Bootstrap Upgraded to 5.3.3
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													jquery Upgraded to 3.7.1
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Fontawesome Upgraded to 6.5.1
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													New pages added in html template and template-rtl
+												</li>
+											</ul>
+
+											<span class="badge btn-soft-info">Laravel</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Laravel version upgraded v9.19 to v11.2.0
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													laravel packages upgraded
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													New pages added in laravel template and template-rtl
+												</li>
+											</ul>
+											<span class="badge btn-soft-success">Angular</span>
+											<ul class="mb-3">
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Angular version upgraded 16.2.2 to 17.2.4
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													All packages upgraded
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													New pages added in Angular template and template-rtl
+												</li>
+
+
+												<span class="badge btn-soft-success">Vue</span>
+												<ul class="mb-3">
+													<li class="mt-0"><span
+															class="badge text-bg-warning rounded-pill me-2">Updated</span>
+														Vue version upgraded v3.1.5 to v3.4.21
+													</li>
+													<li class="mt-0"><span
+															class="badge text-bg-warning rounded-pill me-2">Updated</span>
+														Vue packages upgraded
+													</li>
+													<li class="mt-0"><span
+															class="badge text-bg-success rounded-pill me-2">Added</span>
+														New pages added in vue template and template-rtl
+													</li>
+												</ul>
+												<span class="badge btn-soft-danger">React</span>
+												<ul class="mb-3">
+													<li class="mt-0"><span
+															class="badge text-bg-warning rounded-pill me-2">Updated</span>
+														All Packages Updated
+													</li>
+													<li class="mt-0"><span
+															class="badge text-bg-warning rounded-pill me-2">Updated</span>
+														New Pages and Design Updated
+													</li>
+													<li class="mt-0"><span
+															class="badge text-bg-success rounded-pill me-2">Added</span>
+														Redux Based Template and RTL
+													</li>
+												</ul>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.1.5<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>07 JUN 2023</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated node version in reactjs to v20.2.0
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated react version to v18.2.0
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated Webpack version to v5.85.0
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated documentation
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.1.4<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>22 APR 2023</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added Nodejs Template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.1.3<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>17 APR 2023</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added Mobile Template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.1.2<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>23 DEC 2023</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added jQuery Less Angular template & rtl
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added Angular Material Angular template & rtl
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added Ngx Bootstrap Angular template & rtl
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added Angular 15.0.3 Angular template & rtl
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added Dynamic Data Angular template & rtl
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added API Integrated Datas Angular template & rtl
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.1.1<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>26 NOV 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added multiple stylesheets and reduced angular as a single template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 2.0<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>20 OCT 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													multiple stylesheets and reduced reactjs as a single template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9.9<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>23 JULY 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added blog, elements, charts and icons pages in html template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9.8<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>11 JULY 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Laravel version upgrade 8 to 9
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9.7<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>13 MAY 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added multiple stylesheets and reduced laravel as a single template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9.6<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>09 MAY 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added multiple stylesheet reduced vuejs as single template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9.5<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>23 APR 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added multiple stylesheet reduced html as single template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9.4<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>02 FEB 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Authentication provided to Laravel template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9.3<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>22 JAN 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated Bootstrap 4 to 5 Laravel template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9.2<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>18 JAN 2022</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated Angular version 12 to 13
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated Bootstrap 4 to 5 Angular template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9.1<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>20 DEC 2021</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated vuejs version 2 to 3
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.9<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>10 DEC 2021</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Changed bootstrap4 to bootstrap5 HTML template
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated Laravel version 7 to 8
+												</li>
+												<li class="mt-0"><span
+														class="badge text-bg-warning rounded-pill me-2">Updated</span>
+													Updated Angular version 11 to 12 and fixed vulnerability issues
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.8<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>14 MAY 2021</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Angular template files added with RTL
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.7<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>16 APR 2021</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Reactjs template files added with RTL
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.6<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>11 FEB 2021</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Vuejs template files added
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.5<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>9 FEB 2021</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Laravel template files added
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.4<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>29 JAN 2021</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-danger rounded-pill me-2">Fixed</span>
+													Feather icons added and bug fixed
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.3<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>24 OCT 2020</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													RTL template added in Html template
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.2<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>23 FEB 2021</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Angular template files added
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.1<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>14 AUG 2020</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Added Multiple color
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="section-block">
+									<div class="custom-card page-block">
+										<div class="card-header">
+											<h4 class="card-title">Version 1.0<a class="anchor-link ms-2"
+													href="#changelog"><i class="fa-solid fa-hashtag"></i></a></h4>
+											<small>23 JULY 2020</small>
+										</div>
+										<div class="card-body">
+											<ul>
+												<li class="mt-0"><span
+														class="badge text-bg-success rounded-pill me-2">Added</span>
+													Initial Release
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- Version block -->
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<footer class="content-footer footer">
+				<div
+					class="container-fluid d-flex flex-wrap justify-content-between align-items-center text-center py-3">
+					<div>
+						&copy; 2015-
+						<script>
+							document.write(new Date().getFullYear())
+
+						</script>
+
+						<a href="#" class="footer-text fw-medium text-primary" target="_blank">Shinecoder HRM</a>
+
+					</div>
+					<div class="social-icons">
+						<a href="https://www.facebook.com/shinecoderlimited/" class="footer-link me-2"
+							target="_blank"><i class="fa-brands fa-facebook"></i></a>
+						<a href="https://twitter.com/dreamstechltd" class="footer-link me-2" target="_blank"><i
+								class="fa-brands fa-twitter"></i></a>
+						<a href="https://www.behance.net/shinecoder" class="footer-link me-2" target="_blank"><i
+								class="fa-brands fa-behance"></i></a>
+						<a href="https://dribbble.com/shinecoder" class="footer-link me-2" target="_blank"><i
+								class="fa-brands fa-dribbble"></i></a>
+						<a href="https://www.instagram.com/shinecoderlimited/" class="footer-link" target="_blank"><i
+								class="fa-brands fa-instagram"></i></a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+	</main>
+
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/prism.js"></script>
+	<script src="assets/js/feather.min.js"></script>
+	<script src="assets/js/jquery.zoom.min.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
